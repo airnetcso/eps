@@ -1,48 +1,189 @@
-body{font-family:Arial;margin:0}
-.center{text-align:center;padding-top:100px}
-
-.header{
- position:fixed;top:0;left:0;right:0;height:60px;
- background:#eee;display:flex;justify-content:space-between;
- align-items:center;padding:0 15px;
+/* ===== RESET & GLOBAL ===== */
+*{
+  box-sizing:border-box;
 }
 
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  margin:0;
+  background:#f5f6fa;
+}
+
+.center{
+  text-align:center;
+  padding-top:100px;
+}
+
+input, button{
+  padding:10px;
+  margin:6px;
+  font-size:14px;
+}
+
+/* ===== HEADER ===== */
+.header{
+  position:fixed;
+  top:0; left:0; right:0;
+  height:60px;
+  background:#ffffff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 15px;
+  box-shadow:0 2px 6px rgba(0,0,0,.15);
+  z-index:10;
+}
+
+.header-right{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+/* ===== TIMER (HIJAU DIBLOK) ===== */
 .timer{
-  background:#16a34a;      /* hijau */
-  color:#ffffff;           /* teks putih */
+  background:#16a34a;     /* hijau */
+  color:#ffffff;
   padding:6px 14px;
   border-radius:8px;
   font-weight:bold;
   min-width:80px;
   text-align:center;
+  box-shadow:0 2px 6px rgba(0,0,0,.25);
 }
 
+/* ===== SUBMIT BUTTON (HEADER) ===== */
+#submitBtn{
+  padding:6px 14px;
+  background:#1e3a8a;
+  color:#ffffff;
+  border:none;
+  border-radius:8px;
+  font-weight:bold;
+  cursor:pointer;
+}
 
-.content{margin-top:70px;padding:15px}
+#submitBtn:hover{
+  background:#162f6a;
+}
 
+/* ===== CONTENT ===== */
+.content{
+  margin-top:70px;
+  padding:15px;
+}
+
+/* DUA KOLOM TETAP (HP & PC) */
 .two-col{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:12px;
-
-.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
-
-.qbox{
- background:#1e3a8a;color:#fff;
- padding:15px;text-align:center;
- border-radius:8px;cursor:pointer
+  gap:15px;
 }
-.qbox.done{background:#ccc;color:#000}
 
+/* ===== SECTION TITLE ===== */
 .section-box{
- padding:10px;font-weight:bold;
- border-radius:8px;margin-bottom:10px
+  padding:10px;
+  font-weight:bold;
+  border-radius:8px;
+  margin-bottom:10px;
+  text-align:center;
 }
-.listening{background:#bfdbfe}
-.reading{background:#bbf7d0}
 
-#submitBtn{
- position:fixed;bottom:20px;right:20px;
- padding:15px 25px;background:#1e3a8a;
- color:#fff;border:none;border-radius:10px
+.listening{
+  background:#bfdbfe;
+}
+
+.reading{
+  background:#bbf7d0;
+}
+
+/* ===== GRID SOAL ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(5, 1fr);
+  gap:10px;
+}
+
+/* ===== BOX NOMOR SOAL ===== */
+.qbox{
+  background:#1e3a8a;     /* biru tua */
+  color:#ffffff;
+  padding:14px 0;
+  text-align:center;
+  border-radius:10px;
+  font-weight:bold;
+  cursor:pointer;
+  user-select:none;
+  transition:.2s;
+}
+
+.qbox:hover{
+  opacity:.85;
+}
+
+/* SUDAH DIKLIK / DIJAWAB */
+.qbox.done{
+  background:#d1d5db;     /* abu-abu */
+  color:#000000;
+}
+
+/* ===== HALAMAN SOAL ===== */
+#questionBox{
+  padding:80px 15px 20px;
+}
+
+#questionBox h3{
+  margin-bottom:10px;
+}
+
+#questionBox label{
+  display:block;
+  margin:8px 0;
+  cursor:pointer;
+}
+
+/* ===== NAVIGASI SOAL ===== */
+.nav-btn{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  padding:15px;
+}
+
+.nav-btn button{
+  flex:1;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  background:#2563eb;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.nav-btn button:hover{
+  background:#1d4ed8;
+}
+
+/* ===== ADMIN TABLE ===== */
+table{
+  border-collapse:collapse;
+  margin-top:20px;
+}
+
+th, td{
+  padding:10px;
+  text-align:center;
+}
+
+/* ===== RESPONSIVE SIZE ONLY (TETAP 2 KOLOM) ===== */
+@media(max-width:600px){
+  .qbox{
+    padding:10px 0;
+    font-size:14px;
+  }
+
+  .header{
+    font-size:14px;
+  }
 }
