@@ -1,21 +1,22 @@
-let questions=[];
-let currentQuestion = 0;
-let userAnswers = [];
-let answered = JSON.parse(localStorage.getItem("answered")||"{}");
+let questions = [];
+let answered = JSON.parse(localStorage.getItem("answered") || "{}");
 
-// Load soal.json
+// Load soal.json dari GitHub
 async function loadSoal(){
   try {
-    const res = await fetch('soal.json');
-    questions = await res.json();
-    userAnswers = Array(questions.length).fill(null);
+    const url = "https://raw.githubusercontent.com/airnetcso/eps/refs/heads/main/soal.json";
+    const res = await fetch(url);
+    if(!res.ok) throw new Error("HTTP error: " + res.status);
 
-    // Build grid & load question page setelah data siap
+    questions = await res.json();
+    console.log("Soal loaded:", questions.length);
+
     buildGrid();
     loadQuestionPage();
+
   } catch(err){
     console.error("Gagal load soal.json:", err);
-    alert("Gagal memuat soal. Pastikan server berjalan.");
+    alert("Gagal memuat soal dari GitHub.\nPastikan URL raw benar dan file publik.");
   }
 }
 
@@ -25,20 +26,19 @@ function buildGrid(){
   const R = document.getElementById("read");
   if(!L || !R) return;
 
-  // Kosongkan dulu grid
   L.innerHTML = "";
   R.innerHTML = "";
 
-  questions.forEach(q=>{
+  questions.forEach(q => {
     const b = document.createElement("div");
     b.className = "qbox";
-    if(answered[q.id]!==undefined) b.classList.add("done");
+    if(answered[q.id] !== undefined) b.classList.add("done");
     b.innerText = q.id;
-    b.onclick = ()=>{
+    b.onclick = () => {
       localStorage.setItem("current", q.id);
       location.href = "question.html";
     }
-    (q.type==="listening"?L:R).appendChild(b);
+    (q.type === "listening" ? L : R).appendChild(b);
   });
 }
 
@@ -46,6 +46,15 @@ function buildGrid(){
 function loadQuestionPage(){
   const id = localStorage.getItem("current");
   if(!id) return;
-  const q = questions.find(x=>x.id==id);
+  const q = questions.find(x => x.id == id);
   const qArea = document.getElementById("question-area");
-  const ans
+  const ansDiv = document.getElementById("answers");
+  if(!qArea || !ansDiv) return;
+
+  qArea.innerHTML = "";
+  ansDiv.innerHTML = "";
+
+  // Soal teks
+  const h = document.createElement("h3");
+  h.textContent = q.id + ". " + q.question;
+  qArea.appendChild(h)
