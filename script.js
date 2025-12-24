@@ -9,7 +9,7 @@ async function loadSoal(){
     if(!res.ok) throw new Error("HTTP error: " + res.status);
 
     questions = await res.json();
-    console.log("Soal loaded:", questions.length);
+    console.log("Soal loaded:", questions);
 
     buildGrid();
     loadQuestionPage();
@@ -30,6 +30,11 @@ function buildGrid(){
   R.innerHTML = "";
 
   questions.forEach(q => {
+    if(!q.id || !q.type) {
+      console.warn("Soal diabaikan karena id/type hilang:", q);
+      return;
+    }
+
     const b = document.createElement("div");
     b.className = "qbox";
     if(answered[q.id] !== undefined) b.classList.add("done");
@@ -38,7 +43,9 @@ function buildGrid(){
       localStorage.setItem("current", q.id);
       location.href = "question.html";
     }
-    (q.type === "listening" ? L : R).appendChild(b);
+
+    if(q.type.toLowerCase() === "listening") L.appendChild(b);
+    else if(q.type.toLowerCase() === "reading") R.appendChild(b);
   });
 }
 
@@ -54,7 +61,69 @@ function loadQuestionPage(){
   qArea.innerHTML = "";
   ansDiv.innerHTML = "";
 
-  // Soal teks
   const h = document.createElement("h3");
   h.textContent = q.id + ". " + q.question;
-  qArea.appendChild(h)
+  qArea.appendChild(h);
+
+  if(q.image){
+    const img = document.createElement("img");
+    img.src = q.image;
+    qArea.appendChild(img);
+  }
+
+  if(q.audio){
+    const aud = document.createElement("audio");
+    aud.controls = true;
+    aud.src = q.audio;
+    qArea.appendChild(aud);
+  }
+
+  q.options.forEach((opt, i) => {
+    const btn = document.createElement("button");
+    btn.textContent = opt;
+    if(answered[q.id] == i) btn.style.background = "#c6f6d5";
+    btn.onclick = () => {
+      answered[q.id] = i;
+      localStorage.setItem("answered", JSON.stringify(answered));
+      loadQuestionPage();
+    };
+    ansDiv.appendChild(btn);
+  });
+}
+
+// Timer
+let time = 50*60;
+setInterval(()=>{
+  time--;
+  const m = String(Math.floor(time/60)).padStart(2,"0");
+  const s = String(time%60).padStart(2,"0");
+  const t=document.getElementById("timerBox");
+  if(t) t.innerText = m+":"+s;
+  if(time<=0) autoSubmit();
+},1000);
+
+// Score & submit
+function calculateScore(){
+  let score = 0;
+  questions.forEach(q => {
+    if(answered[q.id] == q.answer) score += 2.5;
+  });
+  return score;
+}
+
+function autoSubmit(){ alert("Waktu habis! Nilai: "+calculateScore()); finish(); }
+function manualSubmit(){ if(confirm("Submit sekarang?")){ alert("Nilai: "+calculateScore()); finish(); } }
+
+function finish(){
+  const user = localStorage.getItem("user");
+  const score = calculateScore();
+  const allScores = JSON.parse(localStorage.getItem("allScores")||"[]");
+  allScores.push({user,score,date:new Date().toLocaleString()});
+  localStorage.setItem("allScores", JSON.stringify(allScores));
+  localStorage.removeItem("answered");
+  localStorage.removeItem("current");
+  location.href="index.html";
+}
+
+// Start
+loadSoal();
