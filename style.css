@@ -220,39 +220,3 @@ th, td{
   border-color:#6b7280;
 }
 
-/* ===== Kolom soal ===== */
-.question-column{
-  width:65%;
-  background:#f9fafb;
-  border-radius:12px;
-  padding:15px;
-  box-shadow:0 2px 6px rgba(0,0,0,.08);
-}
-
-#questionBox{
-  font-size:16px;
-  line-height:1.6;
-  margin-bottom:12px;
-}
-
-#audioBox audio{
-  width:100%;
-  margin-bottom:12px;
-}
-
-#imageBox img{
-  max-width:100%;
-  border-radius:10px;
-  margin-top:10px;
-}
-
-/* ===== Responsive HP ===== */
-@media(max-width:768px){
-  .question-layout{
-    flex-direction:column;
-  }
-  .option-column,
-  .question-column{
-    width:100%;
-  }
-}
