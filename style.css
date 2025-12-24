@@ -7,7 +7,16 @@ body{font-family:Arial;margin:0}
  align-items:center;padding:0 15px;
 }
 
-.timer{color:green;font-weight:bold}
+.timer{
+  background:#16a34a;      /* hijau */
+  color:#ffffff;           /* teks putih */
+  padding:6px 14px;
+  border-radius:8px;
+  font-weight:bold;
+  min-width:80px;
+  text-align:center;
+}
+
 
 .content{margin-top:70px;padding:15px}
 
