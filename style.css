@@ -31,9 +31,22 @@ input,button{padding:10px;margin:5px}
 .reading{color:#2f855a;border-color:#2f855a;}
 
 /* Halaman soal 2 kolom */
-.question-page{display:flex;gap:20px;margin-top:80px;}
-.col-left{flex:1;display:flex;flex-direction:column;gap:10px;}
-.col-right{flex:2;}
+.question-page {
+  display: flex;
+  gap: 20px;
+  margin-top: 80px;
+}
+
+.col-left, .col-right {
+  border: 1px solid #999;  /* border masing-masing kolom */
+  padding: 15px;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+.col-left { flex:1; display:flex; flex-direction:column; gap:10px; }
+.col-right { flex:2; }
+
 .col-left button{
   border-radius:50%;
   width:40px;
@@ -41,4 +54,5 @@ input,button{padding:10px;margin:5px}
   font-weight:bold;
   cursor:pointer;
 }
-.nav-buttons{margin-top:20px;display:flex;gap:10px;}
+
+.nav-buttons{margin-top:20px; display:flex; gap:10px;}
