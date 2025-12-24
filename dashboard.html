@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dashboard CBT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<script>
+if(localStorage.getItem("login")!=="true"){location.href="index.html";}
+</script>
+<body>
 <header class="header">
   <div>CBT TEST</div>
   <div class="top-right">
@@ -17,3 +28,10 @@
     <div class="grid" id="read"></div>
   </div>
 </div>
+
+<script src="script.js"></script>
+<script>
+document.getElementById("user").innerText=localStorage.getItem("user");
+</script>
+</body>
+</html>
