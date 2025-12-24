@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login CBT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="center">
+<h2>LOGIN CBT</h2>
+<input id="username" placeholder="Username">
+<input id="password" type="password">
+<button onclick="login()">MASUK</button>
+<script>
+const users=[
+ {username:"siswa01",password:"12345",role:"user"},
+ {username:"admin",password:"admin123",role:"admin"}
+];
+function login(){
+ const u=username.value.trim();
+ const p=password.value.trim();
+ const user=users.find(x=>x.username===u&&x.password===p);
+ if(!user){alert("Login salah");return;}
+ localStorage.clear();
+ localStorage.setItem("login","true");
+ localStorage.setItem("user",u);
+ localStorage.setItem("role",user.role);
+ location.href=user.role==="admin"?"admin.html":"dashboard.html";
+}
+</script>
+</body>
+</html>

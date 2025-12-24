@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dashboard CBT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<script>
+if(localStorage.getItem("login")!=="true"){location.href="index.html";}
+</script>
+<body>
+<header class="header">
+ <div>CBT TEST</div>
+ <div id="user"></div>
+ <div id="timer">50:00</div>
+</header>
+
+<div class="content two-col">
+ <div class="col">
+  <div class="section-box listening">SOAL LISTENING</div>
+  <div class="grid" id="listen"></div>
+ </div>
+ <div class="col">
+  <div class="section-box reading">SOAL READING</div>
+  <div class="grid" id="read"></div>
+ </div>
+</div>
+
+<button id="submitBtn" onclick="manualSubmit()">SUBMIT</button>
+
+<script src="script.js"></script>
+<script>
+document.getElementById("user").innerText=localStorage.getItem("user");
+</script>
+</body>
+</html>
