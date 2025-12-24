@@ -185,38 +185,5 @@ th, td{
 
   .header{
     font-size:14px;
-    /* ===== Layout soal kiri-kanan ===== */
-.question-layout{
-  display:flex;
-  gap:16px;
-  margin-top:15px;
-}
-
-/* ===== Kolom jawaban ===== */
-.option-column{
-  width:35%;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-
-.option-column button{
-  padding:14px;
-  border-radius:10px;
-  border:2px solid #1e3a8a;
-  background:#1e40af;
-  color:#fff;
-  font-size:15px;
-  cursor:pointer;
-  text-align:left;
-}
-
-.option-column button:hover{
-  background:#1e3a8a;
-}
-
-.option-column button.selected{
-  background:#9ca3af;
-  border-color:#6b7280;
-}
+  }
 }
