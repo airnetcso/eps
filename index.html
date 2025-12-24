@@ -1,39 +1,32 @@
+
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login CBT EPS</title>
+<title>Login CBT</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="center">
-
-<h2>LOGIN CBT EPS / TOPIK</h2>
-
+<h2>LOGIN CBT</h2>
 <input id="username" placeholder="Username">
-<input id="password" type="password" placeholder="Password">
+<input id="password" type="password">
 <button onclick="login()">MASUK</button>
-
 <script>
-const users = [
- { username:"siswa01", password:"12345", role:"user" },
- { username:"admin", password:"admin123", role:"admin" }
+const users=[
+ {username:"siswa01",password:"12345",role:"user"},
+ {username:"admin",password:"admin123",role:"admin"}
 ];
-
 function login(){
- const u = username.value.trim();
- const p = password.value.trim();
- const user = users.find(x=>x.username===u && x.password===p);
- if(!user){ alert("Username / Password salah"); return; }
-
+ const u=username.value.trim();
+ const p=password.value.trim();
+ const user=users.find(x=>x.username===u&&x.password===p);
+ if(!user){alert("Login salah");return;}
  localStorage.clear();
  localStorage.setItem("login","true");
  localStorage.setItem("user",u);
  localStorage.setItem("role",user.role);
-
- location.href = user.role==="admin" ? "admin.html" : "dashboard.html";
+ location.href=user.role==="admin"?"admin.html":"dashboard.html";
 }
 </script>
-
 </body>
 </html>

@@ -1,0 +1,25 @@
+[
+{"id":1,"type":"listening","question":"Dengarkan audio dan pilih jawaban yang benar.","options":["Kucing","Anjing","Burung","Ikan"],"answer":1,"audio":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3","image":""},
+{"id":2,"type":"listening","question":"Audio kedua, pilih jawaban yang sesuai.","options":["Apel","Jeruk","Pisang","Mangga"],"answer":2,"audio":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3","image":""},
+{"id":3,"type":"listening","question":"Dengarkan suara kendaraan berikut, apa jenisnya?","options":["Mobil","Motor","Truk","Sepeda"],"answer":0,"audio":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3","image":"https://via.placeholder.com/150"},
+{"id":4,"type":"listening","question":"Pilih kata yang terdengar jelas.","options":["Satu","Dua","Tiga","Empat"],"answer":3,"audio":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3","image":""},
+{"id":5,"type":"listening","question":"Pilih kata yang terdengar dalam audio.","options":["Merah","Biru","Hijau","Kuning"],"answer":1,"audio":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3","image":""},
+{"id":6,"type":"listening","question":"Dengarkan audio dan pilih yang benar.","options":["Meja","Kursi","Lemari","Rak"],"answer":0,"audio":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3","image":""},
+{"id":7,"type":"listening","question":"Audio ini tentang hewan, pilih jawaban.","options":["Kelinci","Kucing","Anjing","Burung"],"answer":2,"audio":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3","image":"https://via.placeholder.com/150"},
+{"id":8,"type":"listening","question":"Pilih jawaban yang sesuai dengan audio.","options":["Air","Api","Tanah","Angin"],"answer":0,"audio":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3","image":""},
+{"id":9,"type":"listening","question":"Audio ini tentang buah, pilih yang benar.","options":["Apel","Jeruk","Mangga","Pisang"],"answer":1,"audio":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3","image":""},
+{"id":10,"type":"listening","question":"Dengarkan audio panjang berikut dan pilih jawaban.","options":["Buku","Pensil","Penghapus","Spidol"],"answer":2,"audio":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3","image":""},
+
+{"id":11,"type":"reading","question":"Apa yang terlihat pada gambar ini?","options":["Pohon","Rumah","Mobil","Sepeda"],"answer":2,"audio":"","image":"https://via.placeholder.com/150"},
+{"id":12,"type":"reading","question":"Bacalah kalimat berikut dan pilih jawaban yang benar.","options":["Saya pergi ke pasar","Saya makan nasi","Saya minum air","Saya tidur"],"answer":0,"audio":"","image":""},
+{"id":13,"type":"reading","question":"Gambar ini menunjukkan benda apa?","options":["Bola","Kursi","Meja","Rak"],"answer":1,"audio":"","image":"https://via.placeholder.com/150"},
+{"id":14,"type":"reading","question":"Pilih kata yang sesuai dengan teks.","options":["Merah","Biru","Hijau","Kuning"],"answer":2,"audio":"","image":""},
+{"id":15,"type":"reading","question":"Bacalah teks pendek ini dan pilih jawaban.","options":["Kucing","Anjing","Burung","Ikan"],"answer":0,"audio":"","image":""},
+{"id":16,"type":"reading","question":"Pilih jawaban yang sesuai dengan gambar.","options":["Mobil","Motor","Truk","Sepeda"],"answer":3,"audio":"","image":"https://via.placeholder.com/150"},
+{"id":17,"type":"reading","question":"Baca teks dan pilih jawaban yang benar.","options":["Satu","Dua","Tiga","Empat"],"answer":1,"audio":"","image":""},
+{"id":18,"type":"reading","question":"Apa yang dimaksud pada gambar?","options":["Meja","Kursi","Lemari","Rak"],"answer":0,"audio":"","image":"https://via.placeholder.com/150"},
+{"id":19,"type":"reading","question":"Bacalah teks sederhana ini dan pilih jawaban.","options":["Apel","Jeruk","Pisang","Mangga"],"answer":2,"audio":"","image":""},
+{"id":20,"type":"reading","question":"Teks panjang untuk soal reading pemula, agak sulit.","options":["Buku","Pensil","Penghapus","Spidol"],"answer":3,"audio":"","image":""}
+
+  /* Tambahkan soal 21–40 dengan format sama: listening & reading, 3 terakhir lebih panjang */
+]

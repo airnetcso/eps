@@ -1,41 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CBT EPS</title>
+<title>Dashboard CBT</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<script>
+if(localStorage.getItem("login")!=="true"){location.href="index.html";}
+</script>
 
 <header class="header">
-  <div>EPS / TOPIK CBT</div>
-  <div id="user"></div>
-
-  <div class="header-right">
-    <div id="timer" class="timer">50:00</div>
-    <button id="submitBtn" onclick="manualSubmit()">SUBMIT</button>
-  </div>
+ <div>CBT TEST</div>
+ <div id="user"></div>
+ <div id="timerBox">
+   <span id="timer">50:00</span>
+   <button id="submitBtn" onclick="manualSubmit()">SUBMIT</button>
+ </div>
 </header>
 
-
 <div class="content two-col">
-  <div>
-    <div class="section-box listening">SOAL LISTENING</div>
-    <div id="listen" class="grid"></div>
-  </div>
-
-  <div>
-    <div class="section-box reading">SOAL READING</div>
-    <div id="read" class="grid"></div>
-  </div>
+ <div class="col">
+  <div class="section-box listening">SOAL LISTENING</div>
+  <div class="grid" id="listen"></div>
+ </div>
+ <div class="col">
+  <div class="section-box reading">SOAL READING</div>
+  <div class="grid" id="read"></div>
+ </div>
 </div>
 
 <script src="script.js"></script>
 <script>
-document.getElementById("user").innerText = localStorage.getItem("user");
-document.documentElement.requestFullscreen();
+document.getElementById("user").innerText=localStorage.getItem("user");
 </script>
-
 </body>
 </html>
