@@ -10,12 +10,12 @@ if(localStorage.getItem("login")!=="true"){location.href="index.html";}
 </script>
 <body>
 <header class="header">
-  <div>CBT TEST</div>
-  <div class="top-boxes">
-    <div id="timerBox" class="box">50:00</div>
-    <button id="submitBtn" onclick="manualSubmit()" class="box">SUBMIT</button>
-  </div>
-  <div id="user"></div>
+ <div>CBT TEST</div>
+ <div id="user"></div>
+ <div id="timerBox">
+   <span id="timer">50:00</span>
+   <button id="submitBtn" onclick="manualSubmit()">SUBMIT</button>
+ </div>
 </header>
 
 <div class="content two-col">
