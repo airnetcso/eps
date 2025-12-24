@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>REKAP NILAI</h2>
+
+<table border="1" width="100%">
+<tr><th>Username</th><th>Nilai</th></tr>
+<tbody id="data"></tbody>
+</table>
+
+<script>
+const data = JSON.parse(localStorage.getItem("results") || "[]");
+const tbody = document.getElementById("data");
+data.forEach(d=>{
+ tbody.innerHTML += `<tr><td>${d.user}</td><td>${d.score}</td></tr>`;
+});
+</script>
+
+</body>
+</html>
