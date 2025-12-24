@@ -12,8 +12,22 @@ input,button{padding:10px;margin:5px}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 @media(max-width:900px){.two-col{grid-template-columns:1fr}}
 .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
-.qbox{background:#fff;border:1px solid #ccc;padding:15px;text-align:center;cursor:pointer;border-radius:0}
-.qbox.done{background:#ccc}
+/* Kotak soal default */
+.qbox{
+  background: rgba(255, 182, 193, 0.5); /* merah muda lembut transparan */
+  border:1px solid #ccc;
+  padding:15px;
+  text-align:center;
+  cursor:pointer;
+  border-radius:0;
+  transition: background 0.3s;
+}
+
+/* Kotak soal yang sudah diklik / done */
+.qbox.done{
+  background:#ccc; /* abu-abu */
+}
+
 .section-box{padding:10px;font-weight:bold;border:2px solid #999;border-radius:0;margin-bottom:10px}
 .listening{color:#2b6cb0;border-color:#2b6cb0}
 .reading{color:#2f855a;border-color:#2f855a}
