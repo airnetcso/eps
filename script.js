@@ -70,6 +70,23 @@ function loadQuestionPage(){
     img.src = q.image;
     qArea.appendChild(img);
   }
+function nextQuestion(){
+  if(window.currentIndex+1<questions.length){
+    localStorage.setItem("current",questions[window.currentIndex+1].id);
+    loadQuestionPage();
+  } else alert("Ini soal terakhir");
+}
+
+function prevQuestion(){
+  if(window.currentIndex>0){
+    localStorage.setItem("current",questions[window.currentIndex-1].id);
+    loadQuestionPage();
+  } else alert("Ini soal pertama");
+}
+
+function back(){
+  location.href="dashboard.html";
+}
 
   if(q.audio){
     const aud = document.createElement("audio");
