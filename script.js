@@ -63,11 +63,24 @@ function calculateScore(){let score=0; questions.forEach(q=>{if(answered[q.id]==
 function autoSubmit(){alert("Waktu habis! Nilai: "+calculateScore()); finish();}
 function manualSubmit(){if(confirm("Submit sekarang?")){alert("Nilai: "+calculateScore()); finish();}}
 function finish(){
-  const user=localStorage.getItem("user"), score=calculateScore();
-  const allScores=JSON.parse(localStorage.getItem("allScores")||"[]");
-  allScores.push({user,score,date:new Date().toLocaleString()});
-  localStorage.setItem("allScores",JSON.stringify(allScores));
-  localStorage.removeItem("answered"); localStorage.removeItem("current");
+  const name = localStorage.getItem("user") || "Siswa";
+  const score = calculateScore();
+  const timeUsed = (50*60 - time);
+
+  const results = JSON.parse(localStorage.getItem("results") || "[]");
+
+  results.push({
+    name: name,
+    score: score,
+    time: Math.floor(timeUsed/60) + " menit",
+    date: new Date().toLocaleString()
+  });
+
+  localStorage.setItem("results", JSON.stringify(results));
+
+  localStorage.removeItem("answered");
+  localStorage.removeItem("current");
+
   location.href="index.html";
 }
 
