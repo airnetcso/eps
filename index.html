@@ -18,15 +18,16 @@ body{
   align-items:center;
   background:
     linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
-    url("https://github.com/airnetcso/eps/tree/main/image/bg.jpg") center/cover no-repeat;
+    url("https://raw.githubusercontent.com/airnetcso/eps/main/image/bg.jpg") center/cover no-repeat;
 }
 
 /* BOX LOGIN */
 .login-box{
   width:320px;
-  background:rgba(255,255,255,0.9);
+  background:rgba(255,255,255,0.75); /* lebih transparan */
   padding:30px 25px;
   text-align:center;
+  backdrop-filter: blur(6px); /* efek kaca halus */
 }
 
 .login-box h2{
