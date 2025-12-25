@@ -2,25 +2,70 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin</title>
+<title>Admin - Hasil CBT</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-<h2>REKAP NILAI</h2>
-
-<table border="1" width="100%">
-<tr><th>Username</th><th>Nilai</th></tr>
-<tbody id="data"></tbody>
-</table>
 
 <script>
-const data = JSON.parse(localStorage.getItem("results") || "[]");
-const tbody = document.getElementById("data");
-data.forEach(d=>{
- tbody.innerHTML += `<tr><td>${d.user}</td><td>${d.score}</td></tr>`;
-});
+if(localStorage.getItem("login")!=="true" || localStorage.getItem("role")!=="admin"){
+  location.href="index.html";
+}
+</script>
+
+<body>
+
+<header class="header">
+  <div>ADMIN CBT</div>
+  <div>
+    <button onclick="logout()">LOGOUT</button>
+  </div>
+</header>
+
+<div class="content">
+  <h3>Daftar Nilai Siswa</h3>
+
+  <table border="1" cellpadding="10" cellspacing="0" width="100%">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Username</th>
+        <th>Nilai</th>
+        <th>Waktu</th>
+      </tr>
+    </thead>
+    <tbody id="scoreTable"></tbody>
+  </table>
+</div>
+
+<script>
+function loadScores(){
+  const data = JSON.parse(localStorage.getItem("allScores") || "[]");
+  const tbody = document.getElementById("scoreTable");
+
+  if(data.length === 0){
+    tbody.innerHTML = "<tr><td colspan='4'>Belum ada data</td></tr>";
+    return;
+  }
+
+  tbody.innerHTML = "";
+  data.forEach((x,i)=>{
+    tbody.innerHTML += `
+      <tr>
+        <td>${i+1}</td>
+        <td>${x.user}</td>
+        <td>${x.score}</td>
+        <td>${x.date}</td>
+      </tr>
+    `;
+  });
+}
+
+function logout(){
+  localStorage.clear();
+  location.href="index.html";
+}
+
+loadScores();
 </script>
 
 </body>
