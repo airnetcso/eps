@@ -64,6 +64,26 @@ input,button{padding:10px;margin:5px;cursor:pointer}
 /* Jawaban bulat */
 .col-left button{width:30px;height:30px;border-radius:50%;border:2px solid #555;background:#fff;color:#555;font-weight:bold;display:flex;align-items:center;justify-content:center;font-size:14px;transition:all 0.2s}
 .col-left button.selected{background:#38bdf8;color:#fff;border-color:#38bdf8}
+.nav-buttons {
+  display: flex;
+  justify-content: space-between; /* kiri, tengah, kanan */
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
 
-/* Navigasi */
-.nav-buttons{margin-top:20px;display:flex;gap:10px}
+.nav-buttons button {
+  background-color: #3498db; /* warna biru */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0; /* tidak ada lengkungan */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.nav-buttons button:hover {
+  background-color: #2980b9; /* biru lebih gelap saat hover */
+}
+
