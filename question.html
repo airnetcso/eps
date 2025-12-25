@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>Soal</title>
@@ -9,11 +9,17 @@
 if(localStorage.getItem("login")!=="true"){location.href="index.html";}
 </script>
 <body>
-<div id="questionBox"></div>
-<div style="margin-top:15px; text-align:center;">
-<button onclick="back()">KEMBALI</button>
-<button onclick="manualSubmit()">SUBMIT</button>
+<div class="question-page">
+  <div class="col-left" id="answers"></div>
+  <div class="col-right" id="questionBox"></div>
 </div>
+
+<div class="nav-buttons">
+  <button onclick="prevQuestion()">Sebelumnya</button>
+  <button onclick="nextQuestion()">Berikutnya</button>
+  <button onclick="back()">Kembali</button>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>

@@ -3,42 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <title>Login CBT</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+*{
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:
+    linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
+    url("bg.jpg") center/cover no-repeat;
+}
+
+/* BOX LOGIN */
+.login-box{
+  width:320px;
+  background:rgba(255,255,255,0.9);
+  padding:30px 25px;
+  text-align:center;
+}
+
+.login-box h2{
+  margin-bottom:25px;
+}
+
+/* INPUT */
+.login-box input{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border:1px solid #ccc;
+  outline:none;
+  font-size:14px;
+}
+
+/* BUTTON */
+.login-box button{
+  width:100%;
+  padding:12px;
+  background:#2563eb;
+  color:#fff;
+  border:none;
+  font-size:15px;
+  cursor:pointer;
+}
+
+.login-box button:hover{
+  background:#1e40af;
+}
+</style>
 </head>
-<body class="center" style="background:
-  linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-  url('https://raw.githubusercontent.com/airnetcso/eps/main/image/bg.jpg') center/cover no-repeat;
-  height:100vh;">
+
+<body>
+
 <div class="login-box">
   <h2>LOGIN CBT</h2>
   <input id="username" placeholder="Username">
   <input id="password" type="password" placeholder="Password">
-  <button onclick="login()">MASUK</button>
+  <button onclick="login()">LOGIN</button>
 </div>
 
 <script>
 const users=[
- {username:"siswa01",password:"12345",role:"user"},
- {username:"siswa02",password:"12345",role:"user"},
- {username:"admin",password:"admin123",role:"admin"}
+  {username:"siswa01",password:"12345",role:"user"},
+  {username:"admin",password:"admin123",role:"admin"}
 ];
 
 function login(){
   const u=username.value.trim();
   const p=password.value.trim();
   const user=users.find(x=>x.username===u && x.password===p);
-  if(!user){alert("Login salah");return;}
 
-  // reset soal tapi hasil tetap
-  localStorage.removeItem("answered");
-  localStorage.removeItem("current");
+  if(!user){
+    alert("Username atau password salah");
+    return;
+  }
 
+  localStorage.clear();
   localStorage.setItem("login","true");
   localStorage.setItem("user",u);
   localStorage.setItem("role",user.role);
 
-  location.href=user.role==="admin"?"admin.html":"dashboard.html";
+  location.href = user.role==="admin"
+    ? "admin.html"
+    : "dashboard.html";
 }
 </script>
+
 </body>
 </html>

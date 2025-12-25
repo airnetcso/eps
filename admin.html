@@ -2,49 +2,62 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Admin Dashboard CBT</title>
-<link rel="stylesheet" href="style.css">
+<title>Admin - Hasil CBT</title>
 <style>
-  body{font-family:Arial;margin:0;padding:20px;background:#f3f4f6;}
-  h2{text-align:center;margin-bottom:20px;}
-  table{width:100%;border-collapse:collapse;background:#fff;}
-  th,td{border:1px solid #ccc;padding:10px;text-align:center;}
-  th{background:#2563eb;color:#fff;}
+body{
+  font-family:Arial;
+  padding:20px;
+}
+table{
+  border-collapse:collapse;
+  width:100%;
+}
+th,td{
+  border:1px solid #999;
+  padding:8px;
+  text-align:center;
+}
+th{
+  background:#eee;
+}
 </style>
 </head>
 <body>
 
-<h2>Admin Dashboard CBT</h2>
-<table id="resultsTable">
-  <thead>
-    <tr>
-      <th>No</th>
-      <th>Nama</th>
-      <th>Nilai</th>
-      <th>Tanggal</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
+<h2>HASIL CBT</h2>
+
+<table>
+<thead>
+<tr>
+  <th>No</th>
+  <th>Nama</th>
+  <th>Nilai</th>
+  <th>Waktu</th>
+  <th>Tanggal</th>
+</tr>
+</thead>
+<tbody id="data"></tbody>
 </table>
 
 <script>
-function loadResults(){
-  const results = JSON.parse(localStorage.getItem("results") || "[]");
-  const tbody = document.querySelector("#resultsTable tbody");
-  tbody.innerHTML = "";
-  results.forEach((r,i)=>{
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td>${i+1}</td>
-      <td>${r.name}</td>
-      <td>${r.score}</td>
-      <td>${r.date}</td>
+const data = JSON.parse(localStorage.getItem("results") || "[]");
+const tbody = document.getElementById("data");
+
+if(data.length === 0){
+  tbody.innerHTML = "<tr><td colspan='5'>BELUM ADA DATA</td></tr>";
+}else{
+  data.forEach((d,i)=>{
+    tbody.innerHTML += `
+      <tr>
+        <td>${i+1}</td>
+        <td>${d.name}</td>
+        <td>${d.score}</td>
+        <td>${d.time}</td>
+        <td>${d.date}</td>
+      </tr>
     `;
-    tbody.appendChild(tr);
   });
 }
-loadResults();
 </script>
 
 </body>
