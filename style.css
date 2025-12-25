@@ -11,10 +11,37 @@ input,button{padding:10px;margin:5px;cursor:pointer}
 }
 .header-right{display:flex;gap:10px;align-items:center}
 
-/* Timer & Submit */
-.box{padding:10px 20px;font-weight:bold;text-align:center;display:flex;align-items:center;justify-content:center;min-width:80px;height:40px}
-#timerBox.box{background:#48bb78;color:#fff}
-#submitBtn.box{background:#2b6cb0;color:#fff;cursor:pointer;border-radius:10px}
+/* Timer & Submit sama ukuran */
+.box{
+  padding:10px 20px;
+  font-weight:bold;
+  text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:90px;
+  height:40px;
+  border-radius:0;        /* sama-sama kotak */
+  box-sizing:border-box;
+}
+
+/* Timer */
+#timerBox{
+  background:#48bb78;
+  color:#fff;
+}
+
+/* Submit */
+#submitBtn{
+  background:#ec4899;     /* pink lembut */
+  color:#fff;
+  border:none;
+  cursor:pointer;
+}
+#submitBtn:hover{
+  background:#db2777;
+}
+
 
 /* ===== GRID SOAL ===== */
 .content{margin-top:80px;padding:15px}
