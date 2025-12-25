@@ -49,8 +49,14 @@ input, button {
   color: #fff;
 }
 #submitBtn.box {
-  background: #2b6cb0;  /* biru */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #48bb78;
   color: #fff;
+  border-radius: 10px;
+  padding: 10px 25px;
+  font-weight: bold;
   cursor: pointer;
 }
 
