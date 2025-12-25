@@ -65,21 +65,31 @@ function loadQuestionPage(){
   }
 
   q.options.forEach((opt,i)=>{
-    const btn=document.createElement("button");
-    btn.textContent=i+1;
-    if(answered[q.id]==i) btn.style.background="#c6f6d5";
-    btn.onclick=()=>{
-      answered[q.id]=i;
-      localStorage.setItem("answered",JSON.stringify(answered));
-    };
-    const label=document.createElement("div");
-    label.style.display="flex"; label.style.alignItems="center"; label.style.gap="10px";
-    label.appendChild(btn);
-    const txt=document.createElement("span"); txt.textContent=opt;
-    label.appendChild(txt);
-    ansDiv.appendChild(label);
-  });
-}
+  const btn=document.createElement("button");
+  btn.textContent=i+1;
+  if(answered[q.id]==i) btn.classList.add("selected"); // highlight jika sudah dipilih
+
+  btn.onclick=()=>{
+    answered[q.id]=i;
+    localStorage.setItem("answered",JSON.stringify(answered));
+
+    // hapus selected dari semua tombol di kolom
+    ansDiv.querySelectorAll("button").forEach(b=>b.classList.remove("selected"));
+    btn.classList.add("selected");
+  };
+
+  const label=document.createElement("div");
+  label.style.display="flex";
+  label.style.alignItems="center";
+  label.style.gap="10px";
+  label.appendChild(btn);
+
+  const txt=document.createElement("span");
+  txt.textContent=opt;
+  label.appendChild(txt);
+
+  ansDiv.appendChild(label);
+});
 
 // Navigasi
 function nextQuestion(){
