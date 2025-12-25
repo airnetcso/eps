@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Dashboard UBT</title>
+<title>Dashboard CBT</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <script>
@@ -10,26 +10,23 @@ if(localStorage.getItem("login")!=="true"){location.href="index.html";}
 </script>
 <body>
 <header class="header">
-
-  
-  <div style="text-align:left"><button id="submitBtn" class="box" onclick="manualSubmit()">SUBMIT</button></div></div>
-  <div id="user"></div></div>   
-  <div class="top-right">
-    <div id="timerBox" class="box">50:00</div>
-    
-  </div>
-  
+ <div>CBT TEST</div>
+ <div id="user"></div>
+ <div id="timer-box">
+   <div id="timer">50:00</div>
+   <button id="submitBtn" onclick="manualSubmit()">SUBMIT</button>
+ </div>
 </header>
 
 <div class="content two-col">
-  <div class="col">
-    <div class="section-box listening">SOAL LISTENING / 듣기</div>
-    <div class="grid" id="listen"></div>
-  </div>
-  <div class="col">
-    <div class="section-box reading">SOAL READING / 읽기</div>
-    <div class="grid" id="read"></div>
-  </div>
+ <div class="col">
+  <div class="section-box listening">SOAL LISTENING</div>
+  <div class="grid" id="listen"></div>
+ </div>
+ <div class="col">
+  <div class="section-box reading">SOAL READING</div>
+  <div class="grid" id="read"></div>
+ </div>
 </div>
 
 <script src="script.js"></script>
