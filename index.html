@@ -87,10 +87,10 @@ function login(){
     return;
   }
 
-  localStorage.clear();
-  localStorage.setItem("login","true");
-  localStorage.setItem("user",u);
-  localStorage.setItem("role",user.role);
+ // Hanya reset login & user, jangan hapus 'results'
+localStorage.setItem("login","true");
+localStorage.setItem("user",u);
+localStorage.setItem("role",user.role);
 
   location.href = user.role==="admin"
     ? "admin.html"
