@@ -120,12 +120,26 @@ input, button {
 
 /* Jawaban bulat */
 .col-left button {
-  border-radius: 50%;
-  width: 30px;   /* lebih kecil */
+  width: 30px;
   height: 30px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  background: #fff;
+  color: #555;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  transition: all 0.2s;
   font-size: 14px;
+}
+
+/* Jawaban yang sudah dipilih */
+.col-left button.selected {
+  background: #38bdf8; /* biru */
+  color: #fff;
+  border-color: #38bdf8;
 }
 
 /* Navigasi */
