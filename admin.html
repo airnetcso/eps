@@ -2,109 +2,61 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Admin CBT</title>
+<title>Admin - Hasil CBT</title>
 <style>
 body{
-  font-family: Arial, sans-serif;
-  background:#f5f5f5;
+  font-family:Arial;
   padding:20px;
 }
-h2{
-  margin-bottom:10px;
-}
 table{
-  width:100%;
   border-collapse:collapse;
-  background:#fff;
+  width:100%;
 }
 th,td{
-  border:1px solid #ccc;
+  border:1px solid #999;
   padding:8px;
   text-align:center;
 }
 th{
-  background:#e2e8f0;
-}
-.empty{
-  padding:20px;
-  background:#fff3cd;
-  border:1px solid #ffeeba;
-  margin-top:15px;
-}
-.debug{
-  margin-top:15px;
-  background:#eef;
-  padding:10px;
-  font-size:13px;
-}
-button{
-  margin-top:10px;
-  padding:8px 14px;
+  background:#eee;
 }
 </style>
 </head>
-
 <body>
 
-<h2>📊 Data Nilai Siswa</h2>
+<h2>HASIL CBT</h2>
 
 <table>
-  <thead>
-    <tr>
-      <th>No</th>
-      <th>Nama</th>
-      <th>Nilai</th>
-      <th>Tanggal</th>
-    </tr>
-  </thead>
-  <tbody id="tbody"></tbody>
+<thead>
+<tr>
+  <th>No</th>
+  <th>Nama</th>
+  <th>Nilai</th>
+  <th>Waktu</th>
+  <th>Tanggal</th>
+</tr>
+</thead>
+<tbody id="data"></tbody>
 </table>
 
-<div id="info"></div>
-
-<button onclick="clearData()">🗑 Hapus Semua Data</button>
-
-<div class="debug" id="debug"></div>
-
 <script>
-const tbody = document.getElementById("tbody");
-const info  = document.getElementById("info");
-const debug = document.getElementById("debug");
+const data = JSON.parse(localStorage.getItem("results") || "[]");
+const tbody = document.getElementById("data");
 
-// ambil data mentah
-const raw = localStorage.getItem("results");
-
-// debug tampilkan raw data
-debug.innerHTML = "<b>DEBUG localStorage['results']:</b><br>" + (raw ?? "NULL (belum ada data)");
-
-let results = [];
-try{
-  results = JSON.parse(raw) || [];
-}catch(e){
-  results = [];
-}
-
-// kalau kosong
-if(results.length === 0){
-  info.innerHTML = "<div class='empty'>❗ Belum ada data nilai tersimpan</div>";
+if(data.length === 0){
+  tbody.innerHTML = "<tr><td colspan='5'>BELUM ADA DATA</td></tr>";
 }else{
-  results.forEach((r,i)=>{
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td>${i+1}</td>
-      <td>${r.name || "-"}</td>
-      <td>${r.score ?? "-"}</td>
-      <td>${r.date || "-"}</td>
+  data.forEach((d,i)=>{
+    tbody.innerHTML += `
+      <tr>
+        <td>${i+1}</td>
+        <td>${d.name}</td>
+        <td>${d.score}</td>
+        <td>${d.time}</td>
+        <td>${d.date}</td>
+      </tr>
     `;
-    tbody.appendChild(tr);
   });
-}
-
-function clearData(){
-  if(confirm("Hapus semua data nilai?")){
-    localStorage.removeItem("results");
-    location.reload();
-  }
 }
 </script>
 
