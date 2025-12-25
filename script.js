@@ -59,15 +59,32 @@ setInterval(()=>{
   if(time<=0) autoSubmit();
 },1000);
 
-function calculateScore(){let score=0; questions.forEach(q=>{if(answered[q.id]==q.answer)score+=2.5;}); return score;}
-function autoSubmit(){alert("Waktu habis! Nilai: "+calculateScore()); finish();}
-function manualSubmit(){if(confirm("Submit sekarang?")){alert("Nilai: "+calculateScore()); finish();}}
+function calculateScore(){
+  let score = 0;
+  questions.forEach(q=>{
+    if(answered[q.id] == q.answer) score += 2.5;
+  });
+  return score;
+}
+
+function autoSubmit(){
+  alert("Waktu habis! Nilai: " + calculateScore());
+  finish();
+}
+
+function manualSubmit(){
+  if(confirm("Submit sekarang?")){
+    alert("Nilai: " + calculateScore());
+    finish();
+  }
+}
+
 function finish(){
   const name = localStorage.getItem("user") || "Siswa";
   const score = calculateScore();
   const timeUsed = (50*60 - time);
 
-  const results = JSON.parse(localStorage.getItem("results") || "[]");
+  let results = JSON.parse(localStorage.getItem("results") || "[]");
 
   results.push({
     name: name,
@@ -81,7 +98,11 @@ function finish(){
   localStorage.removeItem("answered");
   localStorage.removeItem("current");
 
-  location.href="index.html";
+  location.href = "index.html";
 }
 
-loadSoal();
+/* ✅ PENTING */
+window.onload = function(){
+  loadSoal();
+};
+
