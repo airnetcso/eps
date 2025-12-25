@@ -42,7 +42,6 @@ input,button{padding:10px;margin:5px;cursor:pointer}
   background:#db2777;
 }
 
-
 /* ===== GRID SOAL ===== */
 .content{margin-top:80px;padding:15px}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
