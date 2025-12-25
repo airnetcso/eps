@@ -2,7 +2,7 @@ let questions=[], answered=JSON.parse(localStorage.getItem("answered")||"{}"), c
 
 async function loadSoal(){
   try{
-    const res=await fetch("https://raw.githubusercontent.com/airnetcso/eps/refs/heads/main/soal.json"); // path lokal
+    const res=await fetch("https://raw.githubusercontent.com/airnetcso/eps/refs/heads/main/soal.json");
     questions=await res.json();
     buildGrid();
     loadQuestionPage();
