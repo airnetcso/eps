@@ -80,16 +80,11 @@ function manualSubmit(){
 }
 
 function finish(){
-  const name = localStorage.getItem("user") || "Siswa";
-  const score = calculateScore();
-  const timeUsed = (50*60 - time);
-
-  let results = JSON.parse(localStorage.getItem("results") || "[]");
+  const results = JSON.parse(localStorage.getItem("results") || "[]");
 
   results.push({
-    name: name,
-    score: score,
-    time: Math.floor(timeUsed/60) + " menit",
+    name: localStorage.getItem("user") || "Siswa",
+    score: calculateScore(),
     date: new Date().toLocaleString()
   });
 
@@ -100,9 +95,5 @@ function finish(){
 
   location.href = "index.html";
 }
-
-/* ✅ PENTING */
-window.onload = function(){
-  loadSoal();
 };
 
