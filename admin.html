@@ -1,71 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Admin - Hasil CBT</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<script>
-if(localStorage.getItem("login")!=="true" || localStorage.getItem("role")!=="admin"){
-  location.href="index.html";
+<title>Admin CBT</title>
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background:#f5f5f5;
+  padding:20px;
 }
-</script>
+h2{
+  margin-bottom:10px;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+}
+th,td{
+  border:1px solid #ccc;
+  padding:8px;
+  text-align:center;
+}
+th{
+  background:#e2e8f0;
+}
+.empty{
+  padding:20px;
+  background:#fff3cd;
+  border:1px solid #ffeeba;
+  margin-top:15px;
+}
+.debug{
+  margin-top:15px;
+  background:#eef;
+  padding:10px;
+  font-size:13px;
+}
+button{
+  margin-top:10px;
+  padding:8px 14px;
+}
+</style>
+</head>
 
 <body>
 
-<header class="header">
-  <div>ADMIN CBT</div>
-  <div>
-    <button onclick="logout()">LOGOUT</button>
-  </div>
-</header>
+<h2>📊 Data Nilai Siswa</h2>
 
-<div class="content">
-  <h3>Daftar Nilai Siswa</h3>
+<table>
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Nama</th>
+      <th>Nilai</th>
+      <th>Tanggal</th>
+    </tr>
+  </thead>
+  <tbody id="tbody"></tbody>
+</table>
 
-  <table border="1" cellpadding="10" cellspacing="0" width="100%">
-    <thead>
-      <tr>
-        <th>No</th>
-        <th>Username</th>
-        <th>Nilai</th>
-        <th>Waktu</th>
-      </tr>
-    </thead>
-    <tbody id="scoreTable"></tbody>
-  </table>
-</div>
+<div id="info"></div>
+
+<button onclick="clearData()">🗑 Hapus Semua Data</button>
+
+<div class="debug" id="debug"></div>
 
 <script>
-function loadScores(){
-  const data = JSON.parse(localStorage.getItem("allScores") || "[]");
-  const tbody = document.getElementById("scoreTable");
+const tbody = document.getElementById("tbody");
+const info  = document.getElementById("info");
+const debug = document.getElementById("debug");
 
-  if(data.length === 0){
-    tbody.innerHTML = "<tr><td colspan='4'>Belum ada data</td></tr>";
-    return;
-  }
+// ambil data mentah
+const raw = localStorage.getItem("results");
 
-  tbody.innerHTML = "";
-  data.forEach((x,i)=>{
-    tbody.innerHTML += `
-      <tr>
-        <td>${i+1}</td>
-        <td>${x.user}</td>
-        <td>${x.score}</td>
-        <td>${x.date}</td>
-      </tr>
+// debug tampilkan raw data
+debug.innerHTML = "<b>DEBUG localStorage['results']:</b><br>" + (raw ?? "NULL (belum ada data)");
+
+let results = [];
+try{
+  results = JSON.parse(raw) || [];
+}catch(e){
+  results = [];
+}
+
+// kalau kosong
+if(results.length === 0){
+  info.innerHTML = "<div class='empty'>❗ Belum ada data nilai tersimpan</div>";
+}else{
+  results.forEach((r,i)=>{
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${i+1}</td>
+      <td>${r.name || "-"}</td>
+      <td>${r.score ?? "-"}</td>
+      <td>${r.date || "-"}</td>
     `;
+    tbody.appendChild(tr);
   });
 }
 
-function logout(){
-  localStorage.clear();
-  location.href="index.html";
+function clearData(){
+  if(confirm("Hapus semua data nilai?")){
+    localStorage.removeItem("results");
+    location.reload();
+  }
 }
-
-loadScores();
 </script>
 
 </body>
