@@ -131,32 +131,33 @@
   {
     "id": 17,
     "type": "listening",
-    "question": "저 사람들이 연주하는 게 뭐예요 ?",
-    "options": ["Option A","Option B","Option C","Option D"],
-    "answer": 0,
+    "question": "이것은 무엇입니까?",
+    "options": ["자동차","자전거","버스","기차"],
+    "answer": 1,
+    "image": "https://airnetcso.github.io/eps/image/2.jpg",
     "audio": "https://airnetcso.github.io/eps/audio/17.mp3"
   },
   {
     "id": 18,
     "type": "listening",
-    "question": "기숙사에서 살려면 어떻게 해🅓 해요 ? 지금 사는 데는 보증금이 비싸서 기숙사에 들어가고 싶은데요.",
-    "options": ["Option A","Option B","Option C","Option D"],
+    "question": "대화가 끝난 후 남자가 가장 먼저 할 일은 무엇입니까 ?",
+    "options": ["기숙사에서 방을 배정받는다.","신청자들 중에서 추첨을 한다.","관리실에 기숙사 신청서를 낸다.","기숙사 관리실에 보증금을 낸다."],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/18.mp3"
   },
   {
     "id": 19,
     "type": "listening",
-    "question": "지혜 씨, 이따가 퇴근하고 수진 씨 병원에 같이 갈래요 ?",
-    "options": ["Option A","Option B","Option C","Option D"],
+    "question": "남자가 왜 병원에 가려고 합니까?",
+    "options": ["친구를 만나려고","다리를 치료하려고","병원에서 일하려고","친구에게 부탁하려고"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/19.mp3"
   },
   {
     "id": 20,
     "type": "listening",
-    "question": "오늘 페인트 작업은 처음 해 봤지요 ? 어땠어요 ?",
-    "options": ["Option A","Option B","Option C","Option D"],
+    "question": "여자가 댜한 설명으로 맞는 것은 무엇입니까 ?",
+    "options": ["냄새가 심해서 힘들었습니다.","냄새가 안 나서 마스크를 안 썼습니다.","페인트 작업을 별로 어렵지 않았습니다.","지금까지 자주 페인트 작업을 했습니다."],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/20.mp3"
   },
@@ -301,6 +302,7 @@
     "answer": 2
   }
 ]
+
 
 
 
