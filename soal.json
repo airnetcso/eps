@@ -200,7 +200,6 @@
     "question": "다음 질문에 답하십시오. 이 표지는 무슨 뜻입니까 ?",
     "options": ["독성 위험","폭발 위험","감전 위험","저온 위험"],
     "answer": 0
-    "image": "https://airnetcso.github.io/eps/image/25.jpg",
   },
   {
     "id": 26,
@@ -208,7 +207,6 @@
     "question": "다음 안내문의 설명으로 맞는 것은 무엇입니까?",
     "options": ["주간 근무를 해야 합니다.","주말에도 일을 해야 합니다.","이력서는 이메일로 보냅니다.","연장 근무도 해야 합니다."],
     "answer": 3
-    "image": "https://airnetcso.github.io/eps/image/26.jpg",
   },
   {
     "id": 27,
@@ -216,7 +214,6 @@
     "question": "다음 그래프에 맞는 것은 고르십시오.",
     "options": ["인건비를 줄이기 위해서 쓰는 비율이 1위로 많다.","국내 근로자를 얻기 못해서 쓰는 비율이 반 이상입니다.","지시를 잘 따르다는 의미로 쓰는 비율이 제일 적다.","긴 시간 일 시킬 수 있어서 쓰는 비율이 제일 많다."],
     "answer": 0
-    "image": "https://airnetcso.github.io/eps/image/27.jpg",
   },
   {
     "id": 28,
@@ -224,7 +221,6 @@
     "question": "이 사람의 지위는 무엇입니까 ?",
     "options": ["박성현입니다.","공장장입니다.","태성입니다.","전문가입니다."],
     "answer": 1
-    "image": "https://airnetcso.github.io/eps/image/28.jpg",
   },
   {
     "id": 29,
@@ -311,6 +307,7 @@
     "answer": 2
   }
 ]
+
 
 
 
