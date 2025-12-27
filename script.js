@@ -1,4 +1,4 @@
-alet questions=[], answered=JSON.parse(localStorage.getItem("answered")||"{}"), currentIndex=0;
+let questions=[], answered=JSON.parse(localStorage.getItem("answered")||"{}"), currentIndex=0;
 
 async function loadSoal(){
   try{
