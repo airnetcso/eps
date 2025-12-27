@@ -126,7 +126,7 @@
     "options": ["","","",""],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/16.mp3"
-    "audio": "https://airnetcso.github.io/eps/image/1.jpg"
+    "image": "https://airnetcso.github.io/eps/image/1.jpg"
   },
   {
     "id": 17,
@@ -301,6 +301,7 @@
     "answer": 2
   }
 ]
+
 
 
 
