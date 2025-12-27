@@ -64,7 +64,7 @@
     "question": "케이크와 카드는 모두 얼마입니까 ?",
     "options": ["만 칠천 원","이만 칠천 원","만 삼천 오백 원","만 사천 오백 원"],
     "answer": 0,
-    "image": "https://airnetcso.github.io/eps/image/1.jpg",
+    "image": "https://airnetcso.github.io/eps/image/8.jpg",
     "audio": "https://airnetcso.github.io/eps/audio/8.mp3"
   },
   {
@@ -73,6 +73,7 @@
     "question": "우체국이 어디에 있습니까 ?",
     "options": ["공원 옆","경찰서 옆","경찰서 건너편","편의점 건너편"],
     "answer": 0,
+    "image": "https://airnetcso.github.io/eps/image/9.jpg",
     "audio": "https://airnetcso.github.io/eps/audio/9.mp3"
   },
   {
@@ -306,6 +307,7 @@
     "answer": 2
   }
 ]
+
 
 
 
