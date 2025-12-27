@@ -81,7 +81,7 @@ function loadQuestionPage(){
   }
 
   /* Audio LISTENING – play 1x saja */
-  if(q.audio){
+ if(q.audio){
   const aud = document.createElement("audio");
   aud.src = q.audio;
   aud.controls = true;
@@ -91,28 +91,25 @@ function loadQuestionPage(){
   const MAX_PLAY = 2;
 
   aud.addEventListener("play", () => {
-    if(playCount >= MAX_PLAY){
+    playCount++;
+
+    // kalau sudah lebih dari batas, paksa stop
+    if(playCount > MAX_PLAY){
       aud.pause();
       aud.currentTime = 0;
     }
   });
 
   aud.addEventListener("ended", () => {
-    playCount++;
-
+    // setelah play ke-2 selesai → disable
     if(playCount >= MAX_PLAY){
-      aud.controls = false;       // hilangkan tombol play
-      aud.style.opacity = "0.6";  // visual disable
+      aud.controls = false;
+      aud.style.opacity = "0.6";
     }
   });
 
   qArea.appendChild(aud);
 }
-
-    });
-
-    qArea.appendChild(audio);
-  }
 
   /* Options */
   q.options.forEach((opt,i)=>{
