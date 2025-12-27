@@ -82,21 +82,33 @@ function loadQuestionPage(){
 
   /* Audio LISTENING – play 1x saja */
   if(q.audio){
-    const audio = document.createElement("audio");
-    audio.src = q.audio;
-    audio.controls = true;
-    audio.preload = "auto";
+  const aud = document.createElement("audio");
+  aud.src = q.audio;
+  aud.controls = true;
+  aud.preload = "auto";
 
-    audio.addEventListener("ended", ()=>{
-      audio.controls = false; // tombol play hilang setelah selesai
-    });
+  let playCount = 0;
+  const MAX_PLAY = 2;
 
-    audio.addEventListener("play", ()=>{
-      if(audio.dataset.played){
-        audio.pause();
-        audio.currentTime = 0;
-      }
-      audio.dataset.played = "true";
+  aud.addEventListener("play", () => {
+    if(playCount >= MAX_PLAY){
+      aud.pause();
+      aud.currentTime = 0;
+    }
+  });
+
+  aud.addEventListener("ended", () => {
+    playCount++;
+
+    if(playCount >= MAX_PLAY){
+      aud.controls = false;       // hilangkan tombol play
+      aud.style.opacity = "0.6";  // visual disable
+    }
+  });
+
+  qArea.appendChild(aud);
+}
+
     });
 
     qArea.appendChild(audio);
