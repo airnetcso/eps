@@ -1,4 +1,4 @@
-let questions=[], answered=JSON.parse(localStorage.getItem("answered")||"{}"), currentIndex=0;
+alet questions=[], answered=JSON.parse(localStorage.getItem("answered")||"{}"), currentIndex=0;
 
 async function loadSoal(){
   try{
@@ -31,7 +31,28 @@ function loadQuestionPage(){
   if(!qArea||!ansDiv) return; qArea.innerHTML=""; ansDiv.innerHTML="";
   const h=document.createElement("h3"); h.textContent=q.id+". "+q.question; qArea.appendChild(h);
   if(q.image){const img=document.createElement("img"); img.src=q.image; img.style.maxWidth="100%"; qArea.appendChild(img);}
-  if(q.audio){const aud=document.createElement("audio"); aud.controls=true; aud.src=q.audio; qArea.appendChild(aud);}
+  if(q.audio){
+  const aud = document.createElement("audio");
+  aud.controls = true;
+  aud.src = q.audio;
+
+  let played = false;
+
+  aud.addEventListener("play", () => {
+    if (played) {
+      aud.pause();
+      aud.currentTime = 0;
+    }
+  });
+
+  aud.addEventListener("ended", () => {
+    played = true;
+    aud.controls = false; // hapus tombol play bawaan
+  });
+
+  qArea.appendChild(aud);
+}
+
   q.options.forEach((opt,i)=>{
     const btn=document.createElement("button"); btn.textContent=i+1;
     if(answered[q.id]==i) btn.classList.add("selected");
