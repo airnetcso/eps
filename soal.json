@@ -2,32 +2,32 @@
   {
     "id": 1,
     "type": "listening",
-    "question": "안내",
-    "options": ["Option A","Option B","Option C","Option D"],
+    "question": "들은 것을 고르십시오",
+    "options": ["이내","언니","안내","안경"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/1.mp3"
   },
   {
     "id": 2,
     "type": "listening",
-    "question": "잡니다",
-    "options": ["Option A","Option B","Option C","Option D"],
+    "question": "들은 것을 고르십시오",
+    "options": ["삽니다","탑니다","갑니다","잡니다"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/2.mp3"
   },
   {
     "id": 3,
     "type": "listening",
-    "question": "발이 추웠어요",
-    "options": ["Option A","Option B","Option C","Option D"],
+    "question": "들은 것을 고르십시오",
+    "options": ["발에 추웠어요","발이 추웠어요","발에 다쳤어요","발이 다쳤어요"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/3.mp3"
   },
   {
     "id": 4,
     "type": "listening",
-    "question": "지우개가 두꺼워요",
-    "options": ["Option A","Option B","Option C","Option D"],
+    "question": "들은 것을 고르십시오",
+    "options": ["가게가 가까워요","찌개가 뜨거워요","친구가 뛰어가요","지우개가 두꺼워요"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/4.mp3"
   },
@@ -300,4 +300,5 @@
     "answer": 2
   }
 ]
+
 
