@@ -34,7 +34,7 @@
   {
     "id": 5,
     "type": "listening",
-    "question": "이것은 무엇입니다.",
+    "question": "이것은 무엇입니까 ?",
     "options": ["동전입니다","지폐입니다","상품권입니다","영수증입니다"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/5.mp3"
@@ -50,7 +50,7 @@
   {
     "id": 7,
     "type": "listening",
-    "question": "이 사람은 무엇으로 여행을 하려고 합니까 ?",
+    "question": "이 사람은 무엇으로 여행을 하려고 합니까?",
     "options": ["배로 여행","기차로 여행","자전거로 여행","비행기로 여행"],
     "answer": 1,
     "audio": "https://airnetcso.github.io/eps/audio/7.mp3"
@@ -75,7 +75,7 @@
     "id": 10,
     "type": "listening",
     "question": "곧 설날인데 연휴 때 뭐 할 거예요 ?",
-    "options": ["Option A","Option B","Option C","Option D"],
+    "options": ["떡국 만드는 법을 배웠어요.","고향에 가서 가족을 만났어요.","고향 친구들을 만나려고 해요.","추석이니까 고향에 가려고 해요."],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/10.mp3"
   },
@@ -83,15 +83,15 @@
     "id": 11,
     "type": "listening",
     "question": "모니카 씨는 와 병원에 간 거예요 ?",
-    "options": ["Option A","Option B","Option C","Option D"],
+    "options": ["공장에 가다가 갑자기 쓰러졌어요.","뜨거운 물은 옮길 때 조심해요.","소독약을 발랐으니까 괜챃을 거예요.","화상을 입을 할수 있어니까 조심하세요."],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/11.mp3"
   },
   {
     "id": 12,
     "type": "listening",
-    "question": "반장님이 집들이에 초대를 하셔서 가🅓 하는데 찾아갈 수 있을지 모르겠어요.",
-    "options": ["Option A","Option B","Option C","Option D"],
+    "question": "반장님이 집들이에 초대를 하셔서 가 하는데 찾아갈 수 있을지 모르겠어요.",
+    "options": ["늦지 않으려면 미리 서둘러겠어요.","저는 집들이 선물을 미리 준비했어요.","집이 커서 많은 사람들이 초대를 받았어요.","근처에 가서 전화를 하면 데리러 나오실 거예요."],    
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/12.mp3"
   },
@@ -300,5 +300,6 @@
     "answer": 2
   }
 ]
+
 
 
