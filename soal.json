@@ -122,11 +122,11 @@
   {
     "id": 16,
     "type": "listening",
-    "question": "은행이 어디에 있어요 ?",
-    "options": ["a","b","c","d"],
-    "answer": 0,
-    "audio": "https://airnetcso.github.io/eps/audio/16.mp3"
-  },
+    "question": "이것은 무엇입니까?",
+    "options": ["자동차", "자전거", "버스", "기차"],
+    "answer": 1,
+    "image": "https://airnetcso.github.io/eps/image/1.jpg",
+    "audio": "https://airnetcso.github.io/eps/audio/l16.mp3"
   {
     "id": 17,
     "type": "listening",
@@ -300,6 +300,7 @@
     "answer": 2
   }
 ]
+
 
 
 
