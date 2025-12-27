@@ -46,7 +46,7 @@
     "question": "여기는 어떤 곳입니까 ?",
     "options": ["담배를 피우는 곳입니다","안내를 해 주는 곳입니다","돈을 바꿔 주는 곳입니다","비행기 표를 파는 곳입니다"],
     "answer": 1,
-    "image": "https://airnetcso.github.io/eps/image/6.jpg",
+    "image": "https://airnetcso.github.io/eps/image/6.png",
     "audio": "https://airnetcso.github.io/eps/audio/6.mp3"
   },
   {
@@ -55,7 +55,7 @@
     "question": "이 사람은 무엇으로 여행을 하려고 합니까?",
     "options": ["배로 여행","기차로 여행","자전거로 여행","비행기로 여행"],
     "answer": 1,
-    "image": "https://airnetcso.github.io/eps/image/7.jpg",
+    "image": "https://airnetcso.github.io/eps/image/7.png",
     "audio": "https://airnetcso.github.io/eps/audio/7.mp3"
   },
   {
@@ -73,7 +73,7 @@
     "question": "우체국이 어디에 있습니까 ?",
     "options": ["공원 옆","경찰서 옆","경찰서 건너편","편의점 건너편"],
     "answer": 0,
-    "image": "https://airnetcso.github.io/eps/image/9.jpg",
+    "image": "https://airnetcso.github.io/eps/image/9.png",
     "audio": "https://airnetcso.github.io/eps/audio/9.mp3"
   },
   {
@@ -307,6 +307,7 @@
     "answer": 2
   }
 ]
+
 
 
 
