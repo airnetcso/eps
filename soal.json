@@ -205,6 +205,7 @@
     "id": 26,
     "type": "reading",
     "question": "다음 안내문의 설명으로 맞는 것은 무엇입니까?",
+    "image": "https://airnetcso.github.io/eps/image/26.jpg",
     "options": ["주간 근무를 해야 합니다.","주말에도 일을 해야 합니다.","이력서는 이메일로 보냅니다.","연장 근무도 해야 합니다."],
     "answer": 3
   },
@@ -307,6 +308,7 @@
     "answer": 2
   }
 ]
+
 
 
 
