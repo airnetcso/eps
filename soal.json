@@ -159,149 +159,150 @@
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/20.mp3"
   },
-  
-  [
   {
     "id": 21,
     "type": "reading",
-    "question": "빈칸에 들어갈 가장 알맞은 것을 고르십시오.",
-    "options": ["난로","에어컨","환풍기","보일러"],
-    "answer": 0
+    "question": "안녕하세요. 이것은 무엇입니까?",
+    "options": ["책","연필","가방","컴퓨터"],
+    "answer": 0,
+    "image": "https://airnetcso.github.io/eps/image/1.jpg"
   },
   {
     "id": 22,
     "type": "reading",
-    "question": "빈칸에 들어갈 가장 알맞은 것을 고르십시오.",
-    "options": ["교환","예금","환불","환전"],
-    "answer": 3
+    "question": "오늘 날씨가 어때요?",
+    "options": ["맑아요","비와요","눈와요","흐려요"],
+    "answer": 0,
+    "image": "https://airnetcso.github.io/eps/image/2.jpg"
   },
   {
     "id": 23,
     "type": "reading",
-    "question": "빈칸에 들어갈 가장 알맞은 것을 고르십시오.",
-    "options": ["제발","엄청","확실히","설마"],
-    "answer": 2
+    "question": "다음 중 올바른 문장을 고르세요.",
+    "options": ["저는 학생이에요","저는 선생님이에요","저는 의사이에요","저는 가수이에요"],
+    "answer": 0
   },
   {
     "id": 24,
     "type": "reading",
-    "question": "빈칸에 들어갈 가장 알맞은 것을 고르십시오.",
-    "options": ["포장해 줍니다.","수거해 갑니다.","배달해 줍니다.","팔아 줍니다."],
-    "answer": 2
+    "question": "이 그림을 보고 알맞은 것을 선택하세요.",
+    "options": ["사과","바나나","포도","배"],
+    "answer": 0,
+    "image": "https://airnetcso.github.io/eps/image/3.jpg"
   },
   {
     "id": 25,
     "type": "reading",
-    "question": "다음 질문에 답하십시오. 이 표지는 무슨 뜻입니까 ?",
-    "options": ["독성 위험","폭발 위험","감전 위험","저온 위험"],
-    "answer": 0
+    "question": "다음 문장을 읽고 질문에 답하세요.",
+    "options": ["학교","집","시장","병원"],
+    "answer": 1
   },
   {
     "id": 26,
     "type": "reading",
-    "question": "다음 안내문의 설명으로 맞는 것은 무엇입니까?",
-    "options": ["주간 근무를 해야 합니다.","주말에도 일을 해야 합니다.","이력서는 이메일로 보냅니다.","연장 근무도 해야 합니다."],
-    "answer": 3
+    "question": "아래 사진을 보고 올바른 색을 고르세요.",
+    "options": ["빨강","파랑","노랑","초록"],
+    "answer": 2,
+    "image": "https://airnetcso.github.io/eps/image/4.jpg"
   },
   {
     "id": 27,
     "type": "reading",
-    "question": "다음 그래프에 맞는 것은 고르십시오.",
-    "options": ["인건비를 줄이기 위해서 쓰는 비율이 1위로 많다.","국내 근로자를 얻기 못해서 쓰는 비율이 반 이상입니다.","지시를 잘 따르다는 의미로 쓰는 비율이 제일 적다.","긴 시간 일 시킬 수 있어서 쓰는 비율이 제일 많다."],
-    "answer": 0
+    "question": "이 사람은 무엇을 하고 있습니까?",
+    "options": ["걷고 있다","달리고 있다","춤추고 있다","공부하고 있다"],
+    "answer": 3
   },
   {
     "id": 28,
     "type": "reading",
-    "question": "이 사람의 지위는 무엇입니까 ?",
-    "options": ["박성현입니다.","공장장입니다.","태성입니다.","전문가입니다."],
-    "answer": 1
+    "question": "다음 문장에서 올바른 것을 고르세요.",
+    "options": ["축구","야구","농구","배구"],
+    "answer": 0
   },
   {
     "id": 29,
     "type": "reading",
-    "question": "빈칸에 들어갈 가장 알맞은 것을 고르십시오.",
-    "options": ["떨어질","끼일","부딪힐","감길"],
-    "answer": 2
+    "question": "이 그림을 보고 어떤 음식을 고르겠습니까?",
+    "options": ["김치","비빔밥","라면","떡볶이"],
+    "answer": 1,
+    "image": "https://airnetcso.github.io/eps/image/5.jpg"
   },
   {
     "id": 30,
     "type": "reading",
-    "question": "빈칸에 들어갈 가장 알맞은 것을 고르십시오.",
-    "options": ["가러","가면","가지만","가도록"],
-    "answer": 3
+    "question": "다음 문장을 읽고 질문에 답하세요.",
+    "options": ["아침","점심","저녁","간식"],
+    "answer": 1
   },
   {
     "id": 31,
     "type": "reading",
-    "question": "다음 설명에 알맞은 어휘를 고르십시오.",
-    "options": ["폐업","휴업","영업","개업"],
-    "answer": 2
+    "question": "오늘 몇 시에 학교에 갔어요?",
+    "options": ["7시","8시","9시","10시"],
+    "answer": 1
   },
   {
     "id": 32,
     "type": "reading",
-    "question": "다음 설명에 알맞은 어휘를 고르십시오.",
-    "options": ["회식","제사","생일 잔치","집들이"],
-    "answer": 0
+    "question": "아래 사진 속 사물을 선택하세요.",
+    "options": ["자동차","자전거","버스","기차"],
+    "answer": 0,
+    "image": "https://airnetcso.github.io/eps/image/6.jpg"
   },
   {
     "id": 33,
     "type": "reading",
-    "question": "다음 글을 읽고 내용과 같은 것을 고르십시오.",
-    "options": ["기본 시급과 연장 시급은 비슷합니다.","휴일 시급은 기본 시급보다 적습니다.","열 시 넘게 일하면 시급 수당이 제일 많습니다.","총 여덟 시간은 시급이 제일 많습니다."],
-    "answer": 0
+    "question": "이 사람의 직업은 무엇입니까?",
+    "options": ["선생님","학생","요리사","의사"],
+    "answer": 2
   },
   {
     "id": 34,
     "type": "reading",
-    "question": "다음 글을 읽고 내용과 같은 것을 고르십시오.",
-    "options": ["현금으로만 탈 수 있어서 힘듭니다.","아침 일찍과 밤 늦게까지 탈 수 있습니다.","호선 색깔은 비슷해서 환승하기가 힘듭니다.","다른 교통보다 요금이 비쌉니다."],
-    "answer": 1
+    "question": "다음 중 올바른 인사말은?",
+    "options": ["안녕히 주무세요","감사합니다","미안합니다","좋은 아침"],
+    "answer": 3
   },
   {
     "id": 35,
     "type": "reading",
-    "question": "다음 글을 읽고 무엇에 대한 글인지 고르십시오.",
-    "options": ["수습 기간","계약 기간","근무 시간","근로 조건"],
-    "answer": 3
+    "question": "마지막 읽기 문제입니다. 이야기를 읽고 질문에 답하세요.",
+    "options": ["집에 갔다","학교에 갔다","시장에 갔다","공원에 갔다"],
+    "answer": 1
   },
   {
     "id": 36,
     "type": "reading",
-    "question": "다음 글을 읽고 무엇에 대한 글인지 고르십시오.",
-    "options": ["백일","돌","제사","폐백"],
+    "question": "조금 긴 문제 예시입니다. 학생은 무엇을 해야 합니까?",
+    "options": ["공부","운동","청소","노래"],
     "answer": 0
   },
   {
     "id": 37,
     "type": "reading",
-    "question": "다음 질문에 답하십시오. 다음 단어와 관계있는 것은 무엇입니까?",
-    "options": ["축제","교통","여행","회식"],
+    "question": "아래 글을 읽고 질문에 맞는 답을 고르세요.",
+    "options": ["학교","집","시장","병원"],
     "answer": 1
   },
   {
     "id": 38,
     "type": "reading",
-    "question": "다음 질문에 답하십시오. 다음 단어의 반대되는 어휘를 고르십시오.",
-    "options": ["건조하다","말리다","젖다","맞다"],
-    "answer": 2
+    "question": "조금 긴 문제 예시입니다. 학생은 어디로 갑니까?",
+    "options": ["학교","집","시장","공원"],
+    "answer": 0
   },
   {
     "id": 39,
     "type": "reading",
-    "question": "다음 그림을 보고 맞는 단어나 문장을 고르십시오.",
-    "options": ["전기밥솥","도마","뚝배기","프라이팬"],
-    "answer": 0
+    "question": "마지막 길 문제입니다. 글을 읽고 질문에 답하세요.",
+    "options": ["아침","점심","저녁","간식"],
+    "answer": 2
   },
   {
     "id": 40,
     "type": "reading",
-    "question": "다음 그림을 보고 맞는 단어나 문장을 고르십시오.",
-    "options": ["박수를 치고 있습니다.","악수를 하고 있습니다.","인사를 하고 있습니다.","고개를 숙이고 있습니다."],
-    "answer": 2
+    "question": "길게 읽기 문제입니다. 학생은 무엇을 배웠습니까?",
+    "options": ["수학","한국어","과학","음악"],
+    "answer": 1
   }
 ]
-
-]
-
