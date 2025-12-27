@@ -3,309 +3,309 @@
     "id": 1,
     "type": "listening",
     "question": "안녕하세요. 이 사람은 누구입니까?",
-    "options": ["학생", "선생님", "의사", "가수"],
+    "options": ["학생", "선생님", "회사원", "의사"],
     "answer": 0,
-    "audio": "dummy.mp3"
+    "audio": "https://airnetcso.github.io/eps/audio/l01.mp3"
   },
   {
     "id": 2,
     "type": "listening",
-    "question": "오늘 날씨가 어때요?",
-    "options": ["맑아요", "비와요", "눈와요", "흐려요"],
-    "answer": 0,
-    "audio": "dummy.mp3"
+    "question": "여기는 어디입니까?",
+    "options": ["학교", "병원", "시장", "회사"],
+    "answer": 1,
+    "audio": "https://airnetcso.github.io/eps/audio/l02.mp3"
   },
   {
     "id": 3,
     "type": "listening",
-    "question": "이것은 무엇입니까?",
-    "options": ["사과", "바나나", "포도", "배"],
-    "answer": 0,
-    "audio": "dummy.mp3"
+    "question": "이 사람은 무엇을 하고 있습니까?",
+    "options": ["공부하고 있습니다", "일하고 있습니다", "쉬고 있습니다", "운동하고 있습니다"],
+    "answer": 1,
+    "audio": "https://airnetcso.github.io/eps/audio/l03.mp3"
   },
   {
     "id": 4,
     "type": "listening",
-    "question": "다음 중 가족 구성원이 아닌 것은?",
-    "options": ["어머니", "형제", "친구", "아버지"],
-    "answer": 2,
-    "audio": "dummy.mp3"
+    "question": "오늘 날씨는 어떻습니까?",
+    "options": ["맑습니다", "비가 옵니다", "눈이 옵니다", "덥습니다"],
+    "answer": 0,
+    "audio": "https://airnetcso.github.io/eps/audio/l04.mp3"
   },
   {
     "id": 5,
     "type": "listening",
-    "question": "어제 무엇을 했어요?",
-    "options": ["공부했어요", "청소했어요", "노래했어요", "요리했어요"],
-    "answer": 0,
-    "audio": "dummy.mp3"
+    "question": "지금 몇 시입니까?",
+    "options": ["7시", "8시", "9시", "10시"],
+    "answer": 2,
+    "audio": "https://airnetcso.github.io/eps/audio/l05.mp3"
   },
   {
     "id": 6,
     "type": "listening",
-    "question": "이 그림을 보고 무엇을 선택해야 합니까?",
-    "options": ["책", "연필", "가방", "컴퓨터"],
-    "answer": 3,
-    "image": "dummy.jpg",
-    "audio": "dummy.mp3"
+    "question": "이 사진을 보고 맞는 것을 고르세요.",
+    "options": ["버스", "지하철", "택시", "기차"],
+    "answer": 0,
+    "image": "https://airnetcso.github.io/eps/image/img_bus.jpg",
+    "audio": "https://airnetcso.github.io/eps/audio/l06.mp3"
   },
   {
     "id": 7,
     "type": "listening",
-    "question": "다음 문장에서 올바른 표현을 고르세요.",
-    "options": ["학교에 가요", "집에 가요", "시장에 가요", "공원에 가요"],
+    "question": "이것은 무엇입니까?",
+    "options": ["책", "가방", "신발", "의자"],
     "answer": 1,
-    "audio": "dummy.mp3"
+    "audio": "https://airnetcso.github.io/eps/audio/l07.mp3"
   },
   {
     "id": 8,
     "type": "listening",
-    "question": "아래 사진을 보고 어떤 음식을 고르겠습니까?",
-    "options": ["김치", "비빔밥", "라면", "떡볶이"],
-    "answer": 1,
-    "image": "dummy.jpg",
-    "audio": "dummy.mp3"
+    "question": "이 사람은 어디에 갑니까?",
+    "options": ["집", "회사", "학교", "시장"],
+    "answer": 2,
+    "audio": "https://airnetcso.github.io/eps/audio/l08.mp3"
   },
   {
     "id": 9,
     "type": "listening",
-    "question": "이 사람은 무엇을 하고 있습니까?",
-    "options": ["걷고 있다", "달리고 있다", "춤추고 있다", "공부하고 있다"],
-    "answer": 3,
-    "audio": "dummy.mp3"
+    "question": "사진을 보고 알맞은 음식을 고르세요.",
+    "options": ["김치", "비빔밥", "라면", "불고기"],
+    "answer": 1,
+    "image": "https://airnetcso.github.io/eps/image/img_food.jpg",
+    "audio": "https://airnetcso.github.io/eps/audio/l09.mp3"
   },
   {
     "id": 10,
     "type": "listening",
-    "question": "다음 문장을 듣고 질문에 답하세요.",
-    "options": ["집", "학교", "시장", "병원"],
-    "answer": 1,
-    "audio": "dummy.mp3"
+    "question": "이 사람의 직업은 무엇입니까?",
+    "options": ["요리사", "기사", "회사원", "간호사"],
+    "answer": 2,
+    "audio": "https://airnetcso.github.io/eps/audio/l10.mp3"
   },
   {
     "id": 11,
     "type": "listening",
-    "question": "오늘 아침에 무엇을 먹었어요?",
-    "options": ["밥", "빵", "국수", "과일"],
+    "question": "오늘 무엇을 했습니까?",
+    "options": ["일했습니다", "공부했습니다", "운동했습니다", "여행했습니다"],
     "answer": 0,
-    "audio": "dummy.mp3"
+    "audio": "https://airnetcso.github.io/eps/audio/l11.mp3"
   },
   {
     "id": 12,
     "type": "listening",
-    "question": "이 그림을 보고 알맞은 색을 선택하세요.",
-    "options": ["빨강", "파랑", "노랑", "초록"],
-    "answer": 2,
-    "image": "dummy.jpg",
-    "audio": "dummy.mp3"
+    "question": "사진을 보고 맞는 장소를 고르세요.",
+    "options": ["병원", "학교", "회사", "식당"],
+    "answer": 3,
+    "image": "https://airnetcso.github.io/eps/image/img_restaurant.jpg",
+    "audio": "https://airnetcso.github.io/eps/audio/l12.mp3"
   },
   {
     "id": 13,
     "type": "listening",
-    "question": "이 사람의 직업은 무엇입니까?",
-    "options": ["선생님", "학생", "요리사", "의사"],
-    "answer": 2,
-    "audio": "dummy.mp3"
+    "question": "이 사람은 언제 옵니까?",
+    "options": ["오늘", "내일", "어제", "주말"],
+    "answer": 1,
+    "audio": "https://airnetcso.github.io/eps/audio/l13.mp3"
   },
   {
     "id": 14,
     "type": "listening",
-    "question": "오늘 몇 시에 학교에 갔어요?",
-    "options": ["7시", "8시", "9시", "10시"],
+    "question": "무엇을 마십니까?",
+    "options": ["물", "커피", "주스", "우유"],
     "answer": 1,
-    "audio": "dummy.mp3"
+    "audio": "https://airnetcso.github.io/eps/audio/l14.mp3"
   },
   {
     "id": 15,
     "type": "listening",
-    "question": "다음 문장을 듣고 올바른 것을 고르세요.",
-    "options": ["축구", "야구", "농구", "배구"],
+    "question": "이 사람은 왜 병원에 갑니까?",
+    "options": ["검사하려고", "일하려고", "공부하려고", "만나려고"],
     "answer": 0,
-    "audio": "dummy.mp3"
+    "audio": "https://airnetcso.github.io/eps/audio/l15.mp3"
   },
+
   {
     "id": 16,
     "type": "listening",
-    "question": "아래 사진 속 사물을 선택하세요.",
-    "options": ["자동차", "자전거", "버스", "기차"],
-    "answer": 0,
-    "image": "dummy.jpg",
-    "audio": "dummy.mp3"
+    "question": "다음을 듣고 알맞은 것을 고르세요.",
+    "options": ["아침에 출근했다", "점심을 먹었다", "저녁에 운동했다", "집에서 쉬었다"],
+    "answer": 1,
+    "audio": "https://airnetcso.github.io/eps/audio/l16.mp3"
   },
   {
     "id": 17,
     "type": "listening",
-    "question": "어떤 계절입니까?",
-    "options": ["봄", "여름", "가을", "겨울"],
-    "answer": 2,
-    "audio": "dummy.mp3"
+    "question": "이야기를 듣고 맞는 답을 고르세요.",
+    "options": ["버스를 탔다", "지하철을 탔다", "걸어갔다", "택시를 탔다"],
+    "answer": 1,
+    "audio": "https://airnetcso.github.io/eps/audio/l17.mp3"
   },
   {
     "id": 18,
     "type": "listening",
-    "question": "이 문장을 듣고 질문에 답하세요.",
-    "options": ["책상", "의자", "문", "창문"],
+    "question": "다음은 회사 생활에 대한 이야기입니다. 이 사람은 무엇을 먼저 합니까?",
+    "options": ["회의를 한다", "일을 시작한다", "점심을 먹는다", "전화를 한다"],
     "answer": 0,
-    "audio": "dummy.mp3"
+    "audio": "https://airnetcso.github.io/eps/audio/l18_long.mp3"
   },
   {
     "id": 19,
     "type": "listening",
-    "question": "다음 중 올바른 인사말은?",
-    "options": ["안녕히 주무세요", "감사합니다", "미안합니다", "좋은 아침"],
-    "answer": 3,
-    "audio": "dummy.mp3"
+    "question": "다음 대화를 듣고 맞는 것을 고르세요. 두 사람은 무엇을 약속합니까?",
+    "options": ["식사", "운동", "여행", "공부"],
+    "answer": 0,
+    "audio": "https://airnetcso.github.io/eps/audio/l19_long.mp3"
   },
   {
     "id": 20,
     "type": "listening",
-    "question": "마지막 듣기 문제입니다. 이야기를 듣고 질문에 답하세요.",
-    "options": ["집에 갔다", "학교에 갔다", "시장에 갔다", "공원에 갔다"],
-    "answer": 1,
-    "audio": "dummy.mp3"
+    "question": "다음 설명을 듣고 이 사람의 하루 일과로 맞는 것을 고르세요.",
+    "options": ["아침 운동 후 출근", "아침 식사 후 공부", "저녁에 일함", "하루 종일 휴식"],
+    "answer": 0,
+    "audio": "https://airnetcso.github.io/eps/audio/l20_long.mp3"
   },
 
   {
     "id": 21,
     "type": "reading",
-    "question": "안녕하세요. 이것은 무엇입니까?",
-    "options": ["책", "연필", "가방", "컴퓨터"],
-    "answer": 0
+    "question": "이 사람은 학생입니다. 어디에 갑니까?",
+    "options": ["회사", "학교", "병원", "시장"],
+    "answer": 1
   },
   {
     "id": 22,
     "type": "reading",
-    "question": "오늘 날씨가 어때요?",
-    "options": ["맑아요", "비와요", "눈와요", "흐려요"],
-    "answer": 0
+    "question": "오늘은 날씨가 좋습니다. 사람들은 무엇을 합니까?",
+    "options": ["집에 있다", "운동을 한다", "일을 한다", "공부한다"],
+    "answer": 1
   },
   {
     "id": 23,
     "type": "reading",
-    "question": "다음 중 올바른 문장을 고르세요.",
-    "options": ["저는 학생이에요", "저는 선생님이에요", "저는 의사이에요", "저는 가수이에요"],
-    "answer": 0
+    "question": "다음 중 직업이 아닌 것은?",
+    "options": ["의사", "회사원", "학생", "버스"],
+    "answer": 3
   },
   {
     "id": 24,
     "type": "reading",
-    "question": "이 그림을 보고 알맞은 것을 선택하세요.",
-    "options": ["사과", "바나나", "포도", "배"],
+    "question": "사진을 보고 맞는 것을 고르세요.",
+    "options": ["가방", "책", "신발", "모자"],
     "answer": 0,
-    "image": "dummy.jpg"
+    "image": "https://airnetcso.github.io/eps/image/img_bag.jpg"
   },
   {
     "id": 25,
     "type": "reading",
-    "question": "다음 문장을 읽고 질문에 답하세요.",
-    "options": ["학교", "집", "시장", "병원"],
-    "answer": 1
+    "question": "이 사람은 아침에 무엇을 합니까?",
+    "options": ["운동", "공부", "출근", "휴식"],
+    "answer": 2
   },
   {
     "id": 26,
     "type": "reading",
-    "question": "아래 사진을 보고 올바른 색을 고르세요.",
-    "options": ["빨강", "파랑", "노랑", "초록"],
+    "question": "사진 속 장소는 어디입니까?",
+    "options": ["회사", "병원", "식당", "학교"],
     "answer": 2,
-    "image": "dummy.jpg"
+    "image": "https://airnetcso.github.io/eps/image/img_restaurant.jpg"
   },
   {
     "id": 27,
     "type": "reading",
-    "question": "이 사람은 무엇을 하고 있습니까?",
-    "options": ["걷고 있다", "달리고 있다", "춤추고 있다", "공부하고 있다"],
+    "question": "다음 중 음식이 아닌 것은?",
+    "options": ["김치", "라면", "불고기", "연필"],
     "answer": 3
   },
   {
     "id": 28,
     "type": "reading",
-    "question": "다음 문장에서 올바른 것을 고르세요.",
-    "options": ["축구", "야구", "농구", "배구"],
-    "answer": 0
+    "question": "이 사람은 언제 쉽니까?",
+    "options": ["아침", "점심", "저녁", "주말"],
+    "answer": 3
   },
   {
     "id": 29,
     "type": "reading",
-    "question": "이 그림을 보고 어떤 음식을 고르겠습니까?",
-    "options": ["김치", "비빔밥", "라면", "떡볶이"],
-    "answer": 1,
-    "image": "dummy.jpg"
+    "question": "사진을 보고 맞는 교통수단을 고르세요.",
+    "options": ["버스", "비행기", "배", "자전거"],
+    "answer": 0,
+    "image": "https://airnetcso.github.io/eps/image/img_bus.jpg"
   },
   {
     "id": 30,
     "type": "reading",
-    "question": "다음 문장을 읽고 질문에 답하세요.",
-    "options": ["아침", "점심", "저녁", "간식"],
+    "question": "이 사람은 왜 한국어를 공부합니까?",
+    "options": ["여행하려고", "일하려고", "친구 만나려고", "취미로"],
     "answer": 1
   },
+
   {
     "id": 31,
     "type": "reading",
-    "question": "오늘 몇 시에 학교에 갔어요?",
-    "options": ["7시", "8시", "9시", "10시"],
+    "question": "회사에서 중요한 것은 무엇입니까?",
+    "options": ["시간", "약속", "휴식", "여행"],
     "answer": 1
   },
   {
     "id": 32,
     "type": "reading",
-    "question": "아래 사진 속 사물을 선택하세요.",
-    "options": ["자동차", "자전거", "버스", "기차"],
-    "answer": 0,
-    "image": "dummy.jpg"
+    "question": "이 사람은 하루에 몇 시간 일합니까?",
+    "options": ["6시간", "7시간", "8시간", "9시간"],
+    "answer": 2
   },
   {
     "id": 33,
     "type": "reading",
-    "question": "이 사람의 직업은 무엇입니까?",
-    "options": ["선생님", "학생", "요리사", "의사"],
-    "answer": 2
+    "question": "다음 중 장소가 아닌 것은?",
+    "options": ["학교", "회사", "시장", "학생"],
+    "answer": 3
   },
   {
     "id": 34,
     "type": "reading",
-    "question": "다음 중 올바른 인사말은?",
-    "options": ["안녕히 주무세요", "감사합니다", "미안합니다", "좋은 아침"],
-    "answer": 3
+    "question": "이 사람은 무엇을 타고 출근합니까?",
+    "options": ["버스", "자전거", "지하철", "자동차"],
+    "answer": 2
   },
   {
     "id": 35,
     "type": "reading",
-    "question": "마지막 읽기 문제입니다. 이야기를 읽고 질문에 답하세요.",
-    "options": ["집에 갔다", "학교에 갔다", "시장에 갔다", "공원에 갔다"],
-    "answer": 1
+    "question": "이 사람은 점심에 무엇을 먹습니까?",
+    "options": ["김밥", "라면", "비빔밥", "불고기"],
+    "answer": 2
   },
   {
     "id": 36,
     "type": "reading",
-    "question": "조금 긴 문제 예시입니다. 학생은 무엇을 해야 합니까?",
-    "options": ["공부", "운동", "청소", "노래"],
-    "answer": 0
+    "question": "다음 글의 내용으로 맞는 것은?",
+    "options": ["아침에 운동한다", "회사에서 일한다", "집에서 쉰다", "학교에 간다"],
+    "answer": 1
   },
   {
     "id": 37,
     "type": "reading",
-    "question": "아래 글을 읽고 질문에 맞는 답을 고르세요.",
-    "options": ["학교", "집", "시장", "병원"],
-    "answer": 1
+    "question": "이 사람은 언제 한국에 옵니까?",
+    "options": ["오늘", "내일", "다음 주", "어제"],
+    "answer": 2
   },
   {
     "id": 38,
     "type": "reading",
-    "question": "조금 긴 문제 예시입니다. 학생은 어디로 갑니까?",
-    "options": ["학교", "집", "시장", "공원"],
+    "question": "다음은 한 근로자의 하루입니다. 아침에 출근해서 저녁까지 일합니다. 이 사람의 생활로 맞는 것은?",
+    "options": ["규칙적이다", "불규칙하다", "일하지 않는다", "학생이다"],
     "answer": 0
   },
   {
     "id": 39,
     "type": "reading",
-    "question": "마지막 길 문제입니다. 글을 읽고 질문에 답하세요.",
-    "options": ["아침", "점심", "저녁", "간식"],
+    "question": "다음 글을 읽고 맞는 답을 고르세요. 이 사람은 한국에서 일을 하면서 한국어를 배우고 있습니다.",
+    "options": ["여행자이다", "학생이다", "근로자이다", "관광객이다"],
     "answer": 2
   },
   {
     "id": 40,
     "type": "reading",
-    "question": "길게 읽기 문제입니다. 학생은 무엇을 배웠습니까?",
-    "options": ["수학", "한국어", "과학", "음악"],
-    "answer": 1
+    "question": "다음은 회사 규칙에 대한 글입니다. 시간을 지키고 안전을 중요하게 생각합니다. 이 회사에서 중요한 것은 무엇입니까?",
+    "options": ["휴식", "여행", "규칙", "취미"],
+    "answer": 2
   }
 ]
