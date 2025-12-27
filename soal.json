@@ -99,7 +99,7 @@
     "id": 13,
     "type": "listening",
     "question": "여기에서 시청 가는 버스 있어요 ?",
-    "options": ["Option A","Option B","Option C","Option D"],
+    "options": ["다음 정류장에서 내리세요.","건너편에서 460 번 버스를 타세요.","여기에서 시청까지 30 분 쯤 걸려요.","1 호선을 타고 가다가 시청에서 갈아타세요."],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/13.mp3"
   },
@@ -107,15 +107,15 @@
     "id": 14,
     "type": "listening",
     "question": "아딧 씨, 한국에서는 식사할 때 밥 그릇을 들고 먹으면 안 돼요. 남 : 아 그래요 ? 몰랐어요.",
-    "options": ["Option A","Option B","Option C","Option D"],
+    "options": ["식사를 요리하는 과정","정확이 식사하는 예절","식사를 고르는 기준","한식의 무늬와 소개"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/14.mp3"
   },
   {
     "id": 15,
     "type": "listening",
-    "question": "요즘 길 거리에 쓰레기통이 잘 안 보여. 빈 병 하나를 버리려고 해도 어디에 버려🅓 할지 모르겠어.",
-    "options": ["Option A","Option B","Option C","Option D"],
+    "question": "요즘 길 거리에 쓰레기통이 잘 안 보여. 빈 병 하나를 버리려고 해도 어디에 버려 할지 모르겠어.",
+    "options": ["거리에는 쓰레기통이 많이 필요하다.","쓰레기통에 음료수를 버리면 안 되다.","길에 쓰레기를 버리는 사람들이 많다.","쓰레기통이 없으면 거리가 더 깨끗하다."],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/15.mp3"
   },
@@ -300,6 +300,7 @@
     "answer": 2
   }
 ]
+
 
 
 
