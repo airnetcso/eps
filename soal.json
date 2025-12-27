@@ -123,10 +123,9 @@
     "id": 16,
     "type": "listening",
     "question": "은행이 어디에 있어요 ?",
-    "options": ["","","",""],
+    "options": ["a","b","c","d"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/16.mp3"
-    "image": "https://airnetcso.github.io/eps/image/1.jpg"
   },
   {
     "id": 17,
@@ -301,6 +300,7 @@
     "answer": 2
   }
 ]
+
 
 
 
