@@ -243,7 +243,7 @@
   {
     "id": 25,
     "type": "reading",
-    "question": "‘독성 위험’ 표지의 의미는?",
+    "question": "이 표지는 무슨 뜻입니까 ?",
     "image": "https://airnetcso.github.io/eps/image/25.jpg",
     "options": ["독성 위험", "폭발 위험", "감전 위험", "저온 위험"],
     "answer": 1
@@ -251,22 +251,17 @@
   {
     "id": 26,
     "type": "reading",
-    "question": "다음 그림을 보고 알맞은 설명을 고르십시오.",
+    "question": "다음 안내문의 설명으로 맞는 것은 무엇입니까 ?",
     "image": "https://airnetcso.github.io/eps/image/26.jpg",
-    "options": [
-      "공장에서 기계를 점검하고 있습니다.",
-      "식당에서 음식을 만들고 있습니다.",
-      "병원에서 환자를 돌보고 있습니다.",
-      "사무실에서 회의를 하고 있습니다."
-    ],
+    "options": ["주야간 근무를 해야 합니다.","주말에도 일을 해야 합니다.","이력서는 이메일로 보냅니다.","연장 근무도 해야 합니다."],
     "answer": 3
   },
   {
     "id": 27,
     "type": "reading",
-    "question": "이 장소로 알맞은 것은 무엇입니까?",
+    "question": "다음 그래프에 맞는 것은 고르십시오.",
     "image": "https://airnetcso.github.io/eps/image/27.jpg",
-    "options": ["은행", "병원", "우체국", "시장"],
+    "options": ["인건비를 줄이기 위해서 쓰는 비율이 1 위로 많다.","국내 근로자를 얻기 못해서 쓰는 비율이 반 이상입니다.","지시를 잘 따르다는 의미로 쓰는 비율이 제일 적다.","긴 시간 일 시킬 수 있어서 쓰는 비율이 제일 많다."],
     "answer": 3
   },
   {
@@ -274,13 +269,15 @@
     "type": "reading",
     "question": "이 사람의 지위는 무엇입니까?",
     "image": "https://airnetcso.github.io/eps/image/28.jpg",
-    "options": ["박성현", "공장장", "태성", "전문가"],
+    "options": ["박성현 입니다 ", "공장장 입니다", "태성 입니다", "전문가 입니다"],
     "answer": 1
   },
   {
     "id": 29,
     "type": "reading",
-    "question": "어렸을 때 차에 __________ 뻔한 적이 있어요.",
+    "question":
+    "가 : 교통사고를 당한 적이 있어요 ?",
+    "나 : 어렸을 때 차에 뻔한 적이 있어요.",
     "options": ["떨어질", "끼일", "부딪힐", "감길"],
     "answer": 2
   },
@@ -369,6 +366,7 @@
     "answer": 1
   }
 ]
+
 
 
 
