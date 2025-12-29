@@ -231,7 +231,7 @@
     "type": "reading",
     "question": "다른 사람이 쓴 물건을 사면 가격이 ( ) 쌉니다.",
     "options": ["제발", "엄청", "확실히", "설마"],
-    "answer": 2
+    "answer": 1
   },
   {
     "id": 24,
@@ -246,7 +246,7 @@
     "question": "‘독성 위험’ 표지의 의미는?",
     "image": "https://airnetcso.github.io/eps/image/25.jpg",
     "options": ["독성 위험", "폭발 위험", "감전 위험", "저온 위험"],
-    "answer": 0
+    "answer": 1
   },
   {
     "id": 26,
@@ -259,7 +259,7 @@
       "병원에서 환자를 돌보고 있습니다.",
       "사무실에서 회의를 하고 있습니다."
     ],
-    "answer": 0
+    "answer": 3
   },
   {
     "id": 27,
@@ -267,7 +267,7 @@
     "question": "이 장소로 알맞은 것은 무엇입니까?",
     "image": "https://airnetcso.github.io/eps/image/27.jpg",
     "options": ["은행", "병원", "우체국", "시장"],
-    "answer": 2
+    "answer": 3
   },
   {
     "id": 28,
@@ -310,7 +310,7 @@
     "type": "reading",
     "question": "열 시가 넘으면 시급은?",
     "options": ["기본 시급", "1.5배", "2배", "2.5배"],
-    "answer": 3
+    "answer": 2
   },
   {
     "id": 34,
@@ -353,7 +353,7 @@
     "question": "그림과 맞는 단어는?",
     "image": "https://airnetcso.github.io/eps/image/39.jpg",
     "options": ["전기밥솥", "도마", "뚝배기", "프라이팬"],
-    "answer": 3
+    "answer": 2
   },
   {
     "id": 40,
@@ -369,6 +369,7 @@
     "answer": 1
   }
 ]
+
 
 
 
