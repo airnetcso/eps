@@ -35,7 +35,7 @@
     "id": 5,
     "type": "listening",
     "question": "이 것은 무엇입니까?",
-    "image": "https://airnetcso.github.io/eps/image/8.jpg",
+    "image": "https://airnetcso.github.io/eps/image/5.jpg",
     "options": ["①", "②", "③", "④"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/5.mp3"
@@ -44,7 +44,7 @@
     "id": 6,
     "type": "listening",
     "question": "여기는 어떤 곳입니까?",
-    "image": "https://airnetcso.github.io/eps/image/8.jpg",
+    "image": "https://airnetcso.github.io/eps/image/6.jpg",
     "options": ["①", "②", "③", "④"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/6.mp3"
@@ -53,7 +53,7 @@
     "id": 7,
     "type": "listening",
     "question": "이 사람은 무엇으로 여행을 하려고 합니까?",
-    "image": "https://airnetcso.github.io/eps/image/8.jpg",
+    "image": "https://airnetcso.github.io/eps/image/7.jpg",
     "options": ["①", "②", "③", "④"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/7.mp3"
@@ -71,7 +71,7 @@
     "id": 9,
     "type": "listening",
     "question": "우체국이 어디에 있습니까?",
-    "image": "https://airnetcso.github.io/eps/image/29.jpg",
+    "image": "https://airnetcso.github.io/eps/image/9.jpg",
     "options": ["①", "②", "③", "④"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/9.mp3"
@@ -369,5 +369,6 @@
     "answer": 1
   }
 ]
+
 
 
