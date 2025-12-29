@@ -71,7 +71,7 @@
     "id": 9,
     "type": "listening",
     "question": "우체국이 어디에 있습니까?",
-    "image": "https://airnetcso.github.io/eps/image/9.jpg",
+    "image": "https://airnetcso.github.io/eps/image/9.png",
     "options": ["①", "②", "③", "④"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/9.mp3"
@@ -369,6 +369,7 @@
     "answer": 1
   }
 ]
+
 
 
 
