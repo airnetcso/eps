@@ -31,23 +31,7 @@ function loadQuestionPage(){
   if(!qArea||!ansDiv) return; qArea.innerHTML=""; ansDiv.innerHTML="";
   const h=document.createElement("h3"); h.textContent=q.id+". "+q.question; qArea.appendChild(h);
   if(q.image){const img=document.createElement("img"); img.src=q.image; img.style.maxWidth="100%"; qArea.appendChild(img);}
-  if(q.audio){
-  const aud = document.createElement("audio");
-  aud.src = q.audio;
-  aud.controls = true;  // tampilkan controls dulu biar bisa play
-
-  // Event: setelah audio selesai play sekali
-  aud.onended = function() {
-    aud.controls = false;  // hilangkan controls
-    aud.removeAttribute("src");  // hapus src biar nggak bisa play lagi
-    aud.load();  // reload elemen
-    // Optional: tambah teks info
-    const info = document.createElement("p");
-    info.textContent = "Audio sudah diputar (hanya 1 kali).";
-    info.style.color = "red";
-    info.style.fontWeight = "bold";
-    qArea.appendChild(info);
-  };
+  if(q.audio){const aud=document.createElement("audio"); aud.controls=true; aud.src=q.audio; qArea.appendChild(aud);}
 
   // Prevent replay kalau user coba klik lagi (meskipun controls hilang)
   aud.onclick = function(e) {
