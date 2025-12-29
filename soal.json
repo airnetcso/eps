@@ -12,7 +12,7 @@
     "type": "listening",
     "question": "들은 것을 고르십시오.",
     "options": ["삽니다", "탑니다", "갑니다", "잡니다"],
-    "answer": 2,
+    "answer": 3,
     "audio": "https://airnetcso.github.io/eps/audio/2.mp3"
   },
   {
@@ -28,7 +28,7 @@
     "type": "listening",
     "question": "들은 것을 고르십시오.",
     "options": ["가게가 가까워요", "찌개가 뜨거워요", "친구가 뛰어가요", "지우개가 두꺼워요"],
-    "answer": 1,
+    "answer": 3,
     "audio": "https://airnetcso.github.io/eps/audio/4.mp3"
   },
   {
@@ -36,8 +36,8 @@
     "type": "listening",
     "question": "이 것은 무엇입니까?",
     "image": "https://airnetcso.github.io/eps/image/5.jpg",
-    "options": ["1", "2", "3", "4"],
-    "answer": 0,
+    "options": ["", "", "", ""],
+    "answer": 2,
     "audio": "https://airnetcso.github.io/eps/audio/5.mp3"
   },
   {
@@ -55,7 +55,7 @@
     "question": "이 사람은 무엇으로 여행을 하려고 합니까?",
     "image": "https://airnetcso.github.io/eps/image/7.png",
     "options": ["①", "②", "③", "④"],
-    "answer": 0,
+    "answer": 3,
     "audio": "https://airnetcso.github.io/eps/audio/7.mp3"
   },
   {
@@ -64,7 +64,7 @@
     "question": "케이크와 카드는 모두 얼마입니까?",
     "image": "https://airnetcso.github.io/eps/image/8.jpg",
     "options": [".", ".", ".", "."],
-    "answer": 0,
+    "answer": 1,
     "audio": "https://airnetcso.github.io/eps/audio/8.mp3"
   },
   {
@@ -73,7 +73,7 @@
     "question": "우체국이 어디에 있습니까?",
     "image": "https://airnetcso.github.io/eps/image/9.png",
     "options": ["①", "②", "③", "④"],
-    "answer": 0,
+    "answer": 2,
     "audio": "https://airnetcso.github.io/eps/audio/9.mp3"
   },
   {
@@ -86,7 +86,7 @@
       "고향 친구들을 만나려고 해요.",
       "추석이니까 고향에 가려고 해요."
     ],
-    "answer": 3,
+    "answer": 2,
     "audio": "https://airnetcso.github.io/eps/audio/10.mp3"
   },
   {
@@ -99,7 +99,7 @@
       "소독약을 발랐으니까 괜찮을 거예요.",
       "화상을 입을 수 있으니까 조심하세요."
     ],
-    "answer": 1,
+    "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/11.mp3"
   },
   {
@@ -138,7 +138,7 @@
       "정확히 식사하는 예절",
       "한식의 종류와 소개"
     ],
-    "answer": 1,
+    "answer": 2,
     "audio": "https://airnetcso.github.io/eps/audio/14.mp3"
   },
   {
@@ -151,7 +151,7 @@
       "길에 쓰레기를 버리는 사람이 많다.",
       "쓰레기통이 없으면 거리가 더 깨끗하다."
     ],
-    "answer": 0,
+    "answer": 3,
     "audio": "https://airnetcso.github.io/eps/audio/15.mp3"
   },
   {
@@ -160,7 +160,7 @@
     "question": "들은 내용과 관계있는 그림을 고르십시오.",
     "image": "https://airnetcso.github.io/eps/image/16.jpg",
     "options": [".", ".", ".", "."],
-    "answer": 0,
+    "answer": 2,
     "audio": "https://airnetcso.github.io/eps/audio/16.mp3"
   },
   {
@@ -195,7 +195,7 @@
       "병원에서 일하려고",
       "부탁하려고"
     ],
-    "answer": 1,
+    "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/19.mp3"
   },
   {
@@ -208,7 +208,7 @@
       "페인트 작업이 어렵지 않았다.",
       "자주 페인트 작업을 했다."
     ],
-    "answer": 3,
+    "answer": 2,
     "audio": "https://airnetcso.github.io/eps/audio/20.mp3"
   },
 
@@ -369,6 +369,7 @@
     "answer": 1
   }
 ]
+
 
 
 
