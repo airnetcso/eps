@@ -159,7 +159,7 @@
     "type": "listening",
     "question": "들은 내용과 관계있는 그림을 고르십시오.",
     "image": "https://airnetcso.github.io/eps/image/16.jpg",
-    "options": ["①", "②", "③", "④"],
+    "options": [".", ".", ".", "."],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/16.mp3"
   },
@@ -168,7 +168,7 @@
     "type": "listening",
     "question": "들은 내용과 관계있는 그림을 고르십시오.",
     "image": "https://airnetcso.github.io/eps/image/17.jpg",
-    "options": ["①", "②", "③", "④"],
+    "options": [".", ".", ".", "."],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/17.mp3"
   },
@@ -369,6 +369,7 @@
     "answer": 1
   }
 ]
+
 
 
 
