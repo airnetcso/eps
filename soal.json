@@ -35,6 +35,7 @@
     "id": 5,
     "type": "listening",
     "question": "이 것은 무엇입니까?",
+    "image": "https://airnetcso.github.io/eps/image/8.jpg",
     "options": ["①", "②", "③", "④"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/5.mp3"
@@ -43,6 +44,7 @@
     "id": 6,
     "type": "listening",
     "question": "여기는 어떤 곳입니까?",
+    "image": "https://airnetcso.github.io/eps/image/8.jpg",
     "options": ["①", "②", "③", "④"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/6.mp3"
@@ -51,6 +53,7 @@
     "id": 7,
     "type": "listening",
     "question": "이 사람은 무엇으로 여행을 하려고 합니까?",
+    "image": "https://airnetcso.github.io/eps/image/8.jpg",
     "options": ["①", "②", "③", "④"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/7.mp3"
@@ -155,6 +158,7 @@
     "id": 16,
     "type": "listening",
     "question": "들은 내용과 관계있는 그림을 고르십시오.",
+    "image": "https://airnetcso.github.io/eps/image/8.jpg",
     "options": ["①", "②", "③", "④"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/16.mp3"
@@ -163,6 +167,7 @@
     "id": 17,
     "type": "listening",
     "question": "들은 내용과 관계있는 그림을 고르십시오.",
+    "image": "https://airnetcso.github.io/eps/image/8.jpg",
     "options": ["①", "②", "③", "④"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/17.mp3"
@@ -239,6 +244,7 @@
     "id": 25,
     "type": "reading",
     "question": "‘독성 위험’ 표지의 의미는?",
+    "image": "https://airnetcso.github.io/eps/image/25.jpg",
     "options": ["독성 위험", "폭발 위험", "감전 위험", "저온 위험"],
     "answer": 0
   },
@@ -267,6 +273,7 @@
     "id": 28,
     "type": "reading",
     "question": "이 사람의 지위는 무엇입니까?",
+    "image": "https://airnetcso.github.io/eps/image/28.jpg",
     "options": ["박성현", "공장장", "태성", "전문가"],
     "answer": 1
   },
@@ -344,6 +351,7 @@
     "id": 39,
     "type": "reading",
     "question": "그림과 맞는 단어는?",
+    "image": "https://airnetcso.github.io/eps/image/39.jpg",
     "options": ["전기밥솥", "도마", "뚝배기", "프라이팬"],
     "answer": 3
   },
@@ -351,6 +359,7 @@
     "id": 40,
     "type": "reading",
     "question": "그림 설명으로 맞는 문장은?",
+    "image": "https://airnetcso.github.io/eps/image/40.jpg",
     "options": [
       "박수를 치고 있습니다.",
       "악수를 하고 있습니다.",
@@ -360,4 +369,5 @@
     "answer": 1
   }
 ]
+
 
