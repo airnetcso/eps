@@ -44,7 +44,7 @@
     "id": 6,
     "type": "listening",
     "question": "여기는 어떤 곳입니까?",
-    "image": "https://airnetcso.github.io/eps/image/6.jpg",
+    "image": "https://airnetcso.github.io/eps/image/6.png",
     "options": ["①", "②", "③", "④"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/6.mp3"
@@ -53,7 +53,7 @@
     "id": 7,
     "type": "listening",
     "question": "이 사람은 무엇으로 여행을 하려고 합니까?",
-    "image": "https://airnetcso.github.io/eps/image/7.jpg",
+    "image": "https://airnetcso.github.io/eps/image/7.png",
     "options": ["①", "②", "③", "④"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/7.mp3"
@@ -369,6 +369,7 @@
     "answer": 1
   }
 ]
+
 
 
 
