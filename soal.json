@@ -36,7 +36,7 @@
     "type": "listening",
     "question": "이 것은 무엇입니까?",
     "image": "https://airnetcso.github.io/eps/image/5.jpg",
-    "options": ["①", "②", "③", "④"],
+    "options": [".", ".", ".", "."],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/5.mp3"
   },
@@ -45,7 +45,7 @@
     "type": "listening",
     "question": "여기는 어떤 곳입니까?",
     "image": "https://airnetcso.github.io/eps/image/6.png",
-    "options": ["①", "②", "③", "④"],
+    "options": [".", ".", ".", "."],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/6.mp3"
   },
@@ -63,7 +63,7 @@
     "type": "listening",
     "question": "케이크와 카드는 모두 얼마입니까?",
     "image": "https://airnetcso.github.io/eps/image/8.jpg",
-    "options": ["①", "②", "③", "④"],
+    "options": [".", ".", ".", "."],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/8.mp3"
   },
@@ -369,6 +369,7 @@
     "answer": 1
   }
 ]
+
 
 
 
