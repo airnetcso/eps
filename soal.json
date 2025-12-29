@@ -2,189 +2,152 @@
   {
     "id": 1,
     "type": "listening",
+    "question": "들은 것을 고르십시오.",
+    "options": ["오리", "요리", "우리", "유리"],
+    "answer": 2
+  },
+  {
+    "id": 2,
+    "type": "listening",
+    "question": "들은 것을 고르십시오.",
+    "options": ["세상", "대상", "배상", "해상"],
+    "answer": 0
+  },
+  {
+    "id": 3,
+    "type": "listening",
+    "question": "들은 것을 고르십시오.",
+    "options": ["우산", "장화", "비옷", "장갑"],
+    "answer": 1
+  },
+  {
+    "id": 4,
+    "type": "listening",
+    "question": "들은 것을 고르십시오.",
+    "options": ["양치질", "밥 먹기", "TV 보기", "전화하기"],
+    "answer": 0
+  },
+  {
+    "id": 5,
+    "type": "listening",
+    "question": "이것은 무엇입니까?",
+    "options": ["벽돌", "나무", "철", "유리"],
+    "answer": 0
+  },
+  {
+    "id": 6,
+    "type": "listening",
+    "question": "여기는 어디입니까?",
+    "options": ["횡단보도", "버스 정류장", "지하철", "택시"],
+    "answer": 0
+  },
+  {
+    "id": 7,
+    "type": "listening",
+    "question": "이 사람은 무엇을 하고 있습니까?",
+    "options": ["책 읽기", "공부하기", "쓰기", "말하기"],
+    "answer": 0
+  },
+  {
+    "id": 8,
+    "type": "listening",
+    "question": "양복이 얼마나 있습니까?",
+    "options": ["하나", "둘", "셋", "넷"],
+    "answer": 2
+  },
+  {
+    "id": 9,
+    "type": "listening",
+    "question": "인형 가게는 어디에 있습니까?",
+    "options": ["왼쪽", "오른쪽", "앞", "뒤"],
+    "answer": 1
+  },
+  {
+    "id": 10,
+    "type": "listening",
+    "question": "다음에 알맞은 대답을 고르십시오.",
+    "options": ["저의 형은 키가 커요.", "모님하도 동생이 있어요.", "저는 캄보디아에서 왔어요.", "제 여동생은 스무 살이에요."],
+    "answer": 2
+  },
+
+  {
+    "id": 21,
+    "type": "reading",
     "question": "다음 단어와 관계있는 것은 고르십시오.",
     "options": ["쌓다", "풀다", "해소하다", "운반하다"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/1.mp3"
   },
   {
-    "id": 2,
-    "type": "listening",
+    "id": 22,
+    "type": "reading",
     "question": "다음 단어와 비슷한 말을 고르십시오.",
     "options": ["아주", "가끔", "늘", "자주"],
     "answer": 3,
     "audio": "https://airnetcso.github.io/eps/audio/2.mp3"
   },
   {
-    "id": 3,
-    "type": "listening",
+    "id": 23,
+    "type": "reading",
     "question": "빈칸에 들어갈 가장 알맞은 것을 고르십시오.",
     "options": ["영상", "습도", "온도", "영하"],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/3.mp3"
   },
   {
-    "id": 4,
-    "type": "listening",
+    "id": 24,
+    "type": "reading",
     "question": "빈칸에 들어갈 가장 알맞은 것을 고르십시오.",
     "options": ["일찍", "꼭", "당장", "미리"],
     "answer": 1,
     "audio": "https://airnetcso.github.io/eps/audio/4.mp3"
   },
   {
-    "id": 5,
-    "type": "listening",
-    "question": "이것은 무엇입니까?",
-    "options": ["동전입니다", "지폐입니다", "상품권입니다", "영수증입니다"],
-    "answer": 1,
-    "image": "https://airnetcso.github.io/eps/image/5.jpg",
-    "audio": "https://airnetcso.github.io/eps/audio/5.mp3"
-  },
-  {
-    "id": 6,
-    "type": "listening",
-    "question": "여기는 어떤 곳입니까?",
-    "options": ["담배를 피우는 곳입니다", "안내를 해 주는 곳입니다", "돈을 바꿔 주는 곳입니다", "비행기 표를 파는 곳입니다"],
-    "answer": 2,
-    "image": "https://airnetcso.github.io/eps/image/6.jpg",
-    "audio": "https://airnetcso.github.io/eps/audio/6.mp3"
-  },
-  {
-    "id": 7,
-    "type": "listening",
-    "question": "이곳에서 하는 일이 아닌 것은 무엇입니까?",
-    "options": [
-      "교통사고가 났습니다. 교통정리를 합니다.",
-      "아이를 잃어버렸습니다. 부모님에게 아이를 찾아줍니다.",
-      "사고가 났습니다. 응급 환자를 병원으로 이동합니다.",
-      "도둑이 들었습니다. 현장을 검사하고 범인을 잡습니다."
-    ],
-    "answer": 3,
-    "image": "https://airnetcso.github.io/eps/image/7.jpg",
-    "audio": "https://airnetcso.github.io/eps/audio/7.mp3"
-  },
-  {
-    "id": 8,
-    "type": "listening",
-    "question": "다음 내용과 같은 것을 고르십시오.",
-    "options": [
-      "도착 시간을 알 수 없습니다.",
-      "대전에서 떠납니다.",
-      "비용이 들지 않습니다.",
-      "동대구행 기차표입니다."
-    ],
-    "answer": 0,
-    "image": "https://airnetcso.github.io/eps/image/8.jpg",
-    "audio": "https://airnetcso.github.io/eps/audio/8.mp3"
-  },
-  {
-    "id": 9,
-    "type": "listening",
-    "question": "다음 안내문의 설명으로 맞는 것은 무엇입니까?",
-    "options": [
-      "어린이 인천에서 타면 구천 원입니다.",
-      "김포공항에 타면 요금이 더 냅니다.",
-      "모든 승객들에게 똑같이 비용이 듭니다.",
-      "초등학생의 공항버스 요금은 어른과 같습니다."
-    ],
-    "answer": 0,
-    "image": "https://airnetcso.github.io/eps/image/9.jpg",
-    "audio": "https://airnetcso.github.io/eps/audio/9.mp3"
-  },
-  {
-    "id": 10,
-    "type": "listening",
-    "question": "다음 그래프에 대한 설명으로 맞는 것은 무엇입니까?",
-    "options": [
-      "근로자들은 한국어 교육을 가장 많이 받고 싶어합니다.",
-      "근로자들의 절반 이상이 컴퓨터 교육을 받고 싶어합니다.",
-      "법규에 대한 교육을 받고 싶어하는 근로자들이 가장 적습니다.",
-      "한국 문화 교육을 받고 싶어하는 근로자들이 두 번째로 많습니다."
-    ],
-    "answer": 0,
-    "image": "https://airnetcso.github.io/eps/image/10.jpg",
-    "audio": "https://airnetcso.github.io/eps/audio/10.mp3"
-  },
-  {
-    "id": 21,
-    "type": "reading",
-    "question": "들은 것을 고르십시오.",
-    "options": ["오리", "요리", "우리", "유리"],
-    "answer": 2
-  },
-  {
-    "id": 22,
-    "type": "reading",
-    "question": "들은 것을 고르십시오.",
-    "options": ["세상", "대상", "배상", "해상"],
-    "answer": 0
-  },
-  {
-    "id": 23,
-    "type": "reading",
-    "question": "들은 것을 고르십시오.",
-    "options": ["우산", "장화", "비옷", "장갑"],
-    "answer": 1,
-    "image": "https://airnetcso.github.io/eps/image/23.jpg"
-  },
-  {
-    "id": 24,
-    "type": "reading",
-    "question": "들은 것을 고르십시오.",
-    "options": ["양치질", "밥 먹기", "TV 보기", "전화하기"],
-    "answer": 0,
-    "image": "https://airnetcso.github.io/eps/image/24.jpg"
-  },
-  {
     "id": 25,
     "type": "reading",
     "question": "이것은 무엇입니까?",
-    "options": ["벽돌", "나무", "철", "유리"],
-    "answer": 0,
-    "image": "https://airnetcso.github.io/eps/image/25.jpg"
+    "options": ["동전입니다", "지폐입니다", "상품권입니다", "영수증입니다"],
+    "answer": 1,
+    "audio": "https://airnetcso.github.io/eps/audio/5.mp3"
   },
   {
     "id": 26,
     "type": "reading",
-    "question": "여기는 어디입니까?",
-    "options": ["횡단보도", "버스 정류장", "지하철", "택시"],
-    "answer": 0,
-    "image": "https://airnetcso.github.io/eps/image/26.jpg"
+    "question": "여기는 어떤 곳입니까?",
+    "options": ["담배를 피우는 곳입니다", "안내를 해 주는 곳입니다", "돈을 바꿔 주는 곳입니다", "비행기 표를 파는 곳입니다"],
+    "answer": 2,
+    "audio": "https://airnetcso.github.io/eps/audio/6.mp3"
   },
   {
     "id": 27,
     "type": "reading",
-    "question": "이 사람은 무엇을 하고 있습니까?",
-    "options": ["책 읽기", "공부하기", "쓰기", "말하기"],
-    "answer": 0,
-    "image": "https://airnetcso.github.io/eps/image/27.jpg"
+    "question": "이곳에서 하는 일이 아닌 것은 무엇입니까?",
+    "options": ["교통사고가 났습니다. 교통정리를 합니다.", "아이를 잃어버렸습니다. 부모님에게 아이를 찾아줍니다.", "사고가 났습니다. 응급 환자를 병원으로 이동합니다.", "도둑이 들었습니다. 현장을 검사하고 범인을 잡습니다."],
+    "answer": 3,
+    "audio": "https://airnetcso.github.io/eps/audio/7.mp3"
   },
   {
     "id": 28,
     "type": "reading",
-    "question": "양복이 얼마나 있습니까?",
-    "options": ["하나", "둘", "셋", "넷"],
-    "answer": 2,
-    "image": "https://airnetcso.github.io/eps/image/28.jpg"
+    "question": "다음 내용과 같은 것을 고르십시오.",
+    "options": ["도착 시간을 알 수 없습니다.", "대전에서 떠납니다.", "비용이 들지 않습니다.", "동대구행 기차표입니다."],
+    "answer": 0,
+    "audio": "https://airnetcso.github.io/eps/audio/8.mp3"
   },
   {
     "id": 29,
     "type": "reading",
-    "question": "인형 가게는 어디에 있습니까?",
-    "options": ["왼쪽", "오른쪽", "앞", "뒤"],
-    "answer": 1,
-    "image": "https://airnetcso.github.io/eps/image/29.jpg"
+    "question": "다음 안내문의 설명으로 맞는 것은 무엇입니까?",
+    "options": ["어린이 인천에서 타면 구천 원입니다.", "김포공항에 타면 요금이 더 냅니다.", "모든 승객들에게 똑같이 비용이 듭니다.", "초등학생의 공항버스 요금은 어른과 같습니다."],
+    "answer": 0,
+    "audio": "https://airnetcso.github.io/eps/audio/9.mp3"
   },
   {
     "id": 30,
     "type": "reading",
-    "question": "다음에 알맞은 대답을 고르십시오.",
-    "options": [
-      "저의 형은 키가 커요.",
-      "모님하도 동생이 있어요.",
-      "저는 캄보디아에서 왔어요.",
-      "제 여동생은 스무 살이에요."
-    ],
-    "answer": 2
+    "question": "다음 그래프에 대한 설명으로 맞는 것은 무엇입니까?",
+    "options": ["근로자들은 한국어 교육을 가장 많이 받고 싶어합니다.", "근로자들의 절반 이상이 컴퓨터 교육을 받고 싶어합니다.", "법규에 대한 교육을 받고 싶어하는 근로자들이 가장 적습니다.", "한국 문화 교육을 받고 싶어하는 근로자들이 두 번째로 많습니다."],
+    "answer": 0,
+    "audio": "https://airnetcso.github.io/eps/audio/10.mp3"
   }
 ]
