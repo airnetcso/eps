@@ -273,7 +273,6 @@
       "도둑이 들었습니다. 현장을 검사하고 범인을 잡습니다."
     ],
     "answer": 3
-    "image": "https://airnetcso.github.io/eps/image/7.jpg"
   },
   {
     "id": 28,
@@ -392,4 +391,5 @@
     "answer": 0
   }
 ]
+
 
