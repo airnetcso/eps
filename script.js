@@ -2,14 +2,11 @@ let questions=[], answered=JSON.parse(localStorage.getItem("answered")||"{}"), c
 
 async function loadSoal(){
   try{
-    const res=await fetch("https://raw.githubusercontent.com/airnetcso/eps/refs/heads/main/soal.json");  // cukup "soal.json" karena satu folder
-    if (!res.ok) throw new Error("File not found");
+    const res=await fetch("https://raw.githubusercontent.com/airnetcso/eps/refs/heads/main/soal.json");
     questions=await res.json();
     buildGrid();
     loadQuestionPage();
-  }catch(e){
-    alert("Gagal load soal: " + e.message);
-  }
+  }catch(e){alert("Gagal load soal")}
 }
 
 function buildGrid(){
