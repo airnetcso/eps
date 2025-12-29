@@ -1,4 +1,197 @@
 [
+    {
+        "id": 1,
+        "type": "listening",
+        "question": "들은 것을 고르십시오.",
+        "options": ["오리", "요리", "우리", "유리"],
+        "answer": 2,
+        "audio": "https://airnetcso.github.io/eps/audio/1.mp3"
+    },
+    {
+        "id": 2,
+        "type": "listening",
+        "question": "들은 것을 고르십시오.",
+        "options": ["세상", "대상", "배상", "해상"],
+        "answer": 0,
+        "audio": "https://airnetcso.github.io/eps/audio/2.mp3"
+    },
+    {
+        "id": 3,
+        "type": "listening",
+        "question": "들은 것을 고르십시오.",
+        "options": ["우산", "장화", "비옷", "장갑"],
+        "answer": 1,
+        "image": "https://airnetcso.github.io/eps/image/3.jpg",
+        "audio": "https://airnetcso.github.io/eps/audio/3.mp3"
+    },
+    {
+        "id": 4,
+        "type": "listening",
+        "question": "들은 것을 고르십시오.",
+        "options": ["양치질", "밥 먹기", "TV 보기", "전화하기"],
+        "answer": 0,
+        "image": "https://airnetcso.github.io/eps/image/4.jpg",
+        "audio": "https://airnetcso.github.io/eps/audio/4.mp3"
+    },
+    {
+        "id": 5,
+        "type": "listening",
+        "question": "이것은 무엇입니까?",
+        "options": ["벽돌", "나무", "철", "유리"],
+        "answer": 0,
+        "image": "https://airnetcso.github.io/eps/image/5.jpg",
+        "audio": "https://airnetcso.github.io/eps/audio/5.mp3"
+    },
+    {
+        "id": 6,
+        "type": "listening",
+        "question": "여기는 어디입니까?",
+        "options": ["횡단보도", "버스 정류장", "지하철", "택시"],
+        "answer": 0,
+        "image": "https://airnetcso.github.io/eps/image/6.jpg",
+        "audio": "https://airnetcso.github.io/eps/audio/6.mp3"
+    },
+    {
+        "id": 7,
+        "type": "listening",
+        "question": "이 사람은 무엇을 하고 있습니까?",
+        "options": ["책 읽기", "공부하기", "쓰기", "말하기"],
+        "answer": 0,
+        "image": "https://airnetcso.github.io/eps/image/7.jpg",
+        "audio": "https://airnetcso.github.io/eps/audio/7.mp3"
+    },
+    {
+        "id": 8,
+        "type": "listening",
+        "question": "양복이 얼마나 있습니까?",
+        "options": ["하나", "둘", "셋", "넷"],
+        "answer": 2,
+        "image": "https://airnetcso.github.io/eps/image/8.jpg",
+        "audio": "https://airnetcso.github.io/eps/audio/8.mp3"
+    },
+    {
+        "id": 9,
+        "type": "listening",
+        "question": "인형 가게는 어디에 있습니까?",
+        "options": ["왼쪽", "오른쪽", "앞", "뒤"],
+        "answer": 1,
+        "image": "https://airnetcso.github.io/eps/image/9.jpg",
+        "audio": "https://airnetcso.github.io/eps/audio/9.mp3"
+    },
+    {
+        "id": 10,
+        "type": "listening",
+        "question": "다음에 알맞은 대답을 고르십시오.",
+        "options": ["저의 형은 키가 커요.", "모님하도 동생이 있어요.", "저는 캄보디아에서 왔어요.", "제 여동생은 스무 살이에요."],
+        "answer": 2,
+        "audio": "https://airnetcso.github.io/eps/audio/10.mp3"
+    },
+    {
+        "id": 11,
+        "type": "listening",
+        "question": "다음에 알맞은 대답을 고르십시오.",
+        "options": ["그러면 제가 옷을 갤게요.", "세제를 너무 많이 쓰면 안 돼요.", "비가 올 때는 빨래를 널지 마세요.", "손으로 하는 것이 더 깨끗한 것 같아요."],
+        "answer": 1,
+        "audio": "https://airnetcso.github.io/eps/audio/11.mp3"
+    },
+    {
+        "id": 12,
+        "type": "listening",
+        "question": "다음에 알맞은 대답을 고르십시오.",
+        "options": ["지금 회사에 계세요.", "성실하고 부지런하세요.", "저에게 소개 좀 해 주세요.", "사장님이 추천해 주셨어요."],
+        "answer": 1,
+        "audio": "https://airnetcso.github.io/eps/audio/12.mp3"
+    },
+    {
+        "id": 13,
+        "type": "listening",
+        "question": "다음에 알맞은 대답을 고르십시오.",
+        "options": ["그 식당은 정말 맛이 없어요.", "찬 음식을 많이 먹으면 안돼요.", "감자는 삶고 당근은 볶아 주세요.", "제가 냉면을 맛있게 하는 식당을 알아요."],
+        "answer": 3,
+        "audio": "https://airnetcso.github.io/eps/audio/13.mp3"
+    },
+    {
+        "id": 14,
+        "type": "listening",
+        "question": "다음을 듣고 이어지는 말을 고르십시오.",
+        "options": ["다른 직원들에게 전화했어요.", "내일 저녁에 식당을 예약했어요.", "바쁘시면 나중에 다시 전화할게요.", "박 대리님께서 좀 늦는다고 전해 달래요."],
+        "answer": 2,
+        "audio": "https://airnetcso.github.io/eps/audio/14.mp3"
+    },
+    {
+        "id": 15,
+        "type": "listening",
+        "question": "다음을 듣고 이어지는 말을 고르십시오.",
+        "options": ["사고가 나지 않게 주의하세요.", "안전모 쓰는 것을 잊지 마세요.", "이런 실수를 해서 정말 미안해.", "병원에 다니고 나서 많이 좋아졌어."],
+        "answer": 1,
+        "audio": "https://airnetcso.github.io/eps/audio/15.mp3"
+    },
+    {
+        "id": 16,
+        "type": "listening",
+        "question": "들은 내용과 관계있는 그림을 고르십시오.",
+        "options": ["3월 1일", "3월 2일", "4월 2일", "4월 1일"],
+        "answer": 1,
+        "image": "https://airnetcso.github.io/eps/image/16.jpg",
+        "audio": "https://airnetcso.github.io/eps/audio/16.mp3"
+    },
+    {
+        "id": 17,
+        "type": "listening",
+        "question": "들은 내용과 관계있는 그림을 고르십시오.",
+        "options": ["벼 베기", "나무 베기", "채소 수확", "과일 따기"],
+        "answer": 0,
+        "image": "https://airnetcso.github.io/eps/image/17.jpg",
+        "audio": "https://airnetcso.github.io/eps/audio/17.mp3"
+    },
+    {
+        "id": 18,
+        "type": "listening",
+        "question": "두 사람은 무엇에 대해 이야기하고 있습니까?",
+        "options": ["실내에 들어가는 방법", "친구와 식사하는 방법", "친구를 초대하는 방법", "신발을 구매하는 방법"],
+        "answer": 1,
+        "audio": "https://airnetcso.github.io/eps/audio/18.mp3"
+    },
+    {
+        "id": 19,
+        "type": "listening",
+        "question": "작업할 때 안전모를 써야 하는 이유는 무엇입니까?",
+        "options": ["발을 다칠 수 있기 때문에", "전기에 감전될 수 있기 때문에", "떨어지는 물건에 맞을 수 있기 때문에", "불꽃이 튀어서 화상을 입을 수 있기 때문에"],
+        "answer": 2,
+        "audio": "https://airnetcso.github.io/eps/audio/19.mp3"
+    },
+    {
+        "id": 20,
+        "type": "listening",
+        "question": "들은 내용과 같은 것을 고르십시오.",
+        "options": ["남자는 연차가 부족해서 걱정하고 있습니다", "여자는 여름휴가로 제주도에 가려고 합니다.", "남자는 내일 휴가 신청서를 제출하려고합니다.", "여자는 지난주에 벌써 휴가 신청서를 제출했습니다."],
+        "answer": 1,
+        "audio": "https://airnetcso.github.io/eps/audio/20.mp3"
+    },
+    {
+        "id": 21,
+        "type": "reading",
+        "question": "다음 단어와 관계있는 것은 고르십시오.",
+        "options": ["쌓다", "풀다", "해소하다", "운반하다"],
+        "answer": 0
+    },
+    {
+        "id": 22,
+        "type": "reading",
+        "question": "다음 단어와 비슷한 말을 고르십시오.",
+        "options": ["아주", "가끔", "늘", "자주"],
+        "answer": 2
+    },
+    {
+        "id": 23,
+        "type": "reading",
+        "question": "빈칸에 들어갈 가장 알맞은 것을 고르십시오.",
+        "options": ["깨끗해졌습니다", "좋아졌습니다", "더러워졌습니다", "미끄러워졌습니다"],
+        "answer": 3
+    },
+    {
+        "id": 24,
+        "type": "[
   {
     "id": 1,
     "type": "listening",
@@ -308,6 +501,7 @@
     "answer": 2
   }
 ]
+
 
 
 
