@@ -87,7 +87,7 @@
   {
     "id": 11,
     "type": "listening",
-    "question": "모니카 씨는 왜 병원에 간 거예요 ?",
+    "question": "다음을 듣고 질문에 알맞은 대답을 고르십시오.",
     "options": ["공장에 가다가 갑자기 쓰러졌어요.","뜨거운 물은 옮길 때 조심해요.","소독약을 발랐으니까 괜챃을 거예요.","화상을 입을 할수 있어니까 조심하세요."],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/11.mp3"
@@ -308,6 +308,7 @@
     "answer": 2
   }
 ]
+
 
 
 
