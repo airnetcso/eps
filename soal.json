@@ -5,7 +5,7 @@
     "question": "들은 것을 고르십시오.",
     "options": ["이내", "언니", "안내", "안경"],
     "answer": 2,
-    "audio": "https://airnetcso.github.io/eps/audio/21.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/1.mp3"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "question": "들은 것을 고르십시오.",
     "options": ["삽니다", "탑니다", "갑니다", "잡니다"],
     "answer": 1,
-    "audio": "https://airnetcso.github.io/eps/audio/22.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/2.mp3"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "question": "들은 것을 고르십시오.",
     "options": ["발에 추웠어요", "발이 추웠어요", "발에 다쳤어요", "발이 다쳤어요"],
     "answer": 1,
-    "audio": "https://airnetcso.github.io/eps/audio/23.jpg",
+    "audio": "https://airnetcso.github.io/eps/audio/3.mp3"
     "image": "https://airnetcso.github.io/eps/image/23.jpg"
   },
   {
@@ -30,7 +30,7 @@
     "question": "들은 것을 고르십시오.",
     "options": ["가게가 가까워요", "찌개가 뜨거워요", "친구가 뛰어가요", "지우개가 두꺼워요"],
     "answer": 1,
-    "audio": "https://airnetcso.github.io/eps/audio/24.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/4.mp3"
   },
   {
     "id": 5,
@@ -38,7 +38,7 @@
     "question": "이것은 무엇입니까?",
     "options": ["①", "②", "③", "④"],
     "answer": 0,
-    "audio": "https://airnetcso.github.io/eps/audio/25.jpg",
+    "audio": "https://airnetcso.github.io/eps/audio/5.mp3"
     "image": "https://airnetcso.github.io/eps/image/25.jpg"
   },
   {
@@ -47,7 +47,7 @@
     "question": "여기는 어떤 곳입니까?",
     "options": ["①", "②", "③", "④"],
     "answer": 1,
-    "audio": "https://airnetcso.github.io/eps/audio/26.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/6.m3u"
   },
   {
     "id": 7,
@@ -55,7 +55,7 @@
     "question": "이 사람은 무엇으로 여행을 하려고 합니까?",
     "options": ["①", "②", "③", "④"],
     "answer": 2,
-    "audio": "https://airnetcso.github.io/eps/audio/27.jpg",
+    "audio": "https://airnetcso.github.io/eps/audio/7.mp3"
     "image": "https://airnetcso.github.io/eps/image/27.jpg"
   },
   {
@@ -64,7 +64,7 @@
     "question": "케이크와 카드는 모두 얼마입니까?",
     "options": ["①", "②", "③", "④"],
     "answer": 3,
-    "audio": "https://airnetcso.github.io/eps/audio/28.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/8.mp3"
   },
   {
     "id": 9,
@@ -72,7 +72,7 @@
     "question": "우체국이 어디에 있습니까?",
     "options": ["①", "②", "③", "④"],
     "answer": 0,
-    "audio": "https://airnetcso.github.io/eps/audio/29.jpg",
+    "audio": "https://airnetcso.github.io/eps/audio/9.mp3"
     "image": "https://airnetcso.github.io/eps/image/29.jpg"
   },
   {
@@ -86,7 +86,7 @@
       "추석이니까 고향에 가려고 해요"
     ],
     "answer": 3,
-    "audio": "https://airnetcso.github.io/eps/audio/30.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/10.mp3"
   },
   {
     "id": 11,
@@ -99,7 +99,7 @@
       "화상을 입을 수 있어요"
     ],
     "answer": 1,
-    "audio": "https://airnetcso.github.io/eps/audio/31.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/11.mp3"
   },
   {
     "id": 12,
@@ -112,7 +112,7 @@
       "전화하면 데리러 와요"
     ],
     "answer": 0,
-    "audio": "https://airnetcso.github.io/eps/audio/32.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/12.mp3"
   },
   {
     "id": 13,
@@ -125,7 +125,7 @@
       "시청에서 갈아타세요"
     ],
     "answer": 3,
-    "audio": "https://airnetcso.github.io/eps/audio/33.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/13.mp3"
   },
   {
     "id": 14,
@@ -133,7 +133,7 @@
     "question": "무엇에 대한 이야기입니까?",
     "options": ["요리 과정", "식사 기준", "식사 예절", "한식 소개"],
     "answer": 2,
-    "audio": "https://airnetcso.github.io/eps/audio/34.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/14.mp3"
   },
   {
     "id": 15,
@@ -146,7 +146,7 @@
       "없으면 더 깨끗하다"
     ],
     "answer": 2,
-    "audio": "https://airnetcso.github.io/eps/audio/35.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/15.mp3"
   },
   {
     "id": 16,
@@ -154,7 +154,7 @@
     "question": "들은 내용과 관계있는 그림을 고르십시오.",
     "options": ["①", "②", "③", "④"],
     "answer": 1,
-    "audio": "https://airnetcso.github.io/eps/audio/36.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/16.mp3"
   },
   {
     "id": 17,
@@ -162,7 +162,7 @@
     "question": "들은 내용과 관계있는 그림을 고르십시오.",
     "options": ["①", "②", "③", "④"],
     "answer": 0,
-    "audio": "https://airnetcso.github.io/eps/audio/37.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/17.mp3"
   },
   {
     "id": 18,
@@ -175,7 +175,7 @@
       "보증금 납부"
     ],
     "answer": 2,
-    "audio": "https://airnetcso.github.io/eps/audio/38.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/18.mp3"
   },
   {
     "id": 19,
@@ -183,7 +183,7 @@
     "question": "남자가 병원에 가는 이유는?",
     "options": ["친구", "다리 치료", "근무", "부탁"],
     "answer": 1,
-    "audio": "https://airnetcso.github.io/eps/audio/39.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/19.mp3"
   },
   {
     "id": 20,
@@ -196,7 +196,7 @@
       "자주 했다"
     ],
     "answer": 3,
-    "audio": "https://airnetcso.github.io/eps/audio/40.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/20.mp3"
   },
   {
     "id": 21,
