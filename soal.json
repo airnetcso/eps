@@ -300,6 +300,7 @@
     "id": 39,
     "type": "reading",
     "question": "다음 그림을 보고 맞는 단어나 문장을 고르십시오.",
+    "image": "https://airnetcso.github.io/eps/image/39.jpg",
     "options": ["전기밥솥","도마","뚝배기","프라이팬"],
     "answer": 0
   },
@@ -307,10 +308,12 @@
     "id": 40,
     "type": "reading",
     "question": "다음 그림을 보고 맞는 단어나 문장을 고르십시오.",
+    "image": "https://airnetcso.github.io/eps/image/40.jpg",
     "options": ["박수를 치고 있습니다.","악수를 하고 있습니다.","인사를 하고 있습니다.","고개를 숙이고 있습니다."],
     "answer": 2
   }
 ]
+
 
 
 
