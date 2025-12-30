@@ -79,7 +79,7 @@
   {
     "id": 10,
     "type": "listening",
-    "question": "곧 설날인데 연휴 때 뭐 할 거예요 ?",
+    "question": "다음을 듣고 질문에 알맞은 대답을 고르십시오.",
     "options": ["떡국 만드는 법을 배웠어요.","고향에 가서 가족을 만났어요.","고향 친구들을 만나려고 해요.","추석이니까 고향에 가려고 해요."],
     "answer": 2,
     "audio": "https://airnetcso.github.io/eps/audio/10.mp3"
@@ -87,7 +87,7 @@
   {
     "id": 11,
     "type": "listening",
-    "question": "모니카 씨는 와 병원에 간 거예요 ?",
+    "question": "모니카 씨는 왜 병원에 간 거예요 ?",
     "options": ["공장에 가다가 갑자기 쓰러졌어요.","뜨거운 물은 옮길 때 조심해요.","소독약을 발랐으니까 괜챃을 거예요.","화상을 입을 할수 있어니까 조심하세요."],
     "answer": 0,
     "audio": "https://airnetcso.github.io/eps/audio/11.mp3"
@@ -95,7 +95,7 @@
   {
     "id": 12,
     "type": "listening",
-    "question": "반장님이 집들이에 초대를 하셔서 가 하는데 찾아갈 수 있을지 모르겠어요.",
+    "question": "다음을 듣고 질문에 알맞은 대답을 고르십시오.",
     "options": ["늦지 않으려면 미리 서둘러겠어요.","저는 집들이 선물을 미리 준비했어요.","집이 커서 많은 사람들이 초대를 받았어요.","근처에 가서 전화를 하면 데리러 나오실 거예요."],    
     "answer": 3,
     "audio": "https://airnetcso.github.io/eps/audio/12.mp3"
@@ -103,7 +103,7 @@
   {
     "id": 13,
     "type": "listening",
-    "question": "여기에서 시청 가는 버스 있어요 ?",
+    "question": "다음을 듣고 질문에 알맞은 대답을 고르십시오.",
     "options": ["다음 정류장에서 내리세요.","건너편에서 460 번 버스를 타세요.","여기에서 시청까지 30 분 쯤 걸려요.","1 호선을 타고 가다가 시청에서 갈아타세요."],
     "answer": 1,
     "audio": "https://airnetcso.github.io/eps/audio/13.mp3"
@@ -111,7 +111,7 @@
   {
     "id": 14,
     "type": "listening",
-    "question": "아딧 씨, 한국에서는 식사할 때 밥 그릇을 들고 먹으면 안 돼요. 남 : 아 그래요 ? 몰랐어요.",
+    "question": "다음은 무엇에 대한 내용인지 맞는 것을 고르십시오.",
     "options": ["식사를 요리하는 과정","정확이 식사하는 예절","식사를 고르는 기준","한식의 무늬와 소개"],
     "answer": 2,
     "audio": "https://airnetcso.github.io/eps/audio/14.mp3"
@@ -119,7 +119,7 @@
   {
     "id": 15,
     "type": "listening",
-    "question": "요즘 길 거리에 쓰레기통이 잘 안 보여. 빈 병 하나를 버리려고 해도 어디에 버려 할지 모르겠어.",
+    "question": "여자가 생각을 있는지 맞는 것을 고르십시오.",
     "options": ["거리에는 쓰레기통이 많이 필요하다.","쓰레기통에 음료수를 버리면 안 되다.","길에 쓰레기를 버리는 사람들이 많다.","쓰레기통이 없으면 거리가 더 깨끗하다."],
     "answer": 3,
     "audio": "https://airnetcso.github.io/eps/audio/15.mp3"
@@ -127,7 +127,7 @@
   {
     "id": 16,
     "type": "listening",
-    "question": "이것은 무엇입니까?",
+    "question": "잘 듣고 들은 내용과 관계있는 그림을 고르십시오.",
     "options": ["자동차","자전거","버스","기차"],
     "answer": 2,
     "image": "https://airnetcso.github.io/eps/image/1.jpg",
@@ -136,7 +136,7 @@
   {
     "id": 17,
     "type": "listening",
-    "question": "이것은 무엇입니까?",
+    "question": "잘 듣고 들은 내용과 관계있는 그림을 고르십시오.",
     "options": ["자동차","자전거","버스","기차"],
     "answer": 0,
     "image": "https://airnetcso.github.io/eps/image/2.jpg",
@@ -308,6 +308,7 @@
     "answer": 2
   }
 ]
+
 
 
 
