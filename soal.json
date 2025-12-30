@@ -21,8 +21,8 @@
     "question": "들은 것을 고르십시오.",
     "options": ["발에 추웠어요", "발이 추웠어요", "발에 다쳤어요", "발이 다쳤어요"],
     "answer": 1,
-    "audio": "https://airnetcso.github.io/eps/audio/3.mp3"
-    "image": "https://airnetcso.github.io/eps/image/23.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/3.mp3",
+    "image": "https://airnetcso.github.io/eps/image/3.jpg"
   },
   {
     "id": 4,
@@ -38,8 +38,8 @@
     "question": "이것은 무엇입니까?",
     "options": ["①", "②", "③", "④"],
     "answer": 0,
-    "audio": "https://airnetcso.github.io/eps/audio/5.mp3"
-    "image": "https://airnetcso.github.io/eps/image/25.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/5.mp3",
+    "image": "https://airnetcso.github.io/eps/image/5.jpg"
   },
   {
     "id": 6,
@@ -47,7 +47,7 @@
     "question": "여기는 어떤 곳입니까?",
     "options": ["①", "②", "③", "④"],
     "answer": 1,
-    "audio": "https://airnetcso.github.io/eps/audio/6.m3u"
+    "audio": "https://airnetcso.github.io/eps/audio/6.mp3"
   },
   {
     "id": 7,
@@ -55,8 +55,8 @@
     "question": "이 사람은 무엇으로 여행을 하려고 합니까?",
     "options": ["①", "②", "③", "④"],
     "answer": 2,
-    "audio": "https://airnetcso.github.io/eps/audio/7.mp3"
-    "image": "https://airnetcso.github.io/eps/image/27.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/7.mp3",
+    "image": "https://airnetcso.github.io/eps/image/7.jpg"
   },
   {
     "id": 8,
@@ -72,8 +72,8 @@
     "question": "우체국이 어디에 있습니까?",
     "options": ["①", "②", "③", "④"],
     "answer": 0,
-    "audio": "https://airnetcso.github.io/eps/audio/9.mp3"
-    "image": "https://airnetcso.github.io/eps/image/29.jpg"
+    "audio": "https://airnetcso.github.io/eps/audio/9.mp3",
+    "image": "https://airnetcso.github.io/eps/image/9.jpg"
   },
   {
     "id": 10,
@@ -88,6 +88,7 @@
     "answer": 3,
     "audio": "https://airnetcso.github.io/eps/audio/10.mp3"
   },
+
   {
     "id": 11,
     "type": "listening",
@@ -168,12 +169,7 @@
     "id": 18,
     "type": "listening",
     "question": "남자가 먼저 해야 할 일은?",
-    "options": [
-      "방 배정",
-      "추첨",
-      "신청서 제출",
-      "보증금 납부"
-    ],
+    "options": ["방 배정", "추첨", "신청서 제출", "보증금 납부"],
     "answer": 2,
     "audio": "https://airnetcso.github.io/eps/audio/18.mp3"
   },
@@ -198,13 +194,14 @@
     "answer": 3,
     "audio": "https://airnetcso.github.io/eps/audio/20.mp3"
   },
+
   {
     "id": 21,
     "type": "reading",
     "question": "날씨가 너무 더워서 냉방을 하려고 합니다. 그래서 내일 ( )을/를 사러 전자상가에 갑니다.",
     "options": ["난로", "에어컨", "환풍기", "보일러"],
     "answer": 1,
-    "image": "https://airnetcso.github.io/eps/image/1.jpg"
+    "image": "https://airnetcso.github.io/eps/image/21.jpg"
   },
   {
     "id": 22,
@@ -233,30 +230,20 @@
     "question": "이 표지는 무슨 뜻입니까?",
     "options": ["독성 위험", "폭발 위험", "감전 위험", "저온 위험"],
     "answer": 2,
-    "image": "https://airnetcso.github.io/eps/image/5.jpg"
+    "image": "https://airnetcso.github.io/eps/image/25.jpg"
   },
   {
     "id": 26,
     "type": "reading",
     "question": "안내문 설명으로 맞는 것은?",
-    "options": [
-      "주야간 근무",
-      "주말 근무",
-      "이메일 지원",
-      "연장 근무"
-    ],
+    "options": ["주야간 근무", "주말 근무", "이메일 지원", "연장 근무"],
     "answer": 3
   },
   {
     "id": 27,
     "type": "reading",
     "question": "그래프 설명으로 맞는 것은?",
-    "options": [
-      "인건비 절감 1위",
-      "내국인 부족 과반",
-      "지시 준수 최소",
-      "장시간 근무 1위"
-    ],
+    "options": ["인건비 절감 1위", "내국인 부족 과반", "지시 준수 최소", "장시간 근무 1위"],
     "answer": 3
   },
   {
@@ -279,7 +266,7 @@
     "question": "빈칸에 알맞은 것은?",
     "options": ["가러", "가면", "가지만", "가도록"],
     "answer": 1,
-    "image": "https://airnetcso.github.io/eps/image/10.jpg"
+    "image": "https://airnetcso.github.io/eps/image/30.jpg"
   },
   {
     "id": 31,
@@ -306,19 +293,14 @@
     "id": 34,
     "type": "reading",
     "question": "지하철 설명으로 맞는 것은?",
-    "options": [
-      "현금만 사용",
-      "아침·밤 이용",
-      "색깔이 비슷",
-      "요금 비쌈"
-    ],
+    "options": ["현금만 사용", "아침·밤 이용", "색깔이 비슷", "요금 비쌈"],
     "answer": 1
   },
   {
     "id": 35,
     "type": "reading",
     "question": "글의 주제는?",
-    "options": ["수습", "계약 기간", "근무 시간", "조건"],
+    "options": ["수습", "계약 기간", "근무 시간", "근로 조건"],
     "answer": 1
   },
   {
@@ -348,7 +330,7 @@
     "question": "그림과 맞는 것은?",
     "options": ["전기밥솥", "도마", "뚝배기", "프라이팬"],
     "answer": 0,
-    "image": "https://airnetcso.github.io/eps/image/19.jpg"
+    "image": "https://airnetcso.github.io/eps/image/39.jpg"
   },
   {
     "id": 40,
