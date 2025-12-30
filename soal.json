@@ -198,6 +198,7 @@
     "id": 25,
     "type": "reading",
     "question": "다음 질문에 답하십시오. 이 표지는 무슨 뜻입니까 ?",
+    "image": "https://airnetcso.github.io/eps/image/25.jpg",
     "options": ["독성 위험","폭발 위험","감전 위험","저온 위험"],
     "answer": 0
   },
@@ -213,6 +214,7 @@
     "id": 27,
     "type": "reading",
     "question": "다음 그래프에 맞는 것은 고르십시오.",
+    "image": "https://airnetcso.github.io/eps/image/27.jpg",
     "options": ["인건비를 줄이기 위해서 쓰는 비율이 1위로 많다.","국내 근로자를 얻기 못해서 쓰는 비율이 반 이상입니다.","지시를 잘 따르다는 의미로 쓰는 비율이 제일 적다.","긴 시간 일 시킬 수 있어서 쓰는 비율이 제일 많다."],
     "answer": 0
   },
@@ -220,6 +222,7 @@
     "id": 28,
     "type": "reading",
     "question": "이 사람의 지위는 무엇입니까 ?",
+    "image": "https://airnetcso.github.io/eps/image/28.jpg",
     "options": ["박성현입니다.","공장장입니다.","태성입니다.","전문가입니다."],
     "answer": 1
   },
@@ -308,6 +311,7 @@
     "answer": 2
   }
 ]
+
 
 
 
