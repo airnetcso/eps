@@ -4,7 +4,7 @@
     "type": "listening",
     "question": "들은 것을 고르십시오",
     "options": ["이내","언니","안내","안경"],
-    "answer": 0,
+    "answer": 2,
     "audio": "https://airnetcso.github.io/eps/audio/1.mp3"
   },
   {
@@ -12,7 +12,7 @@
     "type": "listening",
     "question": "들은 것을 고르십시오",
     "options": ["삽니다","탑니다","갑니다","잡니다"],
-    "answer": 0,
+    "answer": 3,
     "audio": "https://airnetcso.github.io/eps/audio/2.mp3"
   },
   {
@@ -20,7 +20,7 @@
     "type": "listening",
     "question": "들은 것을 고르십시오",
     "options": ["발에 추웠어요","발이 추웠어요","발에 다쳤어요","발이 다쳤어요"],
-    "answer": 0,
+    "answer": 1,
     "audio": "https://airnetcso.github.io/eps/audio/3.mp3"
   },
   {
@@ -28,7 +28,7 @@
     "type": "listening",
     "question": "들은 것을 고르십시오",
     "options": ["가게가 가까워요","찌개가 뜨거워요","친구가 뛰어가요","지우개가 두꺼워요"],
-    "answer": 0,
+    "answer": 3,
     "audio": "https://airnetcso.github.io/eps/audio/4.mp3"
   },
   {
@@ -36,7 +36,7 @@
     "type": "listening",
     "question": "이것은 무엇입니까 ?",
     "options": ["동전입니다","지폐입니다","상품권입니다","영수증입니다"],
-    "answer": 0,
+    "answer": 2,
     "image": "https://airnetcso.github.io/eps/image/5.jpg",
     "audio": "https://airnetcso.github.io/eps/audio/5.mp3"
   },
@@ -45,7 +45,7 @@
     "type": "listening",
     "question": "여기는 어떤 곳입니까 ?",
     "options": ["담배를 피우는 곳입니다","안내를 해 주는 곳입니다","돈을 바꿔 주는 곳입니다","비행기 표를 파는 곳입니다"],
-    "answer": 1,
+    "answer": 0,
     "image": "https://airnetcso.github.io/eps/image/6.png",
     "audio": "https://airnetcso.github.io/eps/audio/6.mp3"
   },
@@ -54,7 +54,7 @@
     "type": "listening",
     "question": "이 사람은 무엇으로 여행을 하려고 합니까?",
     "options": ["배로 여행","기차로 여행","자전거로 여행","비행기로 여행"],
-    "answer": 1,
+    "answer": 3,
     "image": "https://airnetcso.github.io/eps/image/7.png",
     "audio": "https://airnetcso.github.io/eps/audio/7.mp3"
   },
@@ -63,7 +63,7 @@
     "type": "listening",
     "question": "케이크와 카드는 모두 얼마입니까 ?",
     "options": ["만 칠천 원","이만 칠천 원","만 삼천 오백 원","만 사천 오백 원"],
-    "answer": 0,
+    "answer": 1,
     "image": "https://airnetcso.github.io/eps/image/8.jpg",
     "audio": "https://airnetcso.github.io/eps/audio/8.mp3"
   },
@@ -72,7 +72,7 @@
     "type": "listening",
     "question": "우체국이 어디에 있습니까 ?",
     "options": ["공원 옆","경찰서 옆","경찰서 건너편","편의점 건너편"],
-    "answer": 0,
+    "answer": 2,
     "image": "https://airnetcso.github.io/eps/image/9.png",
     "audio": "https://airnetcso.github.io/eps/audio/9.mp3"
   },
@@ -81,7 +81,7 @@
     "type": "listening",
     "question": "곧 설날인데 연휴 때 뭐 할 거예요 ?",
     "options": ["떡국 만드는 법을 배웠어요.","고향에 가서 가족을 만났어요.","고향 친구들을 만나려고 해요.","추석이니까 고향에 가려고 해요."],
-    "answer": 0,
+    "answer": 2,
     "audio": "https://airnetcso.github.io/eps/audio/10.mp3"
   },
   {
@@ -97,7 +97,7 @@
     "type": "listening",
     "question": "반장님이 집들이에 초대를 하셔서 가 하는데 찾아갈 수 있을지 모르겠어요.",
     "options": ["늦지 않으려면 미리 서둘러겠어요.","저는 집들이 선물을 미리 준비했어요.","집이 커서 많은 사람들이 초대를 받았어요.","근처에 가서 전화를 하면 데리러 나오실 거예요."],    
-    "answer": 0,
+    "answer": 3,
     "audio": "https://airnetcso.github.io/eps/audio/12.mp3"
   },
   {
@@ -105,7 +105,7 @@
     "type": "listening",
     "question": "여기에서 시청 가는 버스 있어요 ?",
     "options": ["다음 정류장에서 내리세요.","건너편에서 460 번 버스를 타세요.","여기에서 시청까지 30 분 쯤 걸려요.","1 호선을 타고 가다가 시청에서 갈아타세요."],
-    "answer": 0,
+    "answer": 1,
     "audio": "https://airnetcso.github.io/eps/audio/13.mp3"
   },
   {
@@ -113,7 +113,7 @@
     "type": "listening",
     "question": "아딧 씨, 한국에서는 식사할 때 밥 그릇을 들고 먹으면 안 돼요. 남 : 아 그래요 ? 몰랐어요.",
     "options": ["식사를 요리하는 과정","정확이 식사하는 예절","식사를 고르는 기준","한식의 무늬와 소개"],
-    "answer": 0,
+    "answer": 2,
     "audio": "https://airnetcso.github.io/eps/audio/14.mp3"
   },
   {
@@ -121,7 +121,7 @@
     "type": "listening",
     "question": "요즘 길 거리에 쓰레기통이 잘 안 보여. 빈 병 하나를 버리려고 해도 어디에 버려 할지 모르겠어.",
     "options": ["거리에는 쓰레기통이 많이 필요하다.","쓰레기통에 음료수를 버리면 안 되다.","길에 쓰레기를 버리는 사람들이 많다.","쓰레기통이 없으면 거리가 더 깨끗하다."],
-    "answer": 0,
+    "answer": 3,
     "audio": "https://airnetcso.github.io/eps/audio/15.mp3"
   },
   {
@@ -129,7 +129,7 @@
     "type": "listening",
     "question": "이것은 무엇입니까?",
     "options": ["자동차","자전거","버스","기차"],
-    "answer": 1,
+    "answer": 2,
     "image": "https://airnetcso.github.io/eps/image/1.jpg",
     "audio": "https://airnetcso.github.io/eps/audio/16.mp3"
   },
@@ -138,7 +138,7 @@
     "type": "listening",
     "question": "이것은 무엇입니까?",
     "options": ["자동차","자전거","버스","기차"],
-    "answer": 1,
+    "answer": 0,
     "image": "https://airnetcso.github.io/eps/image/2.jpg",
     "audio": "https://airnetcso.github.io/eps/audio/17.mp3"
   },
@@ -147,7 +147,7 @@
     "type": "listening",
     "question": "대화가 끝난 후 남자가 가장 먼저 할 일은 무엇입니까 ?",
     "options": ["기숙사에서 방을 배정받는다.","신청자들 중에서 추첨을 한다.","관리실에 기숙사 신청서를 낸다.","기숙사 관리실에 보증금을 낸다."],
-    "answer": 0,
+    "answer": 2,
     "audio": "https://airnetcso.github.io/eps/audio/18.mp3"
   },
   {
@@ -163,7 +163,7 @@
     "type": "listening",
     "question": "여자가 댜한 설명으로 맞는 것은 무엇입니까 ?",
     "options": ["냄새가 심해서 힘들었습니다.","냄새가 안 나서 마스크를 안 썼습니다.","페인트 작업을 별로 어렵지 않았습니다.","지금까지 자주 페인트 작업을 했습니다."],
-    "answer": 0,
+    "answer": 2,
     "audio": "https://airnetcso.github.io/eps/audio/20.mp3"
   },
   {
@@ -308,6 +308,7 @@
     "answer": 2
   }
 ]
+
 
 
 
