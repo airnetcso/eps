@@ -65,8 +65,9 @@ function loadQuestionPage(){
   ansDiv.innerHTML = "";
 
   /* Judul soal */
-  const h = document.createElement("h3");
-  h.textContent = q.id + ". " + q.question;
+  const h = document.createElement("div");
+  h.className = "question-text";
+  h.innerText = q.id + ". " + q.question; // ⬅️ PENTING: innerText
   qArea.appendChild(h);
 
   /* Image */
