@@ -8,8 +8,14 @@ async function loadSoal(){
     const res = await fetch("https://raw.githubusercontent.com/airnetcso/eps/refs/heads/main/soal.json");
     questions = await res.json();
 
-    buildGrid();
-    loadQuestionPage();
+    if(document.getElementById("listen") && document.getElementById("read")){
+      buildGrid();
+    }
+
+    if(document.getElementById("questionBox") && document.getElementById("answers")){
+      loadQuestionPage();
+    }
+
   }catch(e){
     alert("Gagal load soal");
     console.error(e);
@@ -67,7 +73,7 @@ function loadQuestionPage(){
   /* ===== JUDUL & SOAL ===== */
   const h = document.createElement("div");
   h.id = "questionText";
-  h.textContent = q.id + ". " + q.question;   // nomor soal + pertanyaan
+  h.textContent = q.id + ". " + q.question;
   qArea.appendChild(h);
 
   /* Image */
@@ -107,7 +113,7 @@ function loadQuestionPage(){
     qArea.appendChild(aud);
   }
 
-  /* ===== OPTIONS ===== */
+  /* ===== OPSI JAWABAN ===== */
   q.options.forEach((opt,i)=>{
     const row = document.createElement("div");
     row.style.display = "flex";
@@ -124,9 +130,7 @@ function loadQuestionPage(){
     btn.onclick = ()=>{
       answered[q.id] = i + 1;
       localStorage.setItem("answered", JSON.stringify(answered));
-
-      ansDiv.querySelectorAll("button")
-        .forEach(b=>b.classList.remove("selected"));
+      ansDiv.querySelectorAll("button").forEach(b=>b.classList.remove("selected"));
       btn.classList.add("selected");
     };
 
@@ -162,17 +166,19 @@ function back(){
   location.href = "dashboard.html";
 }
 
-/* ================= TIMER ================= */
-let time = 50 * 60;
+/* ================= TIMER (Hanya Dashboard) ================= */
+if(document.getElementById("timerBox")){
+  let time = 50 * 60;
 
-setInterval(()=>{
-  time--;
-  const m = String(Math.floor(time/60)).padStart(2,"0");
-  const s = String(time%60).padStart(2,"0");
-  const t = document.getElementById("timerBox");
-  if(t) t.textContent = m + ":" + s;
-  if(time <= 0) autoSubmit();
-},1000);
+  setInterval(()=>{
+    time--;
+    const m = String(Math.floor(time/60)).padStart(2,"0");
+    const s = String(time%60).padStart(2,"0");
+    const t = document.getElementById("timerBox");
+    if(t) t.textContent = m + ":" + s;
+    if(time <= 0) autoSubmit();
+  },1000);
+}
 
 /* ================= SCORE ================= */
 function calculateScore(){
