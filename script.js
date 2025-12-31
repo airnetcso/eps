@@ -64,11 +64,10 @@ function loadQuestionPage(){
   qArea.innerHTML = "";
   ansDiv.innerHTML = "";
 
-  const h = document.createElement("h3");
+  const h = document.createElement("div");
+  h.className = "dialog-box";
   h.textContent = q.id + ". " + q.question;
-  h.style.whiteSpace = "pre-line"; // ⬅️ INI KUNCINYA
   qArea.appendChild(h);
-
 
   /* Image */
   if(q.image){
