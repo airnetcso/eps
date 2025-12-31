@@ -178,26 +178,47 @@ input,button{
   }
 }
 
-/* ===================================================== */
-/* ===== DIALOG BOX KHUSUS SOAL READING (21–40) ===== */
-/* ===================================================== */
+/* =====================================================
+   READING ONLY (21–40) — FINAL FIX
+===================================================== */
 
-.question-page.reading .dialog-box{
-  white-space: pre-line;
+/* pastikan tidak center */
+.question-page.reading{
+  align-items: flex-start !important;
+}
+
+/* DIALOG / PARAGRAF BOX */
+.question-page.reading .question{
   background: #f3f4f6;
   border: 1px solid #d1d5db;
-  padding: 16px 18px;
 
-  width: 70%;              /* lebar dikurangi */
-  max-width: 700px;
+  padding: 18px 20px;
+  margin-top: 10px;
+  margin-bottom: 16px;
 
-  line-height: 1.8;
-  font-size: 18px;         /* teks dialog lebih besar */
-  text-align: justify;
+  width: 70%;
+  max-width: 720px;
 
-  margin-bottom: 15px;
-  margin-left: 0 !important; /* PAKSA KIRI */
+  margin-left: 0 !important;
   margin-right: auto;
 
   border-radius: 0;
+
+  white-space: pre-line;
+  line-height: 1.9;
+  font-size: 20px;
+  text-align: justify;
+}
+
+/* opsi normal */
+.question-page.reading .options{
+  width: 100%;
+}
+
+/* mobile */
+@media (max-width: 768px){
+  .question-page.reading .question{
+    width: 95%;
+    font-size: 18px;
+  }
 }
