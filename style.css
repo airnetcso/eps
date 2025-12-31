@@ -191,14 +191,8 @@ input,button{
 
 /* dialog / bacaan */
 .dialog-box{
-  background: #f0dae0;        /* tetap putih */
+  background: #f2ebed;        /* tetap putih */
   
-  /* 🔥 PEMBEDA VISUAL */
-  box-shadow: 0 0 0 1px #e5e7eb;  /* garis halus TANPA border */
-  /* atau kalau mau sedikit mengambang:
-     box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-  */
-
   padding: 18px 20px;
   margin: 0 0 16px 15px;
 
