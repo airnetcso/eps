@@ -167,7 +167,7 @@ function back(){
 }
 
 /* ================= TIMER (Hanya Dashboard) ================= */
-if(document.getElementById("timerBox")){
+if(window.location.pathname.includes("dashboard.html") && document.getElementById("timerBox")){
   let time = 50 * 60;
 
   setInterval(()=>{
