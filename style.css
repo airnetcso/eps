@@ -184,7 +184,7 @@ input,button{
 
 /* Kolom kanan JANGAN punya box */
 .question-page .col-right{
-  background: green;
+  background: transparent;
   padding: 0;
 }
 
