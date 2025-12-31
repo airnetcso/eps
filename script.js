@@ -4,16 +4,10 @@ let questions = [],
 
 /* ================= LOAD SOAL ================= */
 async function loadSoal(){
-  try{
-    const res = await fetch("https://raw.githubusercontent.com/airnetcso/eps/refs/heads/main/soal.json");
-    questions = await res.json();
-
-    buildGrid();
-    loadQuestionPage();
-  }catch(e){
-    alert("Gagal load soal");
-    console.error(e);
-  }
+  const res = await fetch("https://raw.githubusercontent.com/airnetcso/eps/refs/heads/main/soal.json");
+  questions = await res.json();
+  buildGrid();
+  loadQuestionPage();
 }
 
 /* ================= GRID DASHBOARD ================= */
@@ -26,23 +20,18 @@ function buildGrid(){
   R.innerHTML = "";
 
   questions.forEach(q=>{
-    if(!q.id || !q.type) return;
-
     const box = document.createElement("div");
     box.className = "qbox";
     box.textContent = q.id;
 
-    if(answered[q.id] !== undefined){
-      box.classList.add("done");
-    }
+    if(answered[q.id]) box.classList.add("done");
 
     box.onclick = ()=>{
       localStorage.setItem("current", q.id);
       location.href = "question.html";
     };
 
-    if(q.type === "listening") L.appendChild(box);
-    else R.appendChild(box);
+    q.type === "listening" ? L.appendChild(box) : R.appendChild(box);
   });
 }
 
@@ -52,42 +41,33 @@ function loadQuestionPage(){
   const ansDiv = document.getElementById("answers");
   if(!qArea || !ansDiv) return;
 
-  const id = parseInt(localStorage.getItem("current"));
-  if(!id) return;
-
-  const idx = questions.findIndex(q=>q.id === id);
-  if(idx < 0) return;
-
-  const q = questions[idx];
-  currentIndex = idx;
+  const id = Number(localStorage.getItem("current"));
+  const q = questions.find(x=>x.id === id);
+  if(!q) return;
 
   qArea.innerHTML = "";
   ansDiv.innerHTML = "";
 
-  // pisahkan judul & isi dialog
   const parts = q.question.split("\n\n");
 
-  // ===== JUDUL / INSTRUKSI (DI LUAR BOX) =====
+  /* Judul */
   const title = document.createElement("h3");
   title.textContent = q.id + ". " + parts[0];
   qArea.appendChild(title);
 
-  // ===== DIALOG / BACAAN (DI DALAM BOX) =====
+  /* Dialog / Bacaan */
   if(parts[1]){
-  const box = document.createElement("div");
-  box.className = "dialog-box";
-  box.textContent = parts.slice(1).join("\n\n");
-  qArea.appendChild(box);
-}
-
-
+    const box = document.createElement("div");
+    box.className = "dialog-box";
+    box.textContent = parts.slice(1).join("\n\n");
+    qArea.appendChild(box);
+  }
 
   /* Image */
   if(q.image){
     const img = document.createElement("img");
     img.src = q.image;
     img.style.maxWidth = "100%";
-    img.style.marginBottom = "10px";
     qArea.appendChild(img);
   }
 
@@ -96,138 +76,31 @@ function loadQuestionPage(){
     const aud = document.createElement("audio");
     aud.src = q.audio;
     aud.controls = true;
-    aud.preload = "auto";
-
-    let playCount = 0;
-    const MAX_PLAY = 2;
-
-    aud.addEventListener("play", ()=>{
-      playCount++;
-      if(playCount > MAX_PLAY){
-        aud.pause();
-        aud.currentTime = 0;
-      }
-    });
-
-    aud.addEventListener("ended", ()=>{
-      if(playCount >= MAX_PLAY){
-        aud.controls = false;
-        aud.style.opacity = "0.6";
-      }
-    });
-
     qArea.appendChild(aud);
   }
 
-  /* ================= OPTIONS (1–4 FIXED) ================= */
+  /* Options */
   q.options.forEach((opt,i)=>{
     const btn = document.createElement("button");
-    btn.textContent = i + 1;
+    btn.textContent = i+1;
 
-    // highlight jawaban tersimpan (1–4)
-    if(answered[q.id] === i + 1){
-      btn.classList.add("selected");
-    }
+    if(answered[q.id] === i+1) btn.classList.add("selected");
 
     btn.onclick = ()=>{
-      answered[q.id] = i + 1; // SIMPAN 1–4
+      answered[q.id] = i+1;
       localStorage.setItem("answered", JSON.stringify(answered));
-
-      ansDiv.querySelectorAll("button")
-        .forEach(b=>b.classList.remove("selected"));
+      ansDiv.querySelectorAll("button").forEach(b=>b.classList.remove("selected"));
       btn.classList.add("selected");
     };
 
     const row = document.createElement("div");
     row.style.display = "flex";
-    row.style.alignItems = "center";
     row.style.gap = "10px";
 
-    const txt = document.createElement("span");
-    txt.textContent = opt;
-
     row.appendChild(btn);
-    row.appendChild(txt);
+    row.appendChild(document.createTextNode(opt));
     ansDiv.appendChild(row);
   });
-}
-
-/* ================= NAV ================= */
-function nextQuestion(){
-  if(currentIndex + 1 < questions.length){
-    localStorage.setItem("current", questions[currentIndex+1].id);
-    loadQuestionPage();
-  }else{
-    alert("Ini soal terakhir");
-  }
-}
-
-function prevQuestion(){
-  if(currentIndex > 0){
-    localStorage.setItem("current", questions[currentIndex-1].id);
-    loadQuestionPage();
-  }else{
-    alert("Ini soal pertama");
-  }
-}
-
-function back(){
-  location.href = "dashboard.html";
-}
-
-/* ================= TIMER ================= */
-let time = 50 * 60;
-
-setInterval(()=>{
-  time--;
-  const m = String(Math.floor(time/60)).padStart(2,"0");
-  const s = String(time%60).padStart(2,"0");
-  const t = document.getElementById("timerBox");
-  if(t) t.textContent = m + ":" + s;
-  if(time <= 0) autoSubmit();
-},1000);
-
-/* ================= SCORE ================= */
-function calculateScore(){
-  let score = 0;
-  questions.forEach(q=>{
-    if(answered[q.id] === q.answer){
-      score += 2.5;
-    }
-  });
-  return score;
-}
-
-function autoSubmit(){
-  alert("Waktu habis! Nilai: " + calculateScore());
-  finish();
-}
-
-function manualSubmit(){
-  if(confirm("Submit sekarang?")){
-    alert("Nilai: " + calculateScore());
-    finish();
-  }
-}
-
-function finish(){
-  const name = localStorage.getItem("user") || "Siswa";
-  const score = calculateScore();
-  const timeUsed = (50*60 - time);
-
-  const results = JSON.parse(localStorage.getItem("results") || "[]");
-  results.push({
-    name,
-    score,
-    time: Math.floor(timeUsed/60) + " menit",
-    date: new Date().toLocaleString()
-  });
-
-  localStorage.setItem("results", JSON.stringify(results));
-  localStorage.removeItem("answered");
-  localStorage.removeItem("current");
-
-  location.href = "index.html";
 }
 
 /* ================= INIT ================= */
