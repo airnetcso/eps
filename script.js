@@ -64,10 +64,11 @@ function loadQuestionPage(){
   qArea.innerHTML = "";
   ansDiv.innerHTML = "";
 
-  /* Judul soal */
   const h = document.createElement("h3");
   h.textContent = q.id + ". " + q.question;
+  h.style.whiteSpace = "pre-line"; // ⬅️ INI KUNCINYA
   qArea.appendChild(h);
+
 
   /* Image */
   if(q.image){
