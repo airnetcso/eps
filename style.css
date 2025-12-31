@@ -171,25 +171,40 @@ input,button{
 .nav-buttons button:hover{
   background-color: #2980b9;
 }
+@media (orientation: landscape){
+  .nav-buttons{
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
 
-/* =========================================
-   🔥 FINAL DIALOG BOX (READING)
-========================================= */
+/* =====================================================
+   FINAL — DIALOG BOX READING (PUTIH, KIRI, TANPA BORDER)
+===================================================== */
 
+/* Kolom kanan JANGAN punya box */
+.question-page .col-right{
+  background: transparent;
+  padding: 0;
+}
+
+/* Judul / nomor soal (di luar box) */
+.question-page .col-right h3{
+  margin: 0 0 10px 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Dialog / bacaan */
 .dialog-box{
-  background: #f3f4f6;
-  border: 1px solid #d1d5db;
+  background: #ffffff;   /* PUTIH */
+  border: none;          /* TANPA BORDER */
 
-  padding: 18px 22px;
-  margin: 10px 0 18px 0;
+  padding: 18px 20px;
+  margin: 0 0 16px 15px; /* KIRI */
 
   width: 70%;
   max-width: 720px;
-
-  margin-left: 0;
-  margin-right: auto;
-
-  border-radius: 0;
 
   white-space: pre-line;
   line-height: 1.9;
@@ -197,10 +212,9 @@ input,button{
   text-align: justify;
 }
 
-#questionBox h3{
-  margin: 0 0 6px 0;
-  font-size: 18px;
-  font-weight: 600;
+/* Opsi jawaban */
+#answers{
+  padding: 0 15px;
 }
 
 /* Mobile */
