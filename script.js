@@ -8,16 +8,8 @@ async function loadSoal(){
     const res = await fetch("https://raw.githubusercontent.com/airnetcso/eps/refs/heads/main/soal.json");
     questions = await res.json();
 
-    // Grid dashboard
-    if(document.getElementById("listen") && document.getElementById("read")){
-      buildGrid();
-    }
-
-    // Halaman soal
-    if(document.getElementById("questionBox") && document.getElementById("answers")){
-      loadQuestionPage();
-    }
-
+    buildGrid();
+    loadQuestionPage();
   }catch(e){
     alert("Gagal load soal");
     console.error(e);
@@ -72,13 +64,12 @@ function loadQuestionPage(){
   qArea.innerHTML = "";
   ansDiv.innerHTML = "";
 
-  // Judul soal
-  const h = document.createElement("div");
-  h.id = "questionText";
+  /* Judul soal */
+  const h = document.createElement("h3");
   h.textContent = q.id + ". " + q.question;
   qArea.appendChild(h);
 
-  // Image
+  /* Image */
   if(q.image){
     const img = document.createElement("img");
     img.src = q.image;
@@ -87,7 +78,7 @@ function loadQuestionPage(){
     qArea.appendChild(img);
   }
 
-  // Audio
+  /* Audio */
   if(q.audio){
     const aud = document.createElement("audio");
     aud.src = q.audio;
@@ -115,26 +106,29 @@ function loadQuestionPage(){
     qArea.appendChild(aud);
   }
 
-  // Jawaban
+  /* ================= OPTIONS (1–4 FIXED) ================= */
   q.options.forEach((opt,i)=>{
-    const row = document.createElement("div");
-    row.style.display = "flex";
-    row.style.alignItems = "flex-start";
-    row.style.gap = "10px";
-
     const btn = document.createElement("button");
     btn.textContent = i + 1;
 
+    // highlight jawaban tersimpan (1–4)
     if(answered[q.id] === i + 1){
       btn.classList.add("selected");
     }
 
     btn.onclick = ()=>{
-      answered[q.id] = i + 1;
+      answered[q.id] = i + 1; // SIMPAN 1–4
       localStorage.setItem("answered", JSON.stringify(answered));
-      ansDiv.querySelectorAll("button").forEach(b=>b.classList.remove("selected"));
+
+      ansDiv.querySelectorAll("button")
+        .forEach(b=>b.classList.remove("selected"));
       btn.classList.add("selected");
     };
+
+    const row = document.createElement("div");
+    row.style.display = "flex";
+    row.style.alignItems = "center";
+    row.style.gap = "10px";
 
     const txt = document.createElement("span");
     txt.textContent = opt;
@@ -168,18 +162,17 @@ function back(){
   location.href = "dashboard.html";
 }
 
-/* ================= TIMER (Dashboard saja) ================= */
-if(window.location.pathname.includes("dashboard.html") && document.getElementById("timerBox")){
-  let time = 50 * 60;
-  setInterval(()=>{
-    time--;
-    const m = String(Math.floor(time/60)).padStart(2,"0");
-    const s = String(time%60).padStart(2,"0");
-    const t = document.getElementById("timerBox");
-    if(t) t.textContent = m + ":" + s;
-    if(time <= 0) autoSubmit();
-  },1000);
-}
+/* ================= TIMER ================= */
+let time = 50 * 60;
+
+setInterval(()=>{
+  time--;
+  const m = String(Math.floor(time/60)).padStart(2,"0");
+  const s = String(time%60).padStart(2,"0");
+  const t = document.getElementById("timerBox");
+  if(t) t.textContent = m + ":" + s;
+  if(time <= 0) autoSubmit();
+},1000);
 
 /* ================= SCORE ================= */
 function calculateScore(){
@@ -207,7 +200,7 @@ function manualSubmit(){
 function finish(){
   const name = localStorage.getItem("user") || "Siswa";
   const score = calculateScore();
-  const timeUsed = (50*60 - (window.time || 0));
+  const timeUsed = (50*60 - time);
 
   const results = JSON.parse(localStorage.getItem("results") || "[]");
   results.push({
