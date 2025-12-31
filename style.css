@@ -179,21 +179,21 @@ input,button{
 }
 
 /* =====================================================
-   READING ONLY (21–40) — FINAL FIX
+   🔥 READING ONLY (21–40) — GUARANTEED FIX
 ===================================================== */
 
-/* pastikan tidak center */
+/* pastikan posisi kiri */
 .question-page.reading{
   align-items: flex-start !important;
 }
 
-/* DIALOG / PARAGRAF BOX */
-.question-page.reading .question{
+/* === DIALOG / PARAGRAF BOX === */
+/* target ELEMEN SOAL PERTAMA (tanpa class) */
+.question-page.reading .col-right > *:first-child{
   background: #f3f4f6;
   border: 1px solid #d1d5db;
 
   padding: 18px 20px;
-  margin-top: 10px;
   margin-bottom: 16px;
 
   width: 70%;
@@ -204,20 +204,20 @@ input,button{
 
   border-radius: 0;
 
-  white-space: pre-line;
+  white-space: pre-line;   /* dialog turun baris */
   line-height: 1.9;
   font-size: 20px;
   text-align: justify;
 }
 
-/* opsi normal */
+/* opsi jawaban tetap normal */
 .question-page.reading .options{
   width: 100%;
 }
 
 /* mobile */
 @media (max-width: 768px){
-  .question-page.reading .question{
+  .question-page.reading .col-right > *:first-child{
     width: 95%;
     font-size: 18px;
   }
