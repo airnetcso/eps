@@ -34,7 +34,7 @@ input,button{
   align-items: center;
 }
 
-/* ===== TIMER & SUBMIT ===== */
+/* Timer & Submit */
 .box{
   padding: 10px 20px;
   font-weight: bold;
@@ -83,7 +83,6 @@ input,button{
   padding: 15px;
   text-align: center;
   cursor: pointer;
-  border-radius: 0;
 }
 .qbox.done{
   background: #ccc;
@@ -93,7 +92,6 @@ input,button{
 .section-box{
   padding: 10px;
   font-weight: bold;
-  border-radius: 0;
   margin-bottom: 10px;
 }
 .section-box.listening{
@@ -112,7 +110,7 @@ input,button{
   margin-top: 80px;
 }
 
-/* kolom kiri */
+/* kolom kiri (jawaban) */
 .col-left{
   flex: 1;
   padding: 15px;
@@ -122,7 +120,7 @@ input,button{
   gap: 10px;
 }
 
-/* kolom kanan (bebas untuk dialog) */
+/* kolom kanan (konten soal) */
 .col-right{
   flex: 2;
   padding: 0;
@@ -173,36 +171,24 @@ input,button{
 .nav-buttons button:hover{
   background-color: #2980b9;
 }
-@media (orientation: landscape){
-  .nav-buttons{
-    max-width: 600px;
-    margin: 0 auto;
-  }
-}
 
 /* =====================================================
-   READING — DIALOG BOX FINAL
+   DIALOG / READING BOX
 ===================================================== */
 
-/* judul / nomor soal */
+/* judul & nomor soal (di luar box) */
 .col-right h3{
   margin: 0 0 10px 15px;
 }
 
-/* dialog / bacaan */
+/* dialog box */
 .dialog-box{
-  background: #ffffff;
-
-  /* pemisah halus tanpa border */
-  box-shadow: 0 0 0 1px #e5e7eb;
-
+  background: #ffffff;      /* PUTIH */
   padding: 18px 20px;
   margin: 0 0 16px 15px;
 
   width: 70%;
   max-width: 720px;
-
-  border-radius: 0;
 
   white-space: pre-line;
   line-height: 1.9;
@@ -213,37 +199,35 @@ input,button{
   overflow-wrap: break-word;
 }
 
-/* mobile */
+/* =====================================================
+   IMAGE + AUDIO (LISTENING)
+===================================================== */
+
+.col-right img{
+  display: block;
+  width: 480px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 10px 15px;
+  object-fit: contain;
+}
+
+.col-right audio{
+  display: block;
+  width: 480px;
+  max-width: 100%;
+  margin: 0 0 20px 15px;
+  border-radius: 0;   /* audio kotak */
+}
+
+/* ===== MOBILE ===== */
 @media (max-width: 768px){
   .dialog-box{
     width: 95%;
     font-size: 18px;
   }
-}
-
-/* =====================================================
-   AUDIO PLAYER — KOTAK (NO ROUNDED)
-===================================================== */
-
-audio{
-  width: 280px;
-  max-width: 100%;
-  height: 40px;
-
-  border-radius: 0 !important;
-  background: #f3f4f6;
-}
-
-/* Chrome / Edge */
-audio::-webkit-media-controls-panel{
-  border-radius: 0 !important;
-  background: #f3f4f6;
-}
-audio::-webkit-media-controls-play-button{
-  border-radius: 0 !important;
-}
-
-/* Firefox */
-audio::-moz-focus-inner{
-  border-radius: 0;
+  .col-right img,
+  .col-right audio{
+    width: 95%;
+  }
 }
