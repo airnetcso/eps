@@ -64,10 +64,10 @@ function loadQuestionPage(){
   qArea.innerHTML = "";
   ansDiv.innerHTML = "";
 
-  /* Judul soal */
+  /* ===== JUDUL & SOAL (FINAL FIX) ===== */
   const h = document.createElement("div");
-  h.className = "question-text";
-  h.innerText = q.id + ". " + q.question; // ⬅️ PENTING: innerText
+  h.id = "questionText";
+  h.textContent = q.question;   // ⬅️ KUNCI UTAMA (AMAN JSON + \n)
   qArea.appendChild(h);
 
   /* Image */
@@ -106,6 +106,38 @@ function loadQuestionPage(){
 
     qArea.appendChild(aud);
   }
+
+  /* ===== OPTIONS ===== */
+  q.options.forEach((opt,i)=>{
+    const row = document.createElement("div");
+    row.style.display = "flex";
+    row.style.alignItems = "flex-start";
+    row.style.gap = "10px";
+
+    const btn = document.createElement("button");
+    btn.textContent = i + 1;
+
+    if(answered[q.id] === i + 1){
+      btn.classList.add("selected");
+    }
+
+    btn.onclick = ()=>{
+      answered[q.id] = i + 1;
+      localStorage.setItem("answered", JSON.stringify(answered));
+
+      ansDiv.querySelectorAll("button")
+        .forEach(b=>b.classList.remove("selected"));
+      btn.classList.add("selected");
+    };
+
+    const txt = document.createElement("span");
+    txt.textContent = opt;
+
+    row.appendChild(btn);
+    row.appendChild(txt);
+    ansDiv.appendChild(row);
+  });
+}
 
   /* ================= OPTIONS (1–4 FIXED) ================= */
   q.options.forEach((opt,i)=>{
