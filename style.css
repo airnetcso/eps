@@ -121,14 +121,20 @@ input,button{
 
 /* ===== DIALOG / BACAAN BOX EPS ===== */
 .dialog-box{
-  white-space:pre-line;      /* ⬅️ KUNCI TEKS TURUN BARIS */
-  background:#f3f4f6;
-  border:1px solid #d1d5db;
-  padding:14px 16px;
-  margin-bottom:15px;
-  line-height:1.6;
-  font-size:16px;
-  border-radius:0;
+  white-space: pre-line;       /* teks turun baris */
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  padding: 14px 16px;
+
+  width: 70%;                  /* ⬅️ lebih sempit */
+  max-width: 700px;
+
+  line-height: 1.7;
+  font-size: 16px;
+  text-align: justify;
+
+  margin: 0 auto 15px auto;    /* center */
+  border-radius: 0;
 }
 
 /* Jawaban bulat */
