@@ -64,10 +64,10 @@ function loadQuestionPage(){
   qArea.innerHTML = "";
   ansDiv.innerHTML = "";
 
-  /* Judul soal */
+  /* ===== JUDUL & SOAL ===== */
   const h = document.createElement("div");
   h.id = "questionText";
-  h.textContent = q.question;
+  h.textContent = q.id + ". " + q.question;   // nomor soal + pertanyaan
   qArea.appendChild(h);
 
   /* Image */
@@ -107,7 +107,7 @@ function loadQuestionPage(){
     qArea.appendChild(aud);
   }
 
-  /* Options */
+  /* ===== OPTIONS ===== */
   q.options.forEach((opt,i)=>{
     const row = document.createElement("div");
     row.style.display = "flex";
@@ -115,14 +115,18 @@ function loadQuestionPage(){
     row.style.gap = "10px";
 
     const btn = document.createElement("button");
-    btn.textContent = i+1;
+    btn.textContent = i + 1;
 
-    if(answered[q.id] === i+1) btn.classList.add("selected");
+    if(answered[q.id] === i + 1){
+      btn.classList.add("selected");
+    }
 
     btn.onclick = ()=>{
-      answered[q.id] = i+1;
+      answered[q.id] = i + 1;
       localStorage.setItem("answered", JSON.stringify(answered));
-      ansDiv.querySelectorAll("button").forEach(b=>b.classList.remove("selected"));
+
+      ansDiv.querySelectorAll("button")
+        .forEach(b=>b.classList.remove("selected"));
       btn.classList.add("selected");
     };
 
@@ -137,17 +141,21 @@ function loadQuestionPage(){
 
 /* ================= NAV ================= */
 function nextQuestion(){
-  if(currentIndex+1 < questions.length){
+  if(currentIndex + 1 < questions.length){
     localStorage.setItem("current", questions[currentIndex+1].id);
     loadQuestionPage();
-  } else alert("Ini soal terakhir");
+  }else{
+    alert("Ini soal terakhir");
+  }
 }
 
 function prevQuestion(){
-  if(currentIndex>0){
+  if(currentIndex > 0){
     localStorage.setItem("current", questions[currentIndex-1].id);
     loadQuestionPage();
-  } else alert("Ini soal pertama");
+  }else{
+    alert("Ini soal pertama");
+  }
 }
 
 function back(){
@@ -155,34 +163,36 @@ function back(){
 }
 
 /* ================= TIMER ================= */
-let time = 50*60;
+let time = 50 * 60;
 
 setInterval(()=>{
   time--;
   const m = String(Math.floor(time/60)).padStart(2,"0");
   const s = String(time%60).padStart(2,"0");
   const t = document.getElementById("timerBox");
-  if(t) t.textContent = m+":"+s;
-  if(time<=0) autoSubmit();
+  if(t) t.textContent = m + ":" + s;
+  if(time <= 0) autoSubmit();
 },1000);
 
 /* ================= SCORE ================= */
 function calculateScore(){
-  let score=0;
+  let score = 0;
   questions.forEach(q=>{
-    if(answered[q.id]===q.answer) score+=2.5;
+    if(answered[q.id] === q.answer){
+      score += 2.5;
+    }
   });
   return score;
 }
 
 function autoSubmit(){
-  alert("Waktu habis! Nilai: "+calculateScore());
+  alert("Waktu habis! Nilai: " + calculateScore());
   finish();
 }
 
 function manualSubmit(){
   if(confirm("Submit sekarang?")){
-    alert("Nilai: "+calculateScore());
+    alert("Nilai: " + calculateScore());
     finish();
   }
 }
@@ -196,7 +206,7 @@ function finish(){
   results.push({
     name,
     score,
-    time: Math.floor(timeUsed/60)+" menit",
+    time: Math.floor(timeUsed/60) + " menit",
     date: new Date().toLocaleString()
   });
 
@@ -204,7 +214,7 @@ function finish(){
   localStorage.removeItem("answered");
   localStorage.removeItem("current");
 
-  location.href="index.html";
+  location.href = "index.html";
 }
 
 /* ================= INIT ================= */
