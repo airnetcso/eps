@@ -1,3 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard UBT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<script>
+if(localStorage.getItem("login")!=="true"){location.href="index.html";}
+</script>
+<body>
+<header class="header">
+  <div style="text-align:left">
+    <button id="submitBtn" class="box" onclick="manualSubmit()">SUBMIT</button>
+  </div>
+  <div id="user"></div>
+  <div class="top-right">
+    <div id="timerBox" class="box">50:00</div>
+  </div>
+</header>
+
 <div class="content two-col">
   <div class="col">
     <div style="text-align:center">
@@ -13,3 +34,10 @@
     <div class="grid" id="read"></div>
   </div>
 </div>
+
+<script src="script.js"></script>
+<script>
+document.getElementById("user").innerText = localStorage.getItem("user");
+</script>
+</body>
+</html>
