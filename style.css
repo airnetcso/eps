@@ -119,21 +119,24 @@ input,button{
   flex:2;
 }
 
-/* ===== DIALOG / BACAAN BOX EPS ===== */
+/* ===== DIALOG / BACAAN BOX EPS (FINAL FIX) ===== */
 .dialog-box{
-  white-space: pre-line;       /* teks turun baris */
+  white-space: pre-line;
   background: #f3f4f6;
   border: 1px solid #d1d5db;
-  padding: 14px 16px;
+  padding: 16px 18px;
 
-  width: 70%;                  /* ⬅️ lebih sempit */
+  width: 70%;
   max-width: 700px;
 
-  line-height: 1.7;
-  font-size: 16px;
+  line-height: 1.8;
+  font-size: 18px;          /* ⬅️ TEKS DIBESARKAN */
   text-align: justify;
 
-  margin: 0 auto 15px auto;    /* center */
+  margin-bottom: 15px;
+  margin-left: 0 !important; /* ⬅️ PAKSA KIRI */
+  margin-right: auto;        /* ⬅️ SISA KE KANAN */
+
   border-radius: 0;
 }
 
