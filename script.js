@@ -8,10 +8,12 @@ async function loadSoal(){
     const res = await fetch("https://raw.githubusercontent.com/airnetcso/eps/refs/heads/main/soal.json");
     questions = await res.json();
 
+    // Jika ada dashboard
     if(document.getElementById("listen") && document.getElementById("read")){
       buildGrid();
     }
 
+    // Jika ada halaman soal
     if(document.getElementById("questionBox") && document.getElementById("answers")){
       loadQuestionPage();
     }
@@ -70,13 +72,13 @@ function loadQuestionPage(){
   qArea.innerHTML = "";
   ansDiv.innerHTML = "";
 
-  /* ===== JUDUL & SOAL ===== */
+  // Tampilkan nomor soal
   const h = document.createElement("div");
   h.id = "questionText";
   h.textContent = q.id + ". " + q.question;
   qArea.appendChild(h);
 
-  /* Image */
+  // Image
   if(q.image){
     const img = document.createElement("img");
     img.src = q.image;
@@ -85,7 +87,7 @@ function loadQuestionPage(){
     qArea.appendChild(img);
   }
 
-  /* Audio */
+  // Audio
   if(q.audio){
     const aud = document.createElement("audio");
     aud.src = q.audio;
@@ -113,7 +115,7 @@ function loadQuestionPage(){
     qArea.appendChild(aud);
   }
 
-  /* ===== OPSI JAWABAN ===== */
+  // Opsi jawaban
   q.options.forEach((opt,i)=>{
     const row = document.createElement("div");
     row.style.display = "flex";
@@ -166,7 +168,7 @@ function back(){
   location.href = "dashboard.html";
 }
 
-/* ================= TIMER (Hanya Dashboard) ================= */
+/* ================= TIMER ================= */
 if(window.location.pathname.includes("dashboard.html") && document.getElementById("timerBox")){
   let time = 50 * 60;
 
