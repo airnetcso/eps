@@ -64,10 +64,22 @@ function loadQuestionPage(){
   qArea.innerHTML = "";
   ansDiv.innerHTML = "";
 
-  const h = document.createElement("div");
-  h.className = "dialog-box";
-  h.textContent = q.id + ". " + q.question;
-  qArea.appendChild(h);
+  // pisahkan judul & isi dialog
+  const parts = q.question.split("\n\n");
+
+  // ===== JUDUL / INSTRUKSI (DI LUAR BOX) =====
+  const title = document.createElement("h3");
+  title.textContent = q.id + ". " + parts[0];
+  qArea.appendChild(title);
+
+  // ===== DIALOG / BACAAN (DI DALAM BOX) =====
+  if(parts[1]){
+  const box = document.createElement("div");
+  box.className = "dialog-box";
+  box.textContent = parts.slice(1).join("\n\n");
+  qArea.appendChild(box);
+}
+
 
 
   /* Image */
