@@ -69,6 +69,7 @@ function loadQuestionPage(){
   h.textContent = q.id + ". " + q.question;
   qArea.appendChild(h);
 
+
   /* Image */
   if(q.image){
     const img = document.createElement("img");
