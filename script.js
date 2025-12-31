@@ -8,12 +8,12 @@ async function loadSoal(){
     const res = await fetch("https://raw.githubusercontent.com/airnetcso/eps/refs/heads/main/soal.json");
     questions = await res.json();
 
-    // Jika ada dashboard
+    // Grid dashboard
     if(document.getElementById("listen") && document.getElementById("read")){
       buildGrid();
     }
 
-    // Jika ada halaman soal
+    // Halaman soal
     if(document.getElementById("questionBox") && document.getElementById("answers")){
       loadQuestionPage();
     }
@@ -72,7 +72,7 @@ function loadQuestionPage(){
   qArea.innerHTML = "";
   ansDiv.innerHTML = "";
 
-  // Tampilkan nomor soal
+  // Judul soal
   const h = document.createElement("div");
   h.id = "questionText";
   h.textContent = q.id + ". " + q.question;
@@ -115,7 +115,7 @@ function loadQuestionPage(){
     qArea.appendChild(aud);
   }
 
-  // Opsi jawaban
+  // Jawaban
   q.options.forEach((opt,i)=>{
     const row = document.createElement("div");
     row.style.display = "flex";
@@ -168,10 +168,9 @@ function back(){
   location.href = "dashboard.html";
 }
 
-/* ================= TIMER ================= */
+/* ================= TIMER (Dashboard saja) ================= */
 if(window.location.pathname.includes("dashboard.html") && document.getElementById("timerBox")){
   let time = 50 * 60;
-
   setInterval(()=>{
     time--;
     const m = String(Math.floor(time/60)).padStart(2,"0");
@@ -208,7 +207,7 @@ function manualSubmit(){
 function finish(){
   const name = localStorage.getItem("user") || "Siswa";
   const score = calculateScore();
-  const timeUsed = (50*60 - time);
+  const timeUsed = (50*60 - (window.time || 0));
 
   const results = JSON.parse(localStorage.getItem("results") || "[]");
   results.push({
