@@ -121,8 +121,8 @@ input,button{
   color: #2f855a;
 }
 
-/* ===== HALAMAN SOAL ===== */
-.question-page{
+/* ===== HALAMAN SOAL (ONLY QUESTION PAGE) ===== */
+body.question-mode .question-page{
   display: flex;
   gap: 20px;
   margin-top: 80px;
