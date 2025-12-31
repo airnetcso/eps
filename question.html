@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
 <title>Soal</title>
@@ -8,22 +8,18 @@
 <script>
 if(localStorage.getItem("login")!=="true"){location.href="index.html";}
 </script>
-<body class="question-mode">
-  <header class="header">
-    <div id="timerBox" class="box">50:00</div>
-  </header>
+<body>
+<div class="question-page">
+  <div class="col-left" id="answers"></div>
+  <div class="col-right" id="questionBox"></div>
+</div>
 
-  <div class="question-page">
-    <div class="col-left" id="answers"></div>
-    <div class="col-right" id="questionBox"></div>
-  </div>
+<div class="nav-buttons">
+  <button onclick="prevQuestion()">SOAL SEBELUMNYA</button>
+  <button onclick="back()">KEMBALI</button>
+  <button onclick="nextQuestion()">SOAL BERIKUTNYA</button>
+</div>
 
-  <div class="nav-buttons">
-    <button onclick="prevQuestion()">SOAL SEBELUMNYA</button>
-    <button onclick="back()">KEMBALI</button>
-    <button onclick="nextQuestion()">SOAL BERIKUTNYA</button>
-  </div>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
