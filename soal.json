@@ -46,7 +46,7 @@
     "question": "여기는 어떤 곳입니까 ?",
     "options": ["","","",""],
     "answer": 1,
-    "image": "https://airnetcso.github.io/eps/image/6.png",
+    "image": "https://airnetcso.github.io/eps/image/6.jpg",
     "audio": "https://airnetcso.github.io/eps/audio/6.mp3"
   },
   {
@@ -55,7 +55,7 @@
     "question": "이 사람은 무엇으로 여행을 하려고 합니까?",
     "options": ["","","",""],
     "answer": 4,
-    "image": "https://airnetcso.github.io/eps/image/7.png",
+    "image": "https://airnetcso.github.io/eps/image/7.jpg",
     "audio": "https://airnetcso.github.io/eps/audio/7.mp3"
   },
   {
@@ -73,7 +73,7 @@
     "question": "우체국이 어디에 있습니까 ?",
     "options": ["","","",""],
     "answer": 3,
-    "image": "https://airnetcso.github.io/eps/image/9.png",
+    "image": "https://airnetcso.github.io/eps/image/9.jpg",
     "audio": "https://airnetcso.github.io/eps/audio/9.mp3"
   },
   {
@@ -318,6 +318,7 @@
     "answer": 2
   }
 ]
+
 
 
 
