@@ -36,7 +36,7 @@ function buildGrid() {
 
     box.onclick = () => {
       localStorage.setItem("current", q.id);
-      console.log(`Dipilih soal ID: ${q.id}`); // Debug
+      console.log(`Dipilih soal ID: ${q.id}`);
       location.href = "question.html";
     };
 
@@ -50,7 +50,7 @@ async function loadQuestionPage() {
   const ansDiv = document.getElementById("answers");
   if (!qArea || !ansDiv) return;
 
-  // Tunggu sampai data selesai di-load
+  // Tunggu data siap
   if (!dataLoaded) {
     console.log("Menunggu data soal...");
     await new Promise(resolve => {
@@ -59,7 +59,7 @@ async function loadQuestionPage() {
           clearInterval(check);
           resolve();
         }
-      }, 300); // Cek setiap 300ms
+      }, 300);
     });
   }
 
@@ -83,15 +83,22 @@ async function loadQuestionPage() {
   qArea.innerHTML = "";
   ansDiv.innerHTML = "";
 
-  /* ==== JUDUL + DIALOG ==== */
+  /* ==== JUDUL ==== */
   const parts = q.question.split("\n\n");
   const title = document.createElement("h3");
   title.textContent = q.id + ". " + parts[0];
   qArea.appendChild(title);
 
+  /* ==== DIALOG BOX (khusus 37 & 38: center) ==== */
   if (parts[1]) {
     const box = document.createElement("div");
     box.className = "dialog-box";
+
+    // Khusus soal 37 & 38: rata tengah
+    if (q.id === 37 || q.id === 38) {
+      box.classList.add("dialog-center");
+    }
+
     box.textContent = parts.slice(1).join("\n\n");
     qArea.appendChild(box);
   }
@@ -103,7 +110,7 @@ async function loadQuestionPage() {
     aud.controls = true;
     aud.style.width = "100%";
     aud.style.maxWidth = "380px";
-    aud.style.margin = "20px 0 16px 0"; // Rata kiri
+    aud.style.margin = "20px 0 16px 0";
     aud.style.display = "block";
     qArea.appendChild(aud);
   }
@@ -114,9 +121,9 @@ async function loadQuestionPage() {
     img.src = q.image;
     img.style.maxWidth = "100%";
     img.style.height = "auto";
-    img.style.margin = "16px 0 40px 0"; // Jarak bawah lebih besar
+    img.style.margin = "16px 0 40px 0";
     img.style.display = "block";
-    img.style.borderRadius = "0"; // Kotak tajam
+    img.style.borderRadius = "0";
     qArea.appendChild(img);
   }
 
@@ -202,8 +209,7 @@ function finish() {
 
 /* ================= INIT ================= */
 window.onload = async function () {
-  await loadSoal(); // Tunggu fetch selesai dulu
-  // Jika halaman ini adalah question.html, load soal langsung setelah data siap
+  await loadSoal();
   if (document.getElementById("questionBox")) {
     await loadQuestionPage();
   }
