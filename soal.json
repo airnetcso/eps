@@ -19,7 +19,7 @@
    "id": 3,
    "type":"listening",
    "question":"들은 것을 고르십시오.",
-   "options": ["우산","장화","우비","장갑"],
+   "options": ["","","",""],
    "answer": 1,
    "image":"https://example.com/eps/image/3.jpg",
    "audio":"https://example.com/eps/audio/3.mp3"
@@ -28,7 +28,7 @@
    "id": 4,
    "type":"listening",
    "question":"들은 것을 고르십시오.",
-   "options": ["손 씻기","차 마시기","밥 먹기","전화하기"],
+   "options": ["","","",""],
    "answer": 1,
    "image":"https://example.com/eps/image/4.jpg",
    "audio":"https://example.com/eps/audio/4.mp3"
@@ -37,7 +37,7 @@
    "id": 5,
    "type":"listening",
    "question":"이것은 무엇입니까?",
-   "options": ["책입니다","풀입니다","가위입니다","연필입니다"],
+   "options": ["","","",""],
    "answer": 1,
    "audio":"https://example.com/eps/audio/5.mp3"
   },
@@ -45,7 +45,7 @@
    "id": 6,
    "type":"listening",
    "question":"여기는 어디입니까?",
-   "options": ["버스정류장","지하철역","공항","학교"],
+   "options": ["","","",""],
    "answer": 1,
    "image":"https://example.com/eps/image/6.jpg",
    "audio":"https://example.com/eps/audio/6.mp3"
@@ -54,7 +54,7 @@
    "id": 7,
    "type":"listening",
    "question":"이 사람은 무엇을 하고 있습니까?",
-   "options": ["노래 부르기","TV 보기","책 읽기","춤추기"],
+   "options": ["","","",""],
    "answer": 3,
    "image":"https://example.com/eps/image/7.jpg",
    "audio":"https://example.com/eps/audio/7.mp3"
@@ -63,7 +63,7 @@
    "id": 8,
    "type":"listening",
    "question":"양복이 얼마나 있습니까?",
-   "options": ["1벌","2벌","3벌","4벌"],
+   "options": ["","","",""],
    "answer": 3,
    "image":"https://example.com/eps/image/8.jpg",
    "audio":"https://example.com/eps/audio/8.mp3"
@@ -72,7 +72,7 @@
    "id": 9,
    "type":"listening",
    "question":"인형 가게는 어디에 있습니까?",
-   "options": ["1층","2층","3층","4층"],
+   "options": ["","","",""],
    "answer": 3,
    "audio":"https://example.com/eps/audio/9.mp3"
   },
@@ -307,5 +307,6 @@
    "answer": 3
   }
 ]
+
 
 
