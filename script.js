@@ -11,13 +11,13 @@ async function loadSoal() {
     }
     questions = await res.json();
     
-    console.log(`Soal berhasil dimuat: ${questions.length} soal`); // debug di console
+    console.log(`Soal berhasil dimuat: ${questions.length} soal`); // debug
     
     buildGrid();
-    // JANGAN panggil loadQuestionPage() di sini, hanya di question.html
+    // JANGAN panggil loadQuestionPage() di sini (khusus dashboard)
   } catch (err) {
     console.error("Error memuat soal:", err);
-    alert("Gagal memuat daftar soal! Cek koneksi internet atau file soal.json di GitHub.");
+    alert("Gagal memuat daftar soal! Cek koneksi atau file soal.json di GitHub.");
   }
 }
 
@@ -41,6 +41,7 @@ function buildGrid() {
 
     box.onclick = () => {
       localStorage.setItem("current", q.id);
+      console.log("Dipilih soal ID:", q.id); // debug klik
       location.href = "question.html";
     };
 
@@ -55,11 +56,19 @@ function loadQuestionPage() {
   if (!qArea || !ansDiv) return;
 
   const id = Number(localStorage.getItem("current"));
+  if (!id) {
+    alert("Tidak ada soal yang dipilih! Kembali ke dashboard.");
+    return;
+  }
+
   const idx = questions.findIndex(q => q.id === id);
-  if (idx < 0) return;
+  if (idx === -1) {
+    alert("Soal tidak ditemukan! Coba pilih lagi dari dashboard.");
+    return;
+  }
 
   const q = questions[idx];
-  currentIndex = idx;
+  currentIndex = idx; // pastikan index sesuai ID yang diklik
 
   qArea.innerHTML = "";
   ansDiv.innerHTML = "";
@@ -78,31 +87,29 @@ function loadQuestionPage() {
     qArea.appendChild(box);
   }
 
-  /* Audio – ke atas, posisi kiri (nempel kiri), tajam */
+  /* Audio – ke atas, rata kiri, tajam */
   if (q.audio) {
     const aud = document.createElement("audio");
     aud.src = q.audio;
     aud.controls = true;
     
-    // Style: ke kiri, tajam, tanpa shadow/border
     aud.style.width = "100%";
     aud.style.maxWidth = "380px";
-    aud.style.margin = "20px 0 16px 0";  // kiri = 0 → nempel kiri
+    aud.style.margin = "20px 0 16px 0";  // rata kiri (margin kiri = 0)
     aud.style.display = "block";
     
     qArea.appendChild(aud);
   }
 
-  /* Image – setelah audio */
+  /* Image – setelah audio, tinggi auto, tajam */
   if (q.image) {
     const img = document.createElement("img");
     img.src = q.image;
     img.style.maxWidth = "100%";
-    img.style.marginBottom = "16px";
+    img.style.height = "auto";
+    img.style.margin = "16px 0 32px 0";  // jarak bawah lebih besar biar aman dari nav
     img.style.display = "block";
-    img.style.marginLeft = "0";          // paksa ke kiri juga kalau perlu
-    img.style.marginRight = "auto";
-    img.style.borderRadius = "0";        // tajam, tanpa lengkung
+    img.style.borderRadius = "0";  // tajam
     qArea.appendChild(img);
   }
 
@@ -118,8 +125,7 @@ function loadQuestionPage() {
     btn.onclick = () => {
       answered[q.id] = i + 1;
       localStorage.setItem("answered", JSON.stringify(answered));
-      ansDiv.querySelectorAll("button")
-        .forEach(b => b.classList.remove("selected"));
+      ansDiv.querySelectorAll("button").forEach(b => b.classList.remove("selected"));
       btn.classList.add("selected");
     };
 
