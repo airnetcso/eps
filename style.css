@@ -83,6 +83,7 @@ input,button{
   padding: 15px;
   text-align: center;
   cursor: pointer;
+  border-radius: 0;
 }
 .qbox.done{
   background: #ccc;
@@ -92,6 +93,7 @@ input,button{
 .section-box{
   padding: 10px;
   font-weight: bold;
+  border-radius: 0;
   margin-bottom: 10px;
 }
 .section-box.listening{
@@ -110,7 +112,7 @@ input,button{
   margin-top: 80px;
 }
 
-/* kolom kiri (jawaban) */
+/* kolom kiri tetap */
 .col-left{
   flex: 1;
   padding: 15px;
@@ -120,7 +122,7 @@ input,button{
   gap: 10px;
 }
 
-/* kolom kanan (konten soal) */
+/* kolom kanan DIKOSONGKAN (biar dialog bebas) */
 .col-right{
   flex: 2;
   padding: 0;
@@ -171,63 +173,96 @@ input,button{
 .nav-buttons button:hover{
   background-color: #2980b9;
 }
+@media (orientation: landscape){
+  .nav-buttons{
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
 
 /* =====================================================
-   DIALOG / READING BOX
+   FINAL — DIALOG BOX & PARAGRAF READING
 ===================================================== */
 
-/* judul & nomor soal (di luar box) */
+/* judul / nomor soal */
 .col-right h3{
   margin: 0 0 10px 15px;
 }
 
-/* dialog box */
+/* dialog / bacaan */
 .dialog-box{
-  background: #ebe6e7;      /* PUTIH */
+  background: #f2ebed;
   padding: 18px 20px;
   margin: 0 0 16px 15px;
-
   width: 70%;
   max-width: 720px;
-
+  border-radius: 0;
   white-space: pre-line;
   line-height: 1.9;
   font-size: 20px;
-
   text-align: justify;
   word-break: keep-all;
   overflow-wrap: break-word;
+  hyphens: none;
 }
 
-/* =====================================================
-   IMAGE + AUDIO (LISTENING)
-===================================================== */
-
-.col-right img{
-  display: block;
-  width: 480px;
-  max-width: 100%;
-  height: auto;
-  margin: 0 0 10px 15px;
-  object-fit: contain;
+/* paragraf dalam dialog */
+.dialog-box p{
+  margin: 0 0 10px 0;
+}
+.dialog-box p:last-child{
+  margin-bottom: 0;
 }
 
-.col-right audio{
-  display: block;
-  width: 480px;
-  max-width: 100%;
-  margin: 0 0 20px 15px;
-  border-radius: 0;   /* audio kotak */
-}
-
-/* ===== MOBILE ===== */
+/* mobile */
 @media (max-width: 768px){
   .dialog-box{
     width: 95%;
     font-size: 18px;
   }
-  .col-right img,
-  .col-right audio{
-    width: 95%;
+}
+
+/* =============================================
+   FINAL TOUCH - Nyaman banget di HP (Listening + Image)
+============================================= */
+@media (max-width: 768px) {
+  audio {
+    margin: 20px auto !important;
+    padding: 8px;
+    background: #f8fafc;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
   }
+  
+  #questionBox img {
+    margin-top: 8px;
+    margin-bottom: 20px !important;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .dialog-box {
+    margin-top: 12px !important;
+    font-size: 17px !important;
+    line-height: 1.85 !important;
+    padding: 16px !important;
+  }
+  
+  h3 {
+    font-size: 1.4rem !important;
+    margin-bottom: 12px !important;
+  }
+}
+
+/* Pastikan audio player tidak terpotong & terlihat jelas */
+audio {
+  outline: none;
+  width: 100%;
+  max-width: 380px;
+  display: block;
+  margin: 20px auto;
 }
