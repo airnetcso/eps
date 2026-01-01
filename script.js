@@ -6,18 +6,13 @@ let questions = [],
 async function loadSoal() {
   try {
     const res = await fetch("https://raw.githubusercontent.com/airnetcso/eps/main/soal.json");
-    if (!res.ok) {
-      throw new Error(`Fetch gagal: ${res.status} - ${res.statusText}`);
-    }
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     questions = await res.json();
-    
-    console.log(`Soal berhasil dimuat: ${questions.length} soal`); // debug
-    
+    console.log(`Berhasil load ${questions.length} soal`);
     buildGrid();
-    // JANGAN panggil loadQuestionPage() di sini (khusus dashboard)
   } catch (err) {
-    console.error("Error memuat soal:", err);
-    alert("Gagal memuat daftar soal! Cek koneksi atau file soal.json di GitHub.");
+    console.error("Gagal load soal:", err);
+    alert("Gagal memuat soal! Cek internet atau file soal.json");
   }
 }
 
@@ -35,13 +30,10 @@ function buildGrid() {
     box.className = "qbox";
     box.textContent = q.id;
 
-    if (answered[q.id] !== undefined) {
-      box.classList.add("done");
-    }
+    if (answered[q.id] !== undefined) box.classList.add("done");
 
     box.onclick = () => {
       localStorage.setItem("current", q.id);
-      console.log("Dipilih soal ID:", q.id); // debug klik
       location.href = "question.html";
     };
 
@@ -55,27 +47,28 @@ function loadQuestionPage() {
   const ansDiv = document.getElementById("answers");
   if (!qArea || !ansDiv) return;
 
-  const id = Number(localStorage.getItem("current"));
-  if (!id) {
-    alert("Tidak ada soal yang dipilih! Kembali ke dashboard.");
+  const selectedId = Number(localStorage.getItem("current"));
+  if (!selectedId) {
+    alert("Pilih soal dari dashboard dulu!");
+    location.href = "dashboard.html";
     return;
   }
 
-  const idx = questions.findIndex(q => q.id === id);
+  const idx = questions.findIndex(q => q.id === selectedId);
   if (idx === -1) {
-    alert("Soal tidak ditemukan! Coba pilih lagi dari dashboard.");
+    alert("Soal tidak ditemukan!");
+    location.href = "dashboard.html";
     return;
   }
 
   const q = questions[idx];
-  currentIndex = idx; // pastikan index sesuai ID yang diklik
+  currentIndex = idx;
 
   qArea.innerHTML = "";
   ansDiv.innerHTML = "";
 
   /* ==== JUDUL + DIALOG ==== */
   const parts = q.question.split("\n\n");
-
   const title = document.createElement("h3");
   title.textContent = q.id + ". " + parts[0];
   qArea.appendChild(title);
@@ -87,29 +80,27 @@ function loadQuestionPage() {
     qArea.appendChild(box);
   }
 
-  /* Audio – ke atas, rata kiri, tajam */
+  /* Audio – rata kiri, kotak */
   if (q.audio) {
     const aud = document.createElement("audio");
     aud.src = q.audio;
     aud.controls = true;
-    
     aud.style.width = "100%";
     aud.style.maxWidth = "380px";
-    aud.style.margin = "20px 0 16px 0";  // rata kiri (margin kiri = 0)
+    aud.style.margin = "20px 0 16px 0";
     aud.style.display = "block";
-    
     qArea.appendChild(aud);
   }
 
-  /* Image – setelah audio, tinggi auto, tajam */
+  /* Image – height auto, kotak, jarak bawah aman */
   if (q.image) {
     const img = document.createElement("img");
     img.src = q.image;
     img.style.maxWidth = "100%";
     img.style.height = "auto";
-    img.style.margin = "16px 0 32px 0";  // jarak bawah lebih besar biar aman dari nav
+    img.style.margin = "16px 0 40px 0";
     img.style.display = "block";
-    img.style.borderRadius = "0";  // tajam
+    img.style.borderRadius = "0";
     qArea.appendChild(img);
   }
 
@@ -117,10 +108,7 @@ function loadQuestionPage() {
   q.options.forEach((opt, i) => {
     const btn = document.createElement("button");
     btn.textContent = i + 1;
-
-    if (answered[q.id] === i + 1) {
-      btn.classList.add("selected");
-    }
+    if (answered[q.id] === i + 1) btn.classList.add("selected");
 
     btn.onclick = () => {
       answered[q.id] = i + 1;
@@ -133,7 +121,6 @@ function loadQuestionPage() {
     row.style.display = "flex";
     row.style.alignItems = "center";
     row.style.gap = "10px";
-
     row.appendChild(btn);
     row.appendChild(document.createTextNode(opt));
     ansDiv.appendChild(row);
@@ -145,18 +132,14 @@ function nextQuestion() {
   if (currentIndex + 1 < questions.length) {
     localStorage.setItem("current", questions[currentIndex + 1].id);
     loadQuestionPage();
-  } else {
-    alert("Ini soal terakhir");
-  }
+  } else alert("Ini soal terakhir");
 }
 
 function prevQuestion() {
   if (currentIndex > 0) {
     localStorage.setItem("current", questions[currentIndex - 1].id);
     loadQuestionPage();
-  } else {
-    alert("Ini soal pertama");
-  }
+  } else alert("Ini soal pertama");
 }
 
 function back() {
@@ -165,7 +148,6 @@ function back() {
 
 /* ================= TIMER ================= */
 let time = 50 * 60;
-
 setInterval(() => {
   time--;
   const m = String(Math.floor(time / 60)).padStart(2, "0");
@@ -179,9 +161,7 @@ setInterval(() => {
 function calculateScore() {
   let score = 0;
   questions.forEach(q => {
-    if (answered[q.id] === q.answer) {
-      score += 2.5;
-    }
+    if (answered[q.id] === q.answer) score += 2.5;
   });
   return score;
 }
