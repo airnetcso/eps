@@ -69,19 +69,26 @@ function loadQuestionPage(){
   }
 
   /* Audio – DIPINDAH KE ATAS agar selalu terlihat dulu di HP */
-  if (q.audio) {
-    const aud = document.createElement("audio");
-    aud.src = q.audio;
-    aud.controls = true;
-    
-    // Styling inline agar nyaman di mobile
-    aud.style.width = "100%";
-    aud.style.maxWidth = "380px";
-    aud.style.margin = "20px auto 16px";
-    aud.style.display = "block";
-    
-    qArea.appendChild(aud);
+  /* Pastikan audio player tidak terpotong & terlihat jelas - UBAH KE KIRI */
+audio {
+  outline: none;
+  width: 100%;
+  max-width: 380px;
+  display: block;
+  margin: 20px 0 !important;           /* ← hilangkan auto, jadi ke kiri */
+}
+
+/* Di media query - paksa ke kiri */
+@media (max-width: 768px) {
+  audio {
+    margin: 20px 0 !important;         /* ← ubah dari auto jadi 0 */
+    padding: 8px;
+    background: #f8fafc;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
   }
+}
 
   /* Image – setelah audio */
   if (q.image) {
