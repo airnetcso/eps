@@ -5,7 +5,7 @@
    "question":"들은 것을 고르십시오.",
    "options": ["오리","요리","우리","유리"],
    "answer": 3,
-   "audio":"https://example.com/eps/audio/1-2.mp3"
+   "audio":"https://airnetcso.github.io/eps/audio/1-2.mp3"
   },
   {
    "id": 2,
@@ -13,7 +13,7 @@
    "question":"들은 것을 고르십시오.",
    "options": ["세상","대상","배상","해상"],
    "answer": 1,
-   "audio":"https://example.com/eps/audio/2-2.mp3"
+   "audio":"https://airnetcso.github.io/eps/audio/2-2.mp3"
   },
   {
    "id": 3,
@@ -21,8 +21,8 @@
    "question":"들은 것을 고르십시오.",
    "options": ["","","",""],
    "answer": 1,
-   "image":"https://example.com/eps/image/3-2.jpg",
-   "audio":"https://example.com/eps/audio/3-2.mp3"
+   "image":"https://airnetcso.github.io/eps/image/3-2.jpg",
+   "audio":"https://airnetcso.github.io/eps/audio/3-2.mp3"
   },
   {
    "id": 4,
@@ -30,8 +30,8 @@
    "question":"들은 것을 고르십시오.",
    "options": ["","","",""],
    "answer": 1,
-   "image":"https://example.com/eps/image/4-2.jpg",
-   "audio":"https://example.com/eps/audio/4-2.mp3"
+   "image":"https://airnetcso.github.io/eps/image/4-2.jpg",
+   "audio":"https://airnetcso.github.io/eps/audio/4-2.mp3"
   },
   {
    "id": 5,
@@ -39,8 +39,8 @@
    "question":"이것은 무엇입니까?",
    "options": ["","","",""],
    "answer": 1,
-   "image":"https://example.com/eps/image/5-2.jpg"
-   "audio":"https://example.com/eps/audio/5-2.mp3"
+   "image":"https://airnetcso.github.io/eps/image/5-2.jpg"
+   "audio":"https://airnetcso.github.io/eps/audio/5-2.mp3"
   },
   {
    "id": 6,
@@ -48,8 +48,8 @@
    "question":"여기는 어디입니까?",
    "options": ["","","",""],
    "answer": 1,
-   "image":"https://example.com/eps/image/6-2.jpg",
-   "audio":"https://example.com/eps/audio/6-2.mp3"
+   "image":"https://airnetcso.github.io/eps/image/6-2.jpg",
+   "audio":"https://airnetcso.github.io/eps/audio/6-2.mp3"
   },
   {
    "id": 7,
@@ -57,8 +57,8 @@
    "question":"이 사람은 무엇을 하고 있습니까?",
    "options": ["","","",""],
    "answer": 3,
-   "image":"https://example.com/eps/image/7-2.jpg",
-   "audio":"https://example.com/eps/audio/7-2.mp3"
+   "image":"https://airnetcso.github.io/eps/image/7-2.jpg",
+   "audio":"https://airnetcso.github.io/eps/audio/7-2.mp3"
   },
   {
    "id": 8,
@@ -66,8 +66,8 @@
    "question":"양복이 얼마나 있습니까?",
    "options": ["","","",""],
    "answer": 3,
-   "image":"https://example.com/eps/image/8-2.jpg",
-   "audio":"https://example.com/eps/audio/8-2.mp3"
+   "image":"https://airnetcso.github.io/eps/image/8-2.jpg",
+   "audio":"https://airnetcso.github.io/eps/audio/8-2.mp3"
   },
   {
    "id": 9,
@@ -75,8 +75,8 @@
    "question":"인형 가게는 어디에 있습니까?",
    "options": ["","","",""],
    "answer": 3,
-   "image":"https://example.com/eps/image/9-2.jpg"
-   "audio":"https://example.com/eps/audio/9-2.mp3"
+   "image":"https://airnetcso.github.io/eps/image/9-2.jpg"
+   "audio":"https://airnetcso.github.io/eps/audio/9-2.mp3"
   },
   {
    "id": 10,
@@ -84,7 +84,7 @@
    "question":"다음을 듣고 질문에 알맞은 대답을 고르십시오.",
    "options": ["저의 형은 키가 커요.","모님하도 동생이 있어요.","저는 캄보디아에서 왔어요.","제 여동생은 스무 살이에요."],
    "answer": 3,
-   "audio":"https://example.com/eps/audio/10-2.mp3"
+   "audio":"https://airnetcso.github.io/eps/audio/10-2.mp3"
   },
   {
    "id": 11,
@@ -92,7 +92,7 @@
    "question":"다음을 듣고 질문에 알맞은 대답을 고르십시오.",
    "options": ["그러면 제가 옷을 갤게요.","세제를 너무 많이 쓰면 안 돼요.","비가 올 때는 빨래를 널지 마세요.","손으로 하는 것이 더 깨끗한 것 같아요."],
    "answer": 3,
-   "audio":"https://example.com/eps/audio/11-2.mp3"
+   "audio":"https://airnetcso.github.io/eps/audio/11-2.mp3"
   },
   {
    "id": 12,
@@ -100,7 +100,7 @@
    "question":"다음을 듣고 질문에 알맞은 대답을 고르십시오.",
    "options": ["지금 회사에 계세요.","성실하고 부지런하세요.","저에게 소개 좀 해 주세요.","사장님이 추천해 주셨어요."],
    "answer": 4,
-   "audio":"https://example.com/eps/audio/12-2.mp3"
+   "audio":"https://airnetcso.github.io/eps/audio/12-2.mp3"
   },
   {
    "id": 13,
@@ -108,7 +108,7 @@
    "question":"다음을 듣고 질문에 알맞은 대답을 고르십시오.",
    "options": ["그 식당은 정말 맛이 없어요.","찬 음식을 많이 먹으면 안돼요.","감자는 삶고 당근은 볶아 주세요.","제가 냉면을 맛있게 하는 식당을 알아요."],
    "answer": 3,
-   "audio":"https://example.com/eps/audio/13-2.mp3"
+   "audio":"https://airnetcso.github.io/eps/audio/13-2.mp3"
   },
   {
    "id": 14,
@@ -116,7 +116,7 @@
    "question":"다음을 듣고 이어지는 말을 고르십시오.",
    "options": ["다른 직원들에게 전화했어요.","내일 저녁에 식당을 예약했어요.","바쁘시면 나중에 다시 전화할게요.","박 대리님께서 좀 늦는다고 전해 달래요."],
    "answer": 3,
-   "audio":"https://example.com/eps/audio/14-2.mp3"
+   "audio":"https://airnetcso.github.io/eps/audio/14-2.mp3"
   },
   {
    "id": 15,
@@ -124,7 +124,7 @@
    "question":"다음을 듣고 이어지는 말을 고르십시오.",
    "options": ["사고가 나지 않게 주의하세요.","안전모 쓰는 것을 잊지 마세요.","이런 실수를 해서 정말 미안해.","병원에 다니고 나서 많이 좋아졌어."],
    "answer": 2,
-   "audio":"https://example.com/eps/audio/15-2.mp3"
+   "audio":"https://airnetcso.github.io/eps/audio/15-2.mp3"
   },
   {
    "id": 16,
@@ -132,8 +132,8 @@
    "question":"잘 듣고 들은 내용과 관계있는 그림을 고르십시오.",
    "options": ["","","",""],
    "answer": 2,
-   "image":"https://example.com/eps/image/16-2.jpg"
-   "audio":"https://example.com/eps/audio/16-2.mp3"
+   "image":"https://airnetcso.github.io/eps/image/16-2.jpg"
+   "audio":"https://airnetcso.github.io/eps/audio/16-2.mp3"
   },
   {
    "id": 17,
@@ -141,8 +141,8 @@
    "question":"잘 듣고 들은 내용과 관계있는 그림을 고르십시오.",
    "options": ["","","",""],
    "answer": 3,
-   "image":"https://example.com/eps/image/17-2.jpg"
-   "audio":"https://example.com/eps/audio/17-2.mp3"
+   "image":"https://airnetcso.github.io/eps/image/17-2.jpg"
+   "audio":"https://airnetcso.github.io/eps/audio/17-2.mp3"
   },
   {
    "id": 18,
@@ -150,7 +150,7 @@
    "question":"두 사람은 무엇에 대해 이야기하고 있습니까?",
    "options": ["실내에 들어가는 방법","친구와 식사하는 방법","친구를 초대하는 방법","신발을 구매하는 방법"],
    "answer": 3,
-   "audio":"https://example.com/eps/audio/18-2.mp3"
+   "audio":"https://airnetcso.github.io/eps/audio/18-2.mp3"
   },
   {
    "id": 19,
@@ -158,7 +158,7 @@
    "question":"작업할 때 안전모를 써야 하는 이유는 무엇이니까 ?",
    "options": ["발을 다칠 수 있기 때문에","전기에 감전될 수 있기 때문에","떨어지는 물건에 맞을 수 있기 때문에","불꽃이 튀어서 화상을 입을 수 있기 때문에"],
    "answer": 3,
-   "audio":"https://example.com/eps/audio/19-2.mp3"
+   "audio":"https://airnetcso.github.io/eps/audio/19-2.mp3"
   },
   {
    "id": 20,
@@ -166,7 +166,7 @@
    "question":"다음 이야기를 듣고 들은 내용과 같은 것을 고르십시오.",
    "options": ["남자는 연차가 부족해서 걱정하고 있습니다.","여자는 여름휴가로 제주도에 가려고 합니다.","남자는 내일 휴가 신청서를 제출하려고합니다.","여자는 지난주에 벌써 휴가 신청서를 제출했습니다."],
    "answer": 3,
-   "audio":"https://example.com/eps/audio/20-2.mp3"
+   "audio":"https://airnetcso.github.io/eps/audio/20-2.mp3"
   },
   {
    "id": 21,
@@ -216,7 +216,7 @@
    "question":"이곳에서 하는 일이 아닌 것은 무엇입니까?",
    "options": ["교통사고가 났습니다. 교통정리를 합니다.","아이를 잃어버렸습니다. 부모님에게 아이를 찾아줍니다.","사고가 났습니다. 응급 환자를 병원으로 이동합니다.","도둑이 들었습니다. 현장을 검사하고 범인을 잡습니다."],
    "answer": 1
-   "image":"https://example.com/eps/image/27-2.jpg"
+   "image":"https://airnetcso.github.io/eps/image/27-2.jpg"
   },
   {
    "id": 28,
@@ -224,7 +224,7 @@
    "question":"다음 내용과 같은 것을 고르십시오.",
    "options": ["도착 시간을 알 수 없습니다.","대전에서 떠납니다.","비용이 들지 않습니다.","동대구행 기차표입니다."],
    "answer": 1
-   "image":"https://example.com/eps/image/28-2.jpg"
+   "image":"https://airnetcso.github.io/eps/image/28-2.jpg"
   },
   {
    "id": 29,
@@ -232,7 +232,7 @@
    "question":"다음 안내문의 설명으로 맞는 것은 무엇입니까?",
    "options": ["어린이 인천에서 타면 구천 원입니다.","김포공항에 타면 요금이 더 냅니다.","모든 승객들에게 똑같이 비용이 듭니다.","초등학생의 공항버스 요금은 어른과 같습니다."],
    "answer": 1
-   "image":"https://example.com/eps/image/29-2.jpg"
+   "image":"https://airnetcso.github.io/eps/image/29-2.jpg"
   },
   {
    "id": 30,
@@ -240,7 +240,7 @@
    "question":"다음 그래프에 대한 설명으로 맞는 것은 무엇입니까?",
    "options": ["근로자들은 한국어 교육을 가장 많이 받고 싶어합니다.","근로자들의 절반 이상이 컴퓨터 교육을 받고 싶어합니다.","법규에 대한 교육을 받고 싶어하는 근로자들이 가장 적습니다.","한국 문화 교육을 받고 싶어하는 근로자들이 두 번째로 많습니다."],
    "answer": 1
-   "image":"https://example.com/eps/image/30-2.jpg"
+   "image":"https://airnetcso.github.io/eps/image/30-2.jpg"
   },
   {
    "id": 31,
@@ -276,7 +276,7 @@
    "question":"다음 그림을 보고 맞는 단어나 문장을 고르십시오.",
    "options": ["무입니다.","이입니다.","배추입니다.","고추입니다."],
    "answer": 3,
-   "image":"https://example.com/eps/image/35-2.jpg"
+   "image":"https://airnetcso.github.io/eps/image/35-2.jpg"
   },
   {
    "id": 36,
@@ -284,7 +284,7 @@
    "question":"다음 그림을 보고 맞는 단어나 문장을 고르십시오.",
    "options": ["연날리기입니다.","강강술래입니다.","팽이치기입니다.","윷놀이입니다."],
    "answer": 2,
-   "image":"https://example.com/eps/image/36-2.jpg"
+   "image":"https://airnetcso.github.io/eps/image/36-2.jpg"
   },
   {
    "id": 37,
@@ -315,7 +315,6 @@
    "answer": 3
   }
 ]
-
 
 
 
