@@ -1,20 +1,20 @@
 /* ===== GLOBAL ===== */
-body{
+body {
   font-family: Arial, sans-serif;
   margin: 0;
 }
-.center{
+.center {
   text-align: center;
   padding-top: 100px;
 }
-input,button{
+input, button {
   padding: 10px;
   margin: 5px;
   cursor: pointer;
 }
 
 /* ===== HEADER ===== */
-.header{
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -28,14 +28,14 @@ input,button{
   box-sizing: border-box;
   z-index: 10;
 }
-.header-right{
+.header-right {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
 /* Timer & Submit */
-.box{
+.box {
   padding: 10px 20px;
   font-weight: bold;
   text-align: center;
@@ -47,73 +47,73 @@ input,button{
   border-radius: 0;
   box-sizing: border-box;
 }
-#timerBox{
+#timerBox {
   background: #48bb78;
   color: #fff;
 }
-#submitBtn{
+#submitBtn {
   background: #ec4899;
   color: #fff;
   border: none;
 }
-#submitBtn:hover{
+#submitBtn:hover {
   background: #db2777;
 }
 
 /* ===== GRID SOAL ===== */
-.content{
+.content {
   margin-top: 80px;
   padding: 15px;
 }
-.two-col{
+.two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-@media(max-width:900px){
-  .two-col{grid-template-columns:1fr}
+@media (max-width: 900px) {
+  .two-col { grid-template-columns: 1fr }
 }
-.grid{
+.grid {
   display: grid;
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 10px;
 }
-.qbox{
-  background: rgba(255,192,203,0.3);
+.qbox {
+  background: rgba(255, 192, 203, 0.3);
   padding: 15px;
   text-align: center;
   cursor: pointer;
   border-radius: 0;
 }
-.qbox.done{
+.qbox.done {
   background: #ccc;
 }
 
 /* ===== SECTION BOX ===== */
-.section-box{
+.section-box {
   padding: 10px;
   font-weight: bold;
   border-radius: 0;
   margin-bottom: 10px;
 }
-.section-box.listening{
-  background: rgba(59,130,246,0.2);
+.section-box.listening {
+  background: rgba(59, 130, 246, 0.2);
   color: #2b6cb0;
 }
-.section-box.reading{
-  background: rgba(72,187,120,0.2);
+.section-box.reading {
+  background: rgba(72, 187, 120, 0.2);
   color: #2f855a;
 }
 
 /* ===== HALAMAN SOAL ===== */
-.question-page{
+.question-page {
   display: flex;
   gap: 20px;
   margin-top: 80px;
 }
 
 /* kolom kiri tetap */
-.col-left{
+.col-left {
   flex: 1;
   padding: 15px;
   background: #f9f9f9;
@@ -123,14 +123,14 @@ input,button{
 }
 
 /* kolom kanan DIKOSONGKAN (biar dialog bebas) */
-.col-right{
+.col-right {
   flex: 2;
   padding: 0;
   background: transparent;
 }
 
 /* ===== JAWABAN BULAT ===== */
-.col-left button{
+.col-left button {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -142,13 +142,12 @@ input,button{
   align-items: center;
   justify-content: center;
 }
-.col-left button.selected{
+.col-left button.selected {
   background: #38bdf8;
   color: #fff;
   border-color: #38bdf8;
 }
 
-/* ===== NAV BUTTON ===== */
 /* ===== NAV BUTTON ===== */
 .nav-buttons {
   position: fixed;
@@ -156,13 +155,13 @@ input,button{
   left: 0;
   right: 0;
   display: flex;
-  justify-content: space-between;      /* ini yang bikin kiri-tengah-kanan */
+  justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;                  /* lebih lebar biar muat di pinggir */
+  padding: 12px 20px;
   background: #fff;
   border-top: 1px solid #ddd;
   z-index: 20;
-  gap: 0;                              /* hilangkan gap supaya merata */
+  gap: 0;
   flex-wrap: nowrap;
 }
 
@@ -174,13 +173,13 @@ input,button{
   font-weight: bold;
   font-size: 15px;
   border-radius: 6px;
-  flex: 1;                             /* tombol sama lebarnya */
-  max-width: 160px;                    /* batasi lebar biar gak terlalu melebar */
+  flex: 1;
+  max-width: 160px;
   text-align: center;
   white-space: nowrap;
 }
 
-/* Tombol tengah (KEMBALI) sedikit lebih kecil biar lebih terlihat "tengah" */
+/* Tombol tengah (KEMBALI) sedikit lebih kecil */
 .nav-buttons button:nth-child(2) {
   flex: 0.8;
   max-width: 140px;
@@ -195,32 +194,20 @@ input,button{
   .nav-buttons {
     padding: 10px 12px;
   }
-  
   .nav-buttons button {
     padding: 10px 16px;
     font-size: 14px;
   }
 }
 
-/* Hapus atau comment bagian landscape ini kalau tidak perlu (karena sekarang full width) */
-@media (orientation: landscape) {
-  /* .nav-buttons {
-    max-width: 600px;
-    margin: 0 auto;
-  } */
-}
-
 /* =====================================================
    FINAL — DIALOG BOX & PARAGRAF READING
 ===================================================== */
-
-/* judul / nomor soal */
-.col-right h3{
+.col-right h3 {
   margin: 0 0 10px 15px;
 }
 
-/* dialog / bacaan */
-.dialog-box{
+.dialog-box {
   background: #f2ebed;
   padding: 18px 20px;
   margin: 0 0 16px 15px;
@@ -236,54 +223,52 @@ input,button{
   hyphens: none;
 }
 
-/* paragraf dalam dialog */
-.dialog-box p{
+.dialog-box p {
   margin: 0 0 10px 0;
 }
-.dialog-box p:last-child{
+.dialog-box p:last-child {
   margin-bottom: 0;
 }
 
 /* mobile */
-@media (max-width: 768px){
-  .dialog-box{
+@media (max-width: 768px) {
+  .dialog-box {
     width: 95%;
     font-size: 18px;
   }
 }
 
 /* =============================================
-   FINAL TOUCH - Nyaman banget di HP (Listening + Image)
+   FINAL TOUCH - Nyaman di HP (Listening + Image)
 ============================================= */
 @media (max-width: 768px) {
   audio {
     margin: 20px auto !important;
     padding: 8px;
     background: #f8fafc;
-    border-radius: 0;               /* tetap tajam, tanpa lengkung */
-    box-shadow: none;  /* shadow masih ada biar kelihatan pop */
-    border: none;                   /* <-- ini yang penting, hilangkan border */
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
   }
-}
-  
+
   #questionBox img {
-  margin-top: 8px;
-  margin-bottom: 20px !important;
-  border-radius: 0;               /* <-- diubah jadi 0, gambar jadi tajam tanpa lengkung */
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  max-width: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-  
+    margin-top: 8px;
+    margin-bottom: 20px !important;
+    border-radius: 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .dialog-box {
     margin-top: 12px !important;
     font-size: 17px !important;
     line-height: 1.85 !important;
     padding: 16px !important;
   }
-  
+
   h3 {
     font-size: 1.4rem !important;
     margin-bottom: 12px !important;
