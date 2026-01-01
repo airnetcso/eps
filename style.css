@@ -233,7 +233,7 @@ input, button {
   font-weight: bold !important;
   font-size: 22px !important;
   padding: 20px !important;
-  min-height: 100px !important;
+  min-height: 0px !important;
   background: #f2ebed !important;
 }
 
