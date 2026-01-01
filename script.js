@@ -68,21 +68,32 @@ function loadQuestionPage(){
     qArea.appendChild(box);
   }
 
-  /* Image */
-  if(q.image){
-    const img = document.createElement("img");
-    img.src = q.image;
-    img.style.maxWidth = "100%";
-    img.style.marginBottom = "10px";
-    qArea.appendChild(img);
-  }
-
-  /* Audio */
-  if(q.audio){
+  /* Audio – DIPINDAH KE ATAS agar selalu terlihat dulu di HP */
+  if (q.audio) {
     const aud = document.createElement("audio");
     aud.src = q.audio;
     aud.controls = true;
+    
+    // Styling inline agar nyaman di mobile
+    aud.style.width = "100%";
+    aud.style.maxWidth = "380px";
+    aud.style.margin = "20px auto 16px";
+    aud.style.display = "block";
+    
     qArea.appendChild(aud);
+  }
+
+  /* Image – setelah audio */
+  if (q.image) {
+    const img = document.createElement("img");
+    img.src = q.image;
+    img.style.maxWidth = "100%";
+    img.style.marginBottom = "16px";
+    img.style.display = "block";
+    img.style.marginLeft = "auto";
+    img.style.marginRight = "auto";
+    img.style.borderRadius = "8px";
+    qArea.appendChild(img);
   }
 
   /* ==== OPTIONS ==== */
