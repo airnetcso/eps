@@ -1,5 +1,4 @@
 [
-  // Listening 1-20
   {
     "id": 1,
     "type": "listening",
@@ -165,8 +164,6 @@
     "answer": 3,
     "audio": "https://example.com/eps/audio/20.mp3"
   },
-
-  // Reading 21-40 (TO2 asli dari PDF)
   {
     "id": 21,
     "type": "reading",
@@ -310,3 +307,4 @@
     "answer": 3
   }
 ]
+
