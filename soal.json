@@ -21,7 +21,7 @@
    "question":"들은 것을 고르십시오.",
    "options": ["","","",""],
    "answer": 1,
-   "image":"https://example.com/eps/image/3.jpg",
+   "image":"https://example.com/eps/image/3-2.jpg",
    "audio":"https://example.com/eps/audio/3-2.mp3"
   },
   {
@@ -30,7 +30,7 @@
    "question":"들은 것을 고르십시오.",
    "options": ["","","",""],
    "answer": 1,
-   "image":"https://example.com/eps/image/4.jpg",
+   "image":"https://example.com/eps/image/4-2.jpg",
    "audio":"https://example.com/eps/audio/4-2.mp3"
   },
   {
@@ -39,6 +39,7 @@
    "question":"이것은 무엇입니까?",
    "options": ["","","",""],
    "answer": 1,
+   "image":"https://example.com/eps/image/5-2.jpg"
    "audio":"https://example.com/eps/audio/5-2.mp3"
   },
   {
@@ -47,7 +48,7 @@
    "question":"여기는 어디입니까?",
    "options": ["","","",""],
    "answer": 1,
-   "image":"https://example.com/eps/image/6.jpg",
+   "image":"https://example.com/eps/image/6-2.jpg",
    "audio":"https://example.com/eps/audio/6-2.mp3"
   },
   {
@@ -56,7 +57,7 @@
    "question":"이 사람은 무엇을 하고 있습니까?",
    "options": ["","","",""],
    "answer": 3,
-   "image":"https://example.com/eps/image/7.jpg",
+   "image":"https://example.com/eps/image/7-2.jpg",
    "audio":"https://example.com/eps/audio/7-2.mp3"
   },
   {
@@ -65,7 +66,7 @@
    "question":"양복이 얼마나 있습니까?",
    "options": ["","","",""],
    "answer": 3,
-   "image":"https://example.com/eps/image/8.jpg",
+   "image":"https://example.com/eps/image/8-2.jpg",
    "audio":"https://example.com/eps/audio/8-2.mp3"
   },
   {
@@ -74,6 +75,7 @@
    "question":"인형 가게는 어디에 있습니까?",
    "options": ["","","",""],
    "answer": 3,
+   "image":"https://example.com/eps/image/9-2.jpg"
    "audio":"https://example.com/eps/audio/9-2.mp3"
   },
   {
@@ -130,6 +132,7 @@
    "question":"잘 듣고 들은 내용과 관계있는 그림을 고르십시오.",
    "options": ["","","",""],
    "answer": 2,
+   "image":"https://example.com/eps/image/16-2.jpg"
    "audio":"https://example.com/eps/audio/16-2.mp3"
   },
   {
@@ -138,6 +141,7 @@
    "question":"잘 듣고 들은 내용과 관계있는 그림을 고르십시오.",
    "options": ["","","",""],
    "answer": 3,
+   "image":"https://example.com/eps/image/17-2.jpg"
    "audio":"https://example.com/eps/audio/17-2.mp3"
   },
   {
@@ -212,6 +216,7 @@
    "question":"이곳에서 하는 일이 아닌 것은 무엇입니까?",
    "options": ["교통사고가 났습니다. 교통정리를 합니다.","아이를 잃어버렸습니다. 부모님에게 아이를 찾아줍니다.","사고가 났습니다. 응급 환자를 병원으로 이동합니다.","도둑이 들었습니다. 현장을 검사하고 범인을 잡습니다."],
    "answer": 1
+   "image":"https://example.com/eps/image/27-2.jpg"
   },
   {
    "id": 28,
@@ -219,6 +224,7 @@
    "question":"다음 내용과 같은 것을 고르십시오.",
    "options": ["도착 시간을 알 수 없습니다.","대전에서 떠납니다.","비용이 들지 않습니다.","동대구행 기차표입니다."],
    "answer": 1
+   "image":"https://example.com/eps/image/28-2.jpg"
   },
   {
    "id": 29,
@@ -226,6 +232,7 @@
    "question":"다음 안내문의 설명으로 맞는 것은 무엇입니까?",
    "options": ["어린이 인천에서 타면 구천 원입니다.","김포공항에 타면 요금이 더 냅니다.","모든 승객들에게 똑같이 비용이 듭니다.","초등학생의 공항버스 요금은 어른과 같습니다."],
    "answer": 1
+   "image":"https://example.com/eps/image/29-2.jpg"
   },
   {
    "id": 30,
@@ -233,6 +240,7 @@
    "question":"다음 그래프에 대한 설명으로 맞는 것은 무엇입니까?",
    "options": ["근로자들은 한국어 교육을 가장 많이 받고 싶어합니다.","근로자들의 절반 이상이 컴퓨터 교육을 받고 싶어합니다.","법규에 대한 교육을 받고 싶어하는 근로자들이 가장 적습니다.","한국 문화 교육을 받고 싶어하는 근로자들이 두 번째로 많습니다."],
    "answer": 1
+   "image":"https://example.com/eps/image/30-2.jpg"
   },
   {
    "id": 31,
@@ -268,7 +276,7 @@
    "question":"다음 그림을 보고 맞는 단어나 문장을 고르십시오.",
    "options": ["무입니다.","이입니다.","배추입니다.","고추입니다."],
    "answer": 3,
-   "image":"https://example.com/eps/image/35.jpg"
+   "image":"https://example.com/eps/image/35-2.jpg"
   },
   {
    "id": 36,
@@ -276,7 +284,7 @@
    "question":"다음 그림을 보고 맞는 단어나 문장을 고르십시오.",
    "options": ["연날리기입니다.","강강술래입니다.","팽이치기입니다.","윷놀이입니다."],
    "answer": 2,
-   "image":"https://example.com/eps/image/36.jpg"
+   "image":"https://example.com/eps/image/36-2.jpg"
   },
   {
    "id": 37,
@@ -307,6 +315,7 @@
    "answer": 3
   }
 ]
+
 
 
 
