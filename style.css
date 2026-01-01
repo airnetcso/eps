@@ -237,15 +237,15 @@ input,button{
 }
   
   #questionBox img {
-    margin-top: 8px;
-    margin-bottom: 20px !important;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    max-width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  margin-top: 8px;
+  margin-bottom: 20px !important;
+  border-radius: 0;               /* <-- diubah jadi 0, gambar jadi tajam tanpa lengkung */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
   
   .dialog-box {
     margin-top: 12px !important;
