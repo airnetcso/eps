@@ -1,6 +1,7 @@
 let questions = [],
     answered = JSON.parse(localStorage.getItem("answered") || "{}"),
-    currentIndex = 0;
+    currentIndex = 0,
+    dataLoaded = false; // Flag untuk tahu data sudah siap
 
 /* ================= LOAD SOAL ================= */
 async function loadSoal() {
@@ -9,10 +10,11 @@ async function loadSoal() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     questions = await res.json();
     console.log(`Berhasil load ${questions.length} soal`);
-    buildGrid();
+    dataLoaded = true;
+    buildGrid(); // Jika di dashboard
   } catch (err) {
     console.error("Gagal load soal:", err);
-    alert("Gagal memuat soal! Cek internet atau file soal.json");
+    alert("Gagal memuat daftar soal! Cek koneksi atau file soal.json di GitHub.");
   }
 }
 
@@ -34,6 +36,7 @@ function buildGrid() {
 
     box.onclick = () => {
       localStorage.setItem("current", q.id);
+      console.log(`Dipilih soal ID: ${q.id}`); // Debug
       location.href = "question.html";
     };
 
@@ -42,13 +45,26 @@ function buildGrid() {
 }
 
 /* ================= HALAMAN SOAL ================= */
-function loadQuestionPage() {
+async function loadQuestionPage() {
   const qArea = document.getElementById("questionBox");
   const ansDiv = document.getElementById("answers");
   if (!qArea || !ansDiv) return;
 
+  // Tunggu sampai data selesai di-load
+  if (!dataLoaded) {
+    console.log("Menunggu data soal...");
+    await new Promise(resolve => {
+      const check = setInterval(() => {
+        if (dataLoaded) {
+          clearInterval(check);
+          resolve();
+        }
+      }, 300); // Cek setiap 300ms
+    });
+  }
+
   const selectedId = Number(localStorage.getItem("current"));
-  if (!selectedId) {
+  if (!selectedId || isNaN(selectedId)) {
     alert("Pilih soal dari dashboard dulu!");
     location.href = "dashboard.html";
     return;
@@ -56,7 +72,7 @@ function loadQuestionPage() {
 
   const idx = questions.findIndex(q => q.id === selectedId);
   if (idx === -1) {
-    alert("Soal tidak ditemukan!");
+    alert(`Soal nomor ${selectedId} tidak ditemukan!`);
     location.href = "dashboard.html";
     return;
   }
@@ -80,14 +96,14 @@ function loadQuestionPage() {
     qArea.appendChild(box);
   }
 
-  /* Audio – rata kiri, kotak */
+  /* Audio – rata kiri, kotak tajam */
   if (q.audio) {
     const aud = document.createElement("audio");
     aud.src = q.audio;
     aud.controls = true;
     aud.style.width = "100%";
     aud.style.maxWidth = "380px";
-    aud.style.margin = "20px 0 16px 0";
+    aud.style.margin = "20px 0 16px 0"; // Rata kiri
     aud.style.display = "block";
     qArea.appendChild(aud);
   }
@@ -98,9 +114,9 @@ function loadQuestionPage() {
     img.src = q.image;
     img.style.maxWidth = "100%";
     img.style.height = "auto";
-    img.style.margin = "16px 0 40px 0";
+    img.style.margin = "16px 0 40px 0"; // Jarak bawah lebih besar
     img.style.display = "block";
-    img.style.borderRadius = "0";
+    img.style.borderRadius = "0"; // Kotak tajam
     qArea.appendChild(img);
   }
 
@@ -185,4 +201,10 @@ function finish() {
 }
 
 /* ================= INIT ================= */
-window.onload = loadSoal;
+window.onload = async function () {
+  await loadSoal(); // Tunggu fetch selesai dulu
+  // Jika halaman ini adalah question.html, load soal langsung setelah data siap
+  if (document.getElementById("questionBox")) {
+    await loadQuestionPage();
+  }
+};
