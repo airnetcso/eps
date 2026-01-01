@@ -50,7 +50,7 @@ async function loadQuestionPage() {
   const ansDiv = document.getElementById("answers");
   if (!qArea || !ansDiv) return;
 
-  // Tunggu data siap
+  // Tunggu sampai data selesai di-load
   if (!dataLoaded) {
     console.log("Menunggu data soal...");
     await new Promise(resolve => {
@@ -94,7 +94,7 @@ async function loadQuestionPage() {
     const box = document.createElement("div");
     box.className = "dialog-box";
 
-    // Khusus soal 37 & 38: rata tengah
+    // Hanya untuk soal 37 & 38: teks rata tengah
     if (q.id === 37 || q.id === 38) {
       box.classList.add("dialog-center");
     }
@@ -110,7 +110,7 @@ async function loadQuestionPage() {
     aud.controls = true;
     aud.style.width = "100%";
     aud.style.maxWidth = "380px";
-    aud.style.margin = "20px 0 16px 0";
+    aud.style.margin = "20px 0 16px 0"; // Rata kiri
     aud.style.display = "block";
     qArea.appendChild(aud);
   }
