@@ -153,6 +153,7 @@ input, button {
 }
 
 /* ===== NAV BUTTON ===== */
+/* ===== NAV BUTTON ===== */
 .nav-buttons {
   position: fixed;
   bottom: 0;
@@ -165,7 +166,7 @@ input, button {
   background: #fff;
   border-top: 1px solid #ddd;
   z-index: 20;
-  gap: 0;
+  gap: 10px; /* beri sedikit jarak antar tombol biar rapi */
   flex-wrap: nowrap;
 }
 
@@ -176,17 +177,12 @@ input, button {
   padding: 12px 20px;
   font-weight: bold;
   font-size: 15px;
-  border-radius: 6px;
-  flex: 1;
-  max-width: 160px;
-  text-align: center;
+  border-radius: 0 !important; /* kotak tajam, tanpa lengkung */
+  flex: 1; /* semua ukuran sama */
+  text-align: center; /* tulisan pasti tengah */
   white-space: nowrap;
-}
-
-/* Tombol tengah (KEMBALI) sedikit lebih kecil */
-.nav-buttons button:nth-child(2) {
-  flex: 0.8;
-  max-width: 140px;
+  min-width: 120px; /* minimal lebar biar tidak terlalu sempit */
+  max-width: 160px; /* batasi biar tidak melebar terlalu */
 }
 
 .nav-buttons button:hover {
@@ -197,10 +193,12 @@ input, button {
 @media (max-width: 480px) {
   .nav-buttons {
     padding: 10px 12px;
+    gap: 8px;
   }
   .nav-buttons button {
     padding: 10px 16px;
     font-size: 14px;
+    min-width: 100px;
   }
 }
 
