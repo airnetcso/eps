@@ -128,7 +128,7 @@
     "id": 16,
     "type": "listening",
     "question": "잘 듣고 들은 내용과 관계있는 그림을 고르십시오.",
-    "options": ["자동차","자전거","버스","기차"],
+    "options": ["","","",""],
     "answer": 3,
     "image": "https://airnetcso.github.io/eps/image/16.jpg",
     "audio": "https://airnetcso.github.io/eps/audio/16.mp3"
@@ -137,7 +137,7 @@
     "id": 17,
     "type": "listening",
     "question": "잘 듣고 들은 내용과 관계있는 그림을 고르십시오.",
-    "options": ["자동차","자전거","버스","기차"],
+    "options": ["","","",""],
     "answer": 1,
     "image": "https://airnetcso.github.io/eps/image/17.jpg",
     "audio": "https://airnetcso.github.io/eps/audio/17.mp3"
@@ -318,6 +318,7 @@
     "answer": 2
   }
 ]
+
 
 
 
