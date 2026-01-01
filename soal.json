@@ -128,7 +128,7 @@
    "id": 16,
    "type":"listening",
    "question":"잘 듣고 들은 내용과 관계있는 그림을 고르십시오.",
-   "options": ["3월 1일","3월 2일","4월 2일","4월 1일"],
+   "options": ["","","",""],
    "answer": 2,
    "audio":"https://example.com/eps/audio/16.mp3"
   },
@@ -136,7 +136,7 @@
    "id": 17,
    "type":"listening",
    "question":"잘 듣고 들은 내용과 관계있는 그림을 고르십시오.",
-   "options": ["농사1","농사2","농사3","농사4"],
+   "options": ["","","",""],
    "answer": 3,
    "audio":"https://example.com/eps/audio/17.mp3"
   },
@@ -307,6 +307,7 @@
    "answer": 3
   }
 ]
+
 
 
 
