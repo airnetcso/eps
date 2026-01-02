@@ -1,64 +1,19 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>Admin - Hasil UBT</title>
-<style>
-body{
-  font-family:Arial;
-  padding:20px;
-}
-table{
-  border-collapse:collapse;
-  width:100%;
-}
-th,td{
-  border:1px solid #999;
-  padding:8px;
-  text-align:center;
-}
-th{
-  background:#eee;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Hasil CBT & Latihan Kosa Kata</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; background: #f0f9ff; }
+    h2 { text-align: center; color: #0369a1; margin-bottom: 30px; }
+    iframe { width: 100%; height: 80vh; border: 1px solid #ccc; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    .info { text-align: center; margin-top: 20px; color: #666; font-size: 14px; }
+  </style>
 </head>
 <body>
-
-<h2>HASIL UBT</h2>
-
-<table>
-<thead>
-<tr>
-  <th>No</th>
-  <th>Nama</th>
-  <th>Nilai</th>
-  <th>Waktu</th>
-  <th>Tanggal</th>
-</tr>
-</thead>
-<tbody id="data"></tbody>
-</table>
-
-<script>
-const data = JSON.parse(localStorage.getItem("results") || "[]");
-const tbody = document.getElementById("data");
-
-if(data.length === 0){
-  tbody.innerHTML = "<tr><td colspan='5'>BELUM ADA DATA</td></tr>";
-}else{
-  data.forEach((d,i)=>{
-    tbody.innerHTML += `
-      <tr>
-        <td>${i+1}</td>
-        <td>${d.name}</td>
-        <td>${d.score}</td>
-        <td>${d.time}</td>
-        <td>${d.date}</td>
-      </tr>
-    `;
-  });
-}
-</script>
-
+  <h2>ADMIN - HASIL SEMUA TEST & LATIHAN KOSA KATA</h2>
+  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRA5_l5eZwb1JDfUqyHrl9ePxDVM5a6HbVl8qthVwowIGFIQqBkoSU29VSJBsAqoVshvSf1VqCjVlqL/pubhtml?widget=true&headers=false"></iframe>
+  <p class="info">Data update real-time dari semua aplikasi (CBT & Latihan Kosa Kata)</p>
 </body>
 </html>
