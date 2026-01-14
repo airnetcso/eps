@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Pusat - Quiz & Data Korea</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f0f0f0;margin:0;padding:20px}
+h1{text-align:center;color:#3f51b5}
+.subtitle{text-align:center;color:#666;margin-bottom:30px}
+#passwordPrompt{text-align:center;margin:50px auto;max-width:400px}
+#passwordInput{padding:12px;width:80%;max-width:300px;border-radius:8px;border:1px solid #ccc}
+#passwordBtn{padding:12px 20px;background:#3f51b5;color:white;border:none;border-radius:8px;cursor:pointer}
+.tabs{margin:20px 0;text-align:center}
+.tab-btn{padding:10px 20px;margin:5px;background:#ddd;border:none;border-radius:8px;cursor:pointer}
+.tab-btn.active{background:#3f51b5;color:white}
+.tab-content{display:none;padding:20px;background:white;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.1);margin-top:20px}
+form{background:#f9f9f9;padding:20px;border-radius:8px;margin-bottom:20px}
+input, select{padding:10px;width:100%;margin:8px 0;border-radius:6px;border:1px solid #ccc}
+button{background:#4caf50;color:white;padding:12px;border:none;border-radius:6px;cursor:pointer;margin-top:10px}
+table{width:100%;border-collapse:collapse;margin-top:20px;background:#fff}
+th,td{border:1px solid #ddd;padding:12px;text-align:center}
+th{background:#3f51b5;color:white}
+tr:nth-child(even){background:#f9f9f9}
+.app-latbakor{background:#e3f2fd}
+.app-ubt{background:#e8f5e8}
+.app-koka{background:#fff3e0}
+.clear-btn{margin:30px auto;display:block;padding:16px 40px;background:#f44336;color:white;border:none;cursor:pointer;border-radius:8px}
+</style>
+</head>
+<body>
+
+<h1>ADMIN PUSAT</h1>
+<p class="subtitle">Quiz Korea + Data Siswa & Pembelajaran</p>
+
+<div id="passwordPrompt">
+  <p>Masukan password admin:</p>
+  <input type="password" id="passwordInput" placeholder="Password">
+  <button id="passwordBtn">MASUK</button>
+</div>
+
+<div id="mainContent" style="display:none;">
+  <div class="tabs">
+    <button class="tab-btn active" onclick="openTab('quiz')">Hasil Quiz</button>
+    <button class="tab-btn" onclick="openTab('siswa')">Data Siswa</button>
+    <button class="tab-btn" onclick="openTab('pembelajaran')">Kondisi Pembelajaran</button>
+  </div>
+
+  <!-- TAB HASIL QUIZ -->
+  <div id="quiz" class="tab-content">
+    <h2>Hasil Quiz dari Semua Aplikasi</h2>
+    <select id="filterApp" onchange="loadQuiz()">
+      <option value="all">Semua Aplikasi</option>
+      <option value="latbakor">Latihan Soal</option>
+      <option value="ubt">Ujian CBT</option>
+      <option value="koka">Test Kosa Kata</option>
+    </select>
+    <table id="quizTable">
+      <thead><tr><th>No</th><th>Username</th><th>Aplikasi</th><th>Kode Soal</th><th>Nilai</th><th>Tanggal</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <button class="clear-btn" onclick="clearQuiz()">Hapus Semua Hasil Quiz</button>
+  </div>
+
+  <!-- TAB DATA SISWA -->
+  <div id="siswa" class="tab-content" style="display:none;">
+    <h2>Data Siswa</h2>
+    <form id="siswaForm">
+      <input type="text" id="namaLengkap" placeholder="Nama Lengkap" required>
+      <input type="text" id="alamat" placeholder="Alamat" required>
+      <input type="tel" id="noTelp" placeholder="Nomor Telepon" required>
+      <input type="date" id="tglLahir" required>
+      <input type="date" id="tglMasuk" required>
+      <button type="submit">Tambah / Update Data Siswa</button>
+    </form>
+    <table id="siswaTable">
+      <thead><tr><th>No</th><th>Nama Lengkap</th><th>Alamat</th><th>No Telp</th><th>Tgl Lahir</th><th>Tgl Masuk</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <button class="clear-btn" onclick="clearSiswa()">Hapus Semua Data Siswa</button>
+  </div>
+
+  <!-- TAB KONDISI PEMBELAJARAN -->
+  <div id="pembelajaran" class="tab-content" style="display:none;">
+    <h2>Kondisi Pembelajaran</h2>
+    <form id="belajarForm">
+      <input type="text" id="namaKelas" placeholder="Nama Kelas" required>
+      <input type="date" id="tglBelajar" required>
+      <input type="text" id="materi" placeholder="Materi Pelajaran" required>
+      <input type="text" id="pengajar" placeholder="Pengajar" required>
+      <button type="submit">Tambah Catatan Pembelajaran</button>
+    </form>
+    <table id="belajarTable">
+      <thead><tr><th>No</th><th>Nama Kelas</th><th>Tanggal</th><th>Materi</th><th>Pengajar</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <button class="clear-btn" onclick="clearBelajar()">Hapus Semua Catatan</button>
+  </div>
+</div>
+
+<script>
+const ADMIN_PASSWORD = "admin123"; // Ganti kalau mau lebih aman
+
+document.getElementById("passwordBtn").onclick = () => {
+  if (document.getElementById("passwordInput").value === ADMIN_PASSWORD) {
+    document.getElementById("passwordPrompt").style.display = "none";
+    document.getElementById("mainContent").style.display = "block";
+    loadQuiz();
+    loadSiswa();
+    loadBelajar();
+    addExampleData(); // Tambah contoh data sekali aja
+  } else {
+    alert("Password salah!");
+  }
+};
+
+function openTab(tabName) {
+  document.querySelectorAll(".tab-content").forEach(t => t.style.display = "none");
+  document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+  document.getElementById(tabName).style.display = "block";
+  document.querySelector(`button[onclick="openTab('${tabName}')"]`).classList.add("active");
+  if (tabName === "quiz") loadQuiz();
+  if (tabName === "siswa") loadSiswa();
+  if (tabName === "pembelajaran") loadBelajar();
+}
+
+// === HASIL QUIZ ===
+const appNames = { "latbakor": "Latihan Soal", "ubt": "Ujian CBT", "koka": "Test Kosa Kata" };
+
+function loadQuiz(filter = document.getElementById("filterApp").value) {
+  const data = JSON.parse(localStorage.getItem("quizResults") || "[]");
+  const tbody = document.querySelector("#quizTable tbody");
+  tbody.innerHTML = "";
+  let filtered = data;
+  if (filter !== "all") filtered = data.filter(item => item.app === filter);
+  if (filtered.length === 0) {
+    tbody.innerHTML = "<tr><td colspan='6'>Belum ada hasil quiz</td></tr>";
+    return;
+  }
+  filtered.sort((a,b) => new Date(b.tanggal) - new Date(a.tanggal));
+  filtered.forEach((item, i) => {
+    const row = document.createElement("tr");
+    row.className = `app-${item.app}`;
+    row.innerHTML = `<td>${i+1}</td><td><b>${item.username}</b></td><td>${appNames[item.app] || item.app}</td><td>${item.kode || "-"}</td><td><b>${item.nilai}</b></td><td>${item.tanggal}</td>`;
+    tbody.appendChild(row);
+  });
+}
+
+function clearQuiz() {
+  if (confirm("Hapus semua hasil quiz?")) {
+    localStorage.removeItem("quizResults");
+    loadQuiz();
+  }
+}
+
+// === DATA SISWA ===
+function loadSiswa() {
+  const data = JSON.parse(localStorage.getItem("studentData") || "[]");
+  const tbody = document.querySelector("#siswaTable tbody");
+  tbody.innerHTML = "";
+  if (data.length === 0) {
+    tbody.innerHTML = "<tr><td colspan='6'>Belum ada data siswa</td></tr>";
+    return;
+  }
+  data.forEach((item, i) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `<td>${i+1}</td><td>${item.nama}</td><td>${item.alamat}</td><td>${item.telp}</td><td>${item.lahir}</td><td>${item.masuk}</td>`;
+    tbody.appendChild(row);
+  });
+}
+
+document.getElementById("siswaForm").onsubmit = (e) => {
+  e.preventDefault();
+  const data = {
+    nama: document.getElementById("namaLengkap").value,
+    alamat: document.getElementById("alamat").value,
+    telp: document.getElementById("noTelp").value,
+    lahir: document.getElementById("tglLahir").value,
+    masuk: document.getElementById("tglMasuk").value
+  };
+  let all = JSON.parse(localStorage.getItem("studentData") || "[]");
+  all.push(data);
+  localStorage.setItem("studentData", JSON.stringify(all));
+  loadSiswa();
+  e.target.reset();
+};
+
+function clearSiswa() {
+  if (confirm("Hapus semua data siswa?")) {
+    localStorage.removeItem("studentData");
+    loadSiswa();
+  }
+}
+
+// === KONDISI PEMBELAJARAN ===
+function loadBelajar() {
+  const data = JSON.parse(localStorage.getItem("learningLog") || "[]");
+  const tbody = document.querySelector("#belajarTable tbody");
+  tbody.innerHTML = "";
+  if (data.length === 0) {
+    tbody.innerHTML = "<tr><td colspan='5'>Belum ada catatan pembelajaran</td></tr>";
+    return;
+  }
+  data.sort((a,b) => new Date(b.tanggal) - new Date(a.tanggal));
+  data.forEach((item, i) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `<td>${i+1}</td><td>${item.kelas}</td><td>${item.tanggal}</td><td>${item.materi}</td><td>${item.pengajar}</td>`;
+    tbody.appendChild(row);
+  });
+}
+
+document.getElementById("belajarForm").onsubmit = (e) => {
+  e.preventDefault();
+  const data = {
+    kelas: document.getElementById("namaKelas").value,
+    tanggal: document.getElementById("tglBelajar").value,
+    materi: document.getElementById("materi").value,
+    pengajar: document.getElementById("pengajar").value
+  };
+  let all = JSON.parse(localStorage.getItem("learningLog") || "[]");
+  all.push(data);
+  localStorage.setItem("learningLog", JSON.stringify(all));
+  loadBelajar();
+  e.target.reset();
+};
+
+function clearBelajar() {
+  if (confirm("Hapus semua catatan pembelajaran?")) {
+    localStorage.removeItem("learningLog");
+    loadBelajar();
+  }
+}
+
+// === CONTOH DATA DUMMY (jalan sekali aja) ===
+function addExampleData() {
+  if (localStorage.getItem("studentData")) return; // Sudah ada, skip
+
+  // Contoh Data Siswa
+  const exampleSiswa = [
+    {nama: "Hanarizka Putri", alamat: "Jl. Merdeka No. 12, Jakarta", telp: "08123456789", lahir: "2003-05-15", masuk: "2025-01-10"},
+    {nama: "Windi Aprilia", alamat: "Jl. Sudirman Blok A, Bandung", telp: "08234567890", lahir: "2000-04-20", masuk: "2025-02-01"},
+    {nama: "Sita Nuraini", alamat: "Jl. Thamrin No. 5, Surabaya", telp: "08345678901", lahir: "1998-07-22", masuk: "2025-03-15"}
+  ];
+  localStorage.setItem("studentData", JSON.stringify(exampleSiswa));
+
+  // Contoh Kondisi Pembelajaran
+  const exampleBelajar = [
+    {kelas: "Kelas A1", tanggal: "2026-01-02", materi: "Hangul Dasar & Pengucapan", pengajar: "Kim Sensei"},
+    {kelas: "Kelas B1", tanggal: "2026-01-03", materi: "Kosakata Sehari-hari", pengajar: "Lee Teacher"},
+    {kelas: "Kelas A1", tanggal: "2026-01-04", materi: "Grammar Dasar (Particles)", pengajar: "Kim Sensei"}
+  ];
+  localStorage.setItem("learningLog", JSON.stringify(exampleBelajar));
+
+  loadSiswa();
+  loadBelajar();
+}
+</script>
+</body>
+</html>
