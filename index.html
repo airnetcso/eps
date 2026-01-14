@@ -154,19 +154,6 @@ document.addEventListener("DOMContentLoaded", () => {
     currentUser = username; // nama asli
     currentKode = kode;
 
-    // Catat login ke Google Sheet
-    fetch(SPREADSHEET_URL,{
-      method:"POST",
-      mode:"no-cors",
-      keepalive:true,
-      body: new URLSearchParams({
-        waktu:new Date().toLocaleString('id-ID',{timeZone:'Asia/Jakarta'}),
-        namaSiswa: currentUser,
-        code: currentKode,
-        status:"login"
-      })
-    });
-
     loginPage.style.display="none";
     quizPage.style.display="block";
     loadSoal(kodeMapping[kode]);
@@ -240,4 +227,5 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
 
