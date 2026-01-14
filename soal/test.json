@@ -1,0 +1,49 @@
+
+[
+  {
+    "question": "다음 그림을 보고 알맞은 답을 고르세요",
+    "image": "https://m.korean.houses-appliances.com/photo/pd35898095-2_56l.jpg",
+    "options": {
+      "a": "텔레비전",
+      "b": "세탁기",
+      "c": "냉장고",
+      "d": "가스레인지"
+    },
+    "answer": "c",
+    "explanation": "Gambar menunjukkan kulkas (냉장고)."
+  },
+  {
+    "question": "다음 그림을 보고 알맞은 답을 고르세요",
+    "image": "https://i.ytimg.com/vi/2BsVcLYFD6Q/maxresdefault.jpg",
+    "options": {
+      "a": "바나나",
+      "b": "오렌지",
+      "c": "사과",
+      "d": "망고"
+    },
+    "answer": "c",
+    "explanation": "Gambar menunjukkan apel (사과)."
+  },
+  {
+    "question": "학교는 무슨 뜻이에요?",
+    "options": {
+      "a": "집",
+      "b": "학교",
+      "c": "회사",
+      "d": "병원"
+    },
+    "answer": "b",
+    "explanation": "학교 berarti sekolah."
+  },
+  {
+    "question": "친구는 무슨 뜻이에요?",
+    "options": {
+      "a": "가족",
+      "b": "친구",
+      "c": "선생님",
+      "d": "의사"
+    },
+    "answer": "b",
+    "explanation": "친구 berarti teman."
+  }
+]

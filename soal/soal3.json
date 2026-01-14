@@ -1,0 +1,135 @@
+[
+  {
+    "passage": "",
+    "audio": "https://airnetcso.github.io/eps/audio/1.mp3",
+    "image": "",
+    "question": "1. Apa topik pembicaraan dalam audio tersebut?",
+    "options": {
+      "A": "Cuaca",
+      "B": "Pekerjaan",
+      "C": "Perjalanan",
+      "D": "Makanan"
+    },
+    "correct": "A"
+  },
+  {
+    "passage": "",
+    "audio": "",
+    "image": "https://airnetcso.github.io/eps/image/2.jpg",
+    "question": "2. Apa benda yang terlihat pada gambar?",
+    "options": {
+      "A": "냉장고",
+      "B": "세탁기",
+      "C": "텔레비전",
+      "D": "에어컨"
+    },
+    "correct": "C"
+  },
+  {
+    "passage": "",
+    "audio": "https://airnetcso.github.io/eps/audio/3.mp3",
+    "image": "",
+    "question": "3. Di mana percakapan ini terjadi?",
+    "options": {
+      "A": "학교",
+      "B": "식당",
+      "C": "병원",
+      "D": "회사"
+    },
+    "correct": "B"
+  },
+  {
+    "passage": "",
+    "audio": "",
+    "image": "https://airnetcso.github.io/eps/image/4.jpg",
+    "question": "4. Apa aktivitas orang pada gambar?",
+    "options": {
+      "A": "공부하다",
+      "B": "일하다",
+      "C": "운동하다",
+      "D": "요리하다"
+    },
+    "correct": "A"
+  },
+  {
+    "passage": "",
+    "audio": "https://airnetcso.github.io/eps/audio/5.mp3",
+    "image": "https://airnetcso.github.io/eps/image/5.jpg",
+    "question": "5. Informasi apa yang disampaikan dalam audio?",
+    "options": {
+      "A": "약속 시간",
+      "B": "날씨 정보",
+      "C": "여행 계획",
+      "D": "가격 안내"
+    },
+    "correct": "B"
+  },
+
+  {
+    "passage": "",
+    "audio": "https://airnetcso.github.io/eps/audio/6.mp3",
+    "image": "",
+    "question": "6. Siapa yang berbicara dalam audio?",
+    "options": {
+      "A": "학생",
+      "B": "회사원",
+      "C": "의사",
+      "D": "손님"
+    },
+    "correct": "A"
+  },
+  {
+    "passage": "",
+    "audio": "",
+    "image": "https://airnetcso.github.io/eps/image/7.jpg",
+    "question": "7. Tempat apakah ini?",
+    "options": {
+      "A": "도서관",
+      "B": "학교",
+      "C": "회사",
+      "D": "병원"
+    },
+    "correct": "A"
+  },
+  {
+    "passage": "",
+    "audio": "https://airnetcso.github.io/eps/audio/8.mp3",
+    "image": "",
+    "question": "8. Apa rencana pembicara?",
+    "options": {
+      "A": "공부하다",
+      "B": "여행하다",
+      "C": "일하다",
+      "D": "쉬다"
+    },
+    "correct": "B"
+  },
+  {
+    "passage": "",
+    "audio": "",
+    "image": "https://airnetcso.github.io/eps/image/9.jpg",
+    "question": "9. Apa yang sedang dilakukan?",
+    "options": {
+      "A": "걷다",
+      "B": "뛰다",
+      "C": "앉다",
+      "D": "자다"
+    },
+    "correct": "A"
+  },
+  {
+    "passage": "",
+    "audio": "https://airnetcso.github.io/eps/audio/10.mp3",
+    "image": "",
+    "question": "10. Kapan peristiwa ini terjadi?",
+    "options": {
+      "A": "어제",
+      "B": "오늘",
+      "C": "내일",
+      "D": "다음 주"
+    },
+    "correct": "B"
+  }
+
+  /* lanjutkan sampai 20 atau 40 soal dengan pola yang sama */
+]

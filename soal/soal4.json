@@ -1,0 +1,328 @@
+[
+  {
+    "question": "Apa arti kata \"냉장고\"?",
+    "options": {
+      "A": "Mesin cuci",
+      "B": "Kulkas",
+      "C": "Kompor",
+      "D": "Televisi"
+    },
+    "correct": "B",
+    "audio": null,
+    "image": null,
+    "explanation": "냉장고 berarti kulkas."
+  },
+  {
+    "question": "Apa arti audio berikut?",
+    "options": {
+      "A": "Saya belajar",
+      "B": "Saya bekerja",
+      "C": "Saya makan",
+      "D": "Saya tidur"
+    },
+    "correct": "A",
+    "audio": "https://airnetcso.github.io/eps/audio/1.mp3",
+    "image": null,
+    "explanation": "Audio bermakna 'Saya belajar'."
+  },
+  {
+    "question": "Apa arti kata \"어머니\"?",
+    "options": {
+      "A": "Guru",
+      "B": "Teman",
+      "C": "Orang tua",
+      "D": "Ibu"
+    },
+    "correct": "B",
+    "audio": null,
+    "image": null,
+    "explanation": "친구 berarti teman."
+  },
+  {
+    "question": "Benda apa pada gambar berikut?",
+    "options": {
+      "A": "Televisi",
+      "B": "Radio",
+      "C": "Kulkas",
+      "D": "Kipas"
+    },
+    "correct": "C",
+    "audio": null,
+    "image": "https://airnetcso.github.io/eps/image/1.jpg",
+    "explanation": "Gambar menunjukkan kulkas."
+  },
+  {
+    "question": "Apa arti kata \"학교\"?",
+    "options": {
+      "A": "Rumah",
+      "B": "Sekolah",
+      "C": "Pasar",
+      "D": "Kantor"
+    },
+    "correct": "B",
+    "audio": null,
+    "image": null,
+    "explanation": "학교 berarti sekolah."
+  },
+  {
+    "question": "Apa arti gambar berikut?",
+    "options": {
+      "A": "Tas",
+      "B": "Buku",
+      "C": "Meja",
+      "D": "Kursi"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": "https://airnetcso.github.io/eps/image/2.jpg",
+    "explanation": "Gambar menunjukkan tas (가방)."
+  },
+  {
+    "question": "Apa arti audio berikut?",
+    "options": {
+      "A": "Saya pergi",
+      "B": "Saya datang",
+      "C": "Saya pulang",
+      "D": "Saya tidur"
+    },
+    "correct": "A",
+    "audio": "https://airnetcso.github.io/eps/audio/2.mp3",
+    "image": null,
+    "explanation": "Audio bermakna 'Saya pergi'."
+  },
+  {
+    "question": "Apa arti kata \"사과\"?",
+    "options": {
+      "A": "Jeruk",
+      "B": "Apel",
+      "C": "Anggur",
+      "D": "Pisang"
+    },
+    "correct": "B",
+    "audio": null,
+    "image": null,
+    "explanation": "사과 berarti apel."
+  },
+  {
+    "question": "Apa benda pada gambar?",
+    "options": {
+      "A": "Laptop",
+      "B": "Televisi",
+      "C": "Radio",
+      "D": "Tablet"
+    },
+    "correct": "B",
+    "audio": null,
+    "image": "https://airnetcso.github.io/eps/image/3.jpg",
+    "explanation": "Gambar menunjukkan televisi."
+  },
+  {
+    "question": "Apa arti kata \"물\"?",
+    "options": {
+      "A": "Susu",
+      "B": "Air",
+      "C": "Teh",
+      "D": "Kopi"
+    },
+    "correct": "B",
+    "audio": null,
+    "image": null,
+    "explanation": "물 berarti air."
+  },
+  {
+    "question": "Apa arti audio berikut?",
+    "options": {
+      "A": "Saya makan",
+      "B": "Saya minum",
+      "C": "Saya belajar",
+      "D": "Saya bekerja"
+    },
+    "correct": "A",
+    "audio": "https://airnetcso.github.io/eps/audio/3.mp3",
+    "image": null,
+    "explanation": "Audio bermakna 'Saya makan'."
+  },
+
+  {
+    "question": "Apa arti gambar berikut?",
+    "options": {
+      "A": "Sepatu",
+      "B": "Topi",
+      "C": "Baju",
+      "D": "Celana"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": "https://airnetcso.github.io/eps/image/4.jpg",
+    "explanation": "Gambar menunjukkan sepatu (신발)."
+  },
+  {
+    "question": "Apa arti kata \"책\"?",
+    "options": {
+      "A": "Buku",
+      "B": "Meja",
+      "C": "Kursi",
+      "D": "Pulpen"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": null,
+    "explanation": "책 berarti buku."
+  },
+  {
+    "question": "Apa arti audio berikut?",
+    "options": {
+      "A": "Saya bekerja",
+      "B": "Saya tidur",
+      "C": "Saya mandi",
+      "D": "Saya makan"
+    },
+    "correct": "B",
+    "audio": "https://airnetcso.github.io/eps/audio/4.mp3",
+    "image": null,
+    "explanation": "Audio bermakna 'Saya tidur'."
+  },
+  {
+    "question": "Apa arti gambar berikut?",
+    "options": {
+      "A": "Jam",
+      "B": "Tas",
+      "C": "Buku",
+      "D": "Pulpen"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": "https://airnetcso.github.io/eps/image/5.jpg",
+    "explanation": "Gambar menunjukkan jam."
+  },
+  {
+    "question": "Apa arti kata \"사람\"?",
+    "options": {
+      "A": "Anak",
+      "B": "Orang",
+      "C": "Guru",
+      "D": "Teman"
+    },
+    "correct": "B",
+    "audio": null,
+    "image": null,
+    "explanation": "사람 berarti orang."
+  },
+  {
+    "question": "Apa arti gambar berikut?",
+    "options": {
+      "A": "Mobil",
+      "B": "Motor",
+      "C": "Bus",
+      "D": "Sepeda"
+    },
+    "correct": "D",
+    "audio": null,
+    "image": "https://airnetcso.github.io/eps/image/6.jpg",
+    "explanation": "Gambar menunjukkan sepeda."
+  },
+  {
+    "question": "Apa arti kata \"집\"?",
+    "options": {
+      "A": "Sekolah",
+      "B": "Kantor",
+      "C": "Rumah",
+      "D": "Pasar"
+    },
+    "correct": "C",
+    "audio": null,
+    "image": null,
+    "explanation": "집 berarti rumah."
+  },
+  {
+    "question": "Apa arti gambar berikut?",
+    "options": {
+      "A": "Pintu",
+      "B": "Jendela",
+      "C": "Atap",
+      "D": "Dinding"
+    },
+    "correct": "B",
+    "audio": null,
+    "image": "https://airnetcso.github.io/eps/image/7.jpg",
+    "explanation": "Gambar menunjukkan jendela."
+  },
+  {
+    "question": "Apa arti kata \"의자\"?",
+    "options": {
+      "A": "Meja",
+      "B": "Kursi",
+      "C": "Lemari",
+      "D": "Kasur"
+    },
+    "correct": "B",
+    "audio": null,
+    "image": null,
+    "explanation": "의자 berarti kursi."
+  },
+  {
+    "question": "Apa arti audio berikut?",
+    "options": {
+      "A": "Saya pulang",
+      "B": "Saya pergi",
+      "C": "Saya belajar",
+      "D": "Saya tidur"
+    },
+    "correct": "A",
+    "audio": "https://airnetcso.github.io/eps/audio/5.mp3",
+    "image": null,
+    "explanation": "Audio bermakna 'Saya pulang'."
+  },
+  {
+    "question": "Apa arti gambar berikut?",
+    "options": {
+      "A": "Kacamata",
+      "B": "Topi",
+      "C": "Sepatu",
+      "D": "Tas"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": "https://airnetcso.github.io/eps/image/8.jpg",
+    "explanation": "Gambar menunjukkan kacamata."
+  },
+  {
+    "question": "Apa arti kata \"친구\"?",
+    "options": {
+      "A": "Guru",
+      "B": "Teman",
+      "C": "Orang tua",
+      "D": "Anak"
+    },
+    "correct": "B",
+    "audio": null,
+    "image": null,
+    "explanation": "친구 berarti teman."
+  },
+  {
+    "question": "Apa arti gambar berikut?",
+    "options": {
+      "A": "Piring",
+      "B": "Sendok",
+      "C": "Gelas",
+      "D": "Mangkok"
+    },
+    "correct": "C",
+    "audio": null,
+    "image": "https://airnetcso.github.io/eps/image/9.jpg",
+    "explanation": "Gambar menunjukkan gelas."
+  },
+  {
+    "question": "Apa arti kata \"밥\"?",
+    "options": {
+      "A": "Air",
+      "B": "Nasi",
+      "C": "Roti",
+      "D": "Sup"
+    },
+    "correct": "B",
+    "audio": null,
+    "image": null,
+    "explanation": "밥 berarti nasi."
+  }
+]
