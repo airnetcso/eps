@@ -8,34 +8,66 @@
 <style>
 body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5}
 
+/* ================= SPLASH ================= */
+#splash{
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+    url("https://raw.githubusercontent.com/airnetcso/eps/main/image/bg1.jpg")
+    center/cover no-repeat;
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:26px 18px;
+  z-index:9999;
+  text-align:center;
+}
+.splash-box{
+  max-width:420px;
+  transform:translateY(28px);
+}
+#splash h1{
+  font-size:18px;
+  font-weight:600;
+  line-height:1.5;
+  margin-bottom:14px;
+  text-shadow:0 2px 6px rgba(0,0,0,.8);
+}
+#splash-names{
+  font-size:10px;
+  line-height:1.55;
+  opacity:.9;
+  text-align:justify;
+  column-count:2;
+  column-gap:16px;
+}
+#splash-names span::after{content:", ";}
+
 /* ================= LOGIN PAGE ================= */
 #login-page{
   min-height:100vh;
-  display:flex;
+  display:none;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  padding:20px; /* ⬅️ SAFE AREA HP */
+  padding:20px;
   background:
     linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-    url('https://raw.githubusercontent.com/airnetcso/eps/main/image/bg1.jpg') center/cover no-repeat;
-}
-
-@keyframes fadeSlideUp{
-  from{opacity:0;transform:translateY(40px)}
-  to{opacity:1;transform:translateY(0)}
+    url('https://raw.githubusercontent.com/airnetcso/eps/main/image/bg1.jpg')
+    center/cover no-repeat;
 }
 
 .login-container{
   width:100%;
-  max-width:300px;     /* ⬅️ RAMPING */
-  padding:34px 26px;   /* ⬅️ TIDAK MEPET */
+  max-width:300px;
+  padding:34px 26px;
   text-align:center;
   background:rgba(255,255,255,.12);
   backdrop-filter:blur(14px);
   border-radius:8px;
   box-shadow:0 12px 40px rgba(0,0,0,.5);
-  animation:fadeSlideUp .9s ease-out forwards;
 }
 
 .login-container h1{
@@ -79,7 +111,12 @@ button{
 }
 
 /* ================= QUIZ PAGE ================= */
-#quiz-page{display:none;min-height:100vh;padding:70px 0 80px;background:linear-gradient(#fdf6ec,#f7efe2)}
+#quiz-page{
+  display:none;
+  min-height:100vh;
+  padding:70px 0 80px;
+  background:linear-gradient(#fdf6ec,#f7efe2);
+}
 
 .header-fixed{
   position:fixed;
@@ -180,6 +217,22 @@ button{
 
 <body>
 
+<!-- SPLASH -->
+<div id="splash">
+  <div class="splash-box">
+    <h1>tetap semangat belajar,<br>semoga kalian semua lulus ujian EPS TOPIK aamiin…</h1>
+    <div id="splash-names">
+      <span>Uus</span><span>Hanarizka</span><span>Windi</span><span>Rismayayanti</span>
+      <span>Sita</span><span>Mila</span><span>Aini</span><span>Feinie</span>
+      <span>Hamdan</span><span>Heri</span><span>Fikrisurya</span><span>Mutiara</span>
+      <span>Wantika</span><span>Dini</span><span>Kaniarostayuni</span>
+      <span>Dikisetiawan</span><span>Aisyah</span><span>Rizka</span>
+      <span>Dinda</span><span>Zhafif</span><span>Siwon</span>
+      <span>Azizah</span><span>Yppsdi</span><span>Satria</span><span>Sultan</span>
+    </div>
+  </div>
+</div>
+
 <!-- LOGIN PAGE -->
 <div id="login-page">
   <div class="login-container">
@@ -205,6 +258,12 @@ button{
 </div>
 
 <script>
+/* ===== SPLASH CONTROL ===== */
+setTimeout(()=>{
+  splash.style.display="none";
+  login-page.style.display="flex";
+},4000);
+
 const SPREADSHEET_URL="https://script.google.com/macros/s/AKfycbzxyVIlsyLswlfnQG618eeUZgN83dd2jfCjU0r7LsNHM3A6NNiibuCIb5e3CNs9J1vVhQ/exec";
 
 /* ===== USER ID MAPPING (TIDAK DIUBAH) ===== */
@@ -232,17 +291,17 @@ let warn5=false,warnLast=false;
 let currentUser="",currentKode="";
 
 btnLogin.onclick=()=>{
-  const userId=userId.value.trim();
-  const kode=kode.value.trim().toLowerCase();
-  if(!userIdToName[userId]) return alert("User ID tidak terdaftar");
-  if(!kodeMapping[kode]) return alert("Kode soal salah");
+  const userIdVal=userId.value.trim();
+  const kodeVal=kode.value.trim().toLowerCase();
+  if(!userIdToName[userIdVal]) return alert("User ID tidak terdaftar");
+  if(!kodeMapping[kodeVal]) return alert("Kode soal salah");
 
-  currentUser=userIdToName[userId];
-  currentKode=kode;
+  currentUser=userIdToName[userIdVal];
+  currentKode=kodeVal;
 
   login-page.style.display="none";
   quiz-page.style.display="block";
-  loadSoal(kodeMapping[kode]);
+  loadSoal(kodeMapping[kodeVal]);
   startTimer();
 };
 
@@ -278,7 +337,6 @@ function show(n){
     q.classList.toggle("active",i===n);
   });
   current=n;
-
   if(!warnLast && questions.length-n<=3){
     alert("⚠️ Kamu sudah masuk 3 soal terakhir");
     warnLast=true;
@@ -305,7 +363,6 @@ function startTimer(){
     timer.textContent=
       String(Math.floor(time/60)).padStart(2,"0")+":"+
       String(time%60).padStart(2,"0");
-
     if(time===300 && !warn5){
       alert("⏰ Waktu tinggal 5 menit!");
       warn5=true;
@@ -316,4 +373,3 @@ function startTimer(){
 </script>
 </body>
 </html>
-
