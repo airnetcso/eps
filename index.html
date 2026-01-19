@@ -25,7 +25,7 @@
     #splash {
       position: fixed;
       inset: 0;
-      background: 
+      background:
         linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.82)),
         url("https://raw.githubusercontent.com/airnetcso/eps/main/image/bg1.jpg")
         center/cover no-repeat;
@@ -39,18 +39,15 @@
       transition: opacity 1.3s ease;
       animation: fadeIn 1.2s ease-out;
     }
-
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
-
     .splash-box {
       max-width: 560px;
       width: 100%;
       transform: translateY(10px);
     }
-
     #splash h1 {
       font-size: 22px;
       font-weight: 800;
@@ -59,11 +56,9 @@
       text-shadow: 0 4px 12px rgba(0,0,0,0.9), 0 0 20px rgba(255, 107, 157, 0.4);
       letter-spacing: 0.5px;
     }
-
     #splash h1 b {
       color: #ff6b9d;
     }
-
     #splash-names {
       font-size: 11px;
       line-height: 1.7;
@@ -73,20 +68,16 @@
       max-width: 90%;
       margin: 0 auto;
     }
-
     #splash-names span {
       white-space: normal;
     }
-
     #splash-names span::after {
       content: ". ";
       opacity: 0.7;
     }
-
     #splash-names span:last-child::after {
       content: " 🔥";
     }
-
     @media (max-width: 480px) {
       #splash {
         padding: 40px 30px;
@@ -108,12 +99,10 @@
       transition: opacity 0.8s ease;
       opacity: 0;
     }
-
     @keyframes fadeSlideUp {
       from { opacity:0; transform:translateY(40px);}
       to { opacity:1; transform:translateY(0);}
     }
-
     .login-container {
       width: 90%;
       max-width: 260px;
@@ -127,14 +116,12 @@
       position: relative;
       z-index: 3;
     }
-
     .login-container h1 {
       color: #fff;
       font-size: 26px;
       margin: 0 0 18px;
       text-shadow: 0 2px 6px rgba(0,0,0,.7);
     }
-
     input {
       width: 100%;
       padding: 14px;
@@ -148,15 +135,12 @@
       box-sizing: border-box;
       transition: all 0.3s;
     }
-
     input::placeholder { color: rgba(255,255,255,.65); font-size: 15px; }
-
     input:focus {
       outline: none;
       background: rgba(255,255,255,.35);
       transform: scale(1.02);
     }
-
     button {
       width: 100%;
       padding: 14px;
@@ -171,12 +155,10 @@
       box-shadow: 0 6px 20px rgba(255,107,157,.5);
       transition: all 0.4s;
     }
-
     button:hover {
       background: #ff8ac1;
       transform: translateY(-5px) scale(1.05);
     }
-
     .copyright {
       margin-top: 30px;
       color: rgba(255,255,255,.8);
@@ -185,79 +167,91 @@
       z-index: 3;
     }
 
-    /* QUIZ PAGE */
-    #quiz-page { 
-      display: none; 
-      min-height: 100vh; 
-      padding: 70px 0 80px; 
-      background: linear-gradient(#fdf6ec,#f7efe2); 
+    /* QUIZ PAGE - FIX WARNA TEKS BIAR KELIHATAN */
+    #quiz-page {
+      display: none;
+      min-height: 100vh;
+      padding: 70px 0 80px;
+      background: linear-gradient(#fdf6ec,#f7efe2);
       position: relative;
       z-index: 2;
+      color: #333; /* warna teks default jadi hitam pekat biar kontras */
     }
-
-    .header-fixed { 
-      position: fixed; 
-      top: 0; left: 0; right: 0; 
-      display: flex; justify-content: space-between; align-items: center; 
-      background: #fff; padding: 10px 15px; 
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-      z-index: 1000; 
+    .header-fixed {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      display: flex; justify-content: space-between; align-items: center;
+      background: #fff; padding: 10px 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
     }
-
-    .timer, .submit-top { 
-      padding: 12px 24px; text-align: center; color: #fff; font-weight: bold; font-size: 16px; min-width: 110px; cursor: pointer; 
+    .timer, .submit-top {
+      padding: 12px 24px; text-align: center; color: #fff; font-weight: bold; font-size: 16px; min-width: 110px; cursor: pointer;
     }
-
     .timer { background: #4caf50; }
     .submit-top { background: #f44336; }
-
     .container { max-width: 540px; margin: auto; height: calc(100vh - 150px); overflow-y: auto; padding: 0 15px; }
 
-    .question-wrapper { display: none; margin-bottom: 40px; }
-    .question-wrapper.active { display: block; }
+    /* FIX TEKS SOAL & JAWABAN BIAR KELIHATAN */
+    .question-wrapper p,
+    .option-item {
+      color: #333 !important; /* hitam pekat, override default */
+      font-weight: 500;
+    }
+    .option-item label {
+      color: #333 !important;
+      cursor: pointer;
+    }
+    .option-circle {
+      color: #333;
+      background: white;
+    }
+    .box-question {
+      background: #fff3e0;
+      padding: 20px;
+      margin-top: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
 
+    .question-wrapper.active {
+      display: block;
+    }
     .box-passage { padding: 0; margin-bottom: 20px; }
     .box-passage audio, .box-passage img { width: 100%; margin-top: 10px; display: block; }
     .box-passage audio { background: #e8d5b8; height: 48px; border-radius: 0 !important; }
-
-    .box-question { background: #fff3e0; padding: 20px; margin-top: 15px; }
 
     .option-item { display: flex; align-items: center; margin: 18px 0; font-size: 16px; }
     .option-item input { display: none; }
     .option-circle { width: 32px; height: 32px; border: 2px solid #333; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px; flex-shrink: 0; font-weight: bold; font-size: 15px; }
     .option-item input:checked + .option-circle { background: #bbdefb; border-color: #2196f3; color: #2196f3; }
 
-    .nav-bottom { 
-      position: fixed; bottom: 0; left: 0; right: 0; 
-      display: flex; justify-content: space-between; align-items: center; 
-      background: #fff; padding: 10px 15px; 
-      box-shadow: 0 -2px 10px rgba(0,0,0,0.1); 
+    .nav-bottom {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      display: flex; justify-content: space-between; align-items: center;
+      background: #fff; padding: 10px 15px;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
     }
-
-    .nav-bottom button { 
-      padding: 12px 24px; text-align: center; color: #fff; border: none; font-weight: bold; font-size: 16px; border-radius: 0; min-width: 110px; cursor: pointer; 
+    .nav-bottom button {
+      padding: 12px 24px; text-align: center; color: #fff; border: none; font-weight: bold; font-size: 16px; border-radius: 0; min-width: 110px; cursor: pointer;
     }
-
     #prev { background: #2196f3; }
     #next { background: #ff9800; }
 
-    /* RESULT PAGE */
-    #result-page { 
-      display: none; 
-      max-width: 600px; margin: auto; padding: 20px 15px; 
-      position: relative; z-index: 2; 
+    /* RESULT PAGE - FIX WARNA TEKS JUGA */
+    #result-page {
+      display: none;
+      max-width: 600px; margin: auto; padding: 20px 15px;
+      position: relative; z-index: 2;
+      color: #333; /* teks hitam biar kelihatan di background putih */
     }
-
     .result-box { background: #fff; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 12px; }
-
-    .wrong-item { margin-top: 20px; padding: 15px; background: #ffebee; border-left: 5px solid #f44336; border-radius: 8px; }
-
+    .wrong-item { margin-top: 20px; padding: 15px; background: #ffebee; border-left: 5px solid #f44336; border-radius: 8px; color: #333; }
     .correct { color: green; font-weight: bold; }
-
-    .back-btn { 
-      margin-top: 30px; padding: 16px; 
-      background: #3f51b5; color: #fff; text-align: center; font-weight: bold; font-size: 17px; 
-      border-radius: 12px; cursor: pointer; 
+    .back-btn {
+      margin-top: 30px; padding: 16px;
+      background: #3f51b5; color: #fff; text-align: center; font-weight: bold; font-size: 17px;
+      border-radius: 12px; cursor: pointer;
     }
   </style>
 </head>
@@ -268,7 +262,7 @@
   <div class="splash-box">
     <h1>
       <b>여러분,</b> tetap semangat!<br>
-      Kalian semua pasti lulus EPS TOPIK, Aamiin ...<br>
+      Kalian semua pasti lulus EPS TOPIK, Aamiin ...
     </h1>
     <div id="splash-names">
       Uus. Hanarizka. Windi. Rismayayanti. Sita. Mila. Aini. Feinie. Hamdan. Heri. Fikrisurya. Mutiara. Wantika. Dini. Kaniarostayuni. Dikisetiawan. Aisyah. Rizka. Dinda. Zhafif. Siwon. Azizah. Yppsdi. Satria. Sultan. Aditya. Bima. Citra. Dewi. Eka. Fadli. Gita. Hafiz. Indah. Jihan. Kim Jihoon. Laras. Minji. Naufal. Putri. Qori. Raka. Sari. Taufik. Umair. Vina. Wahyu. Xena. Yanti. Zara. Arif. Bunga. Chandra. Dhani. Elina. Fajar. Galang. Hadi. Indra. Joko. Kurnia. Lukman. Maulana. Nanda 🔥
@@ -348,7 +342,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const timerEl = document.getElementById("timer");
   const resultBox = document.getElementById("resultBox");
 
-  // Splash 6 detik → fade out mulus
   setTimeout(() => {
     splash.style.opacity = "0";
     setTimeout(() => {
@@ -362,13 +355,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const userId = document.getElementById("userId").value.trim();
     const kode = document.getElementById("kode").value.trim().toLowerCase();
     const username = userIdToName[userId];
-
     if (!username) { alert("User ID tidak terdaftar"); return; }
     if (!kodeMapping[kode]) { alert("Kode soal salah"); return; }
-
     currentUser = username;
     currentKode = kode;
-
     loginPage.style.display = "none";
     quizPage.style.display = "block";
     loadSoal(kodeMapping[kode]);
@@ -451,7 +441,3 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
-
-
-
-
