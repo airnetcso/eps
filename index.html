@@ -258,11 +258,15 @@ button{
 </div>
 
 <script>
-/* ===== SPLASH CONTROL ===== */
-setTimeout(()=>{
-  splash.style.display="none";
-  login-page.style.display="flex";
-},4000);
+/* ===== SPLASH CONTROL (FIXED, AMAN) ===== */
+window.addEventListener("load",()=>{
+  const splashEl=document.getElementById("splash");
+  const loginEl=document.getElementById("login-page");
+  setTimeout(()=>{
+    splashEl.style.display="none";
+    loginEl.style.display="flex";
+  },4000);
+});
 
 const SPREADSHEET_URL="https://script.google.com/macros/s/AKfycbzxyVIlsyLswlfnQG618eeUZgN83dd2jfCjU0r7LsNHM3A6NNiibuCIb5e3CNs9J1vVhQ/exec";
 
@@ -371,5 +375,6 @@ function startTimer(){
   },1000);
 }
 </script>
+
 </body>
 </html>
