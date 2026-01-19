@@ -12,113 +12,211 @@ body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5}
 #splash{
   position:fixed;
   inset:0;
-  z-index:99999;
+  background:
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+    url("https://raw.githubusercontent.com/airnetcso/eps/main/image/bg1.jpg")
+    center/cover no-repeat;
+  color:#fff;
   display:flex;
-  flex-direction:column;
   justify-content:center;
   align-items:center;
+  padding:26px 18px;
+  z-index:9999;
   text-align:center;
-  padding:30px 20px;
-  color:#fff;
-  background:
-    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
-    url('https://raw.githubusercontent.com/airnetcso/eps/main/image/bg1.jpg')
-    center/cover no-repeat;
 }
+
+.splash-box{
+  max-width:420px;
+  transform:translateY(28px);
+}
+
 #splash h1{
-  font-size:20px;
-  line-height:1.6;
-  margin-bottom:30px;
+  font-size:18px;
+  font-weight:600;
+  line-height:1.5;
+  margin-bottom:14px;
+  text-shadow:0 2px 6px rgba(0,0,0,0.8);
 }
+
 #splash-names{
-  max-width:520px;
-  font-size:11px;
-  line-height:1.7;
-  column-count:2;
-  column-gap:18px;
-  text-align:justify;
+  font-size:10px;
+  line-height:1.55;
   opacity:.9;
+  text-align:justify;
+  column-count:2;
+  column-gap:16px;
 }
-#splash-names span::after{content:", ";}
+
+#splash-names span::after{content:", "}
 
 /* ================= LOGIN PAGE ================= */
 #login-page{
+  display:none;
   min-height:100vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
+  padding:20px;
   background:
     linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
     url('https://raw.githubusercontent.com/airnetcso/eps/main/image/bg1.jpg')
     center/cover no-repeat;
 }
-@keyframes fadeSlideUp {
-  from { opacity:0; transform:translateY(40px);}
-  to { opacity:1; transform:translateY(0);}
+
+@keyframes fadeSlideUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
 }
+
 .login-container{
-  width:90%; max-width:300px; padding:35px 25px; text-align:center;
-  background:rgba(255,255,255,.12); backdrop-filter:blur(14px);
-  border-radius:8px; box-shadow:0 12px 40px rgba(0,0,0,.5);
-  animation: fadeSlideUp 0.9s ease-out forwards;
+  width:100%;
+  max-width:300px;
+  padding:34px 26px;
+  text-align:center;
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(14px);
+  border-radius:8px;
+  box-shadow:0 12px 40px rgba(0,0,0,.5);
+  animation:fadeSlideUp .9s ease-out forwards;
 }
+
 .login-container h1{
-  color:#fff; font-size:28px; margin:0 0 20px;
+  color:#fff;
+  font-size:26px;
+  margin-bottom:20px;
 }
+
 input{
-  width:100%; padding:16px; margin:12px 0; border:none; border-radius:6px;
-  background:rgba(255,255,255,.18); color:#fff; font-size:16px;
+  width:100%;
+  padding:15px;
+  margin:12px 0;
+  border:none;
+  border-radius:6px;
+  background:rgba(255,255,255,.18);
+  color:#fff;
+  font-size:16px;
+  box-sizing:border-box;
 }
-input::placeholder{ color:rgba(255,255,255,.65);}
-input:focus{ outline:none; background:rgba(255,255,255,.35);}
+
+input::placeholder{color:rgba(255,255,255,.65)}
+input:focus{outline:none;background:rgba(255,255,255,.35)}
+
 button{
-  width:100%; padding:16px; margin:16px 0 8px; border:none; border-radius:6px;
-  background:#ff6b9d; color:#fff; font-weight:bold; font-size:17px;
+  width:100%;
+  padding:15px;
+  margin-top:14px;
+  border:none;
+  border-radius:6px;
+  background:#ff6b9d;
+  color:#fff;
+  font-weight:bold;
+  font-size:17px;
+  cursor:pointer;
 }
-.copyright{ margin-top:35px; color:rgba(255,255,255,.8); font-size:13px; }
+
+.copyright{
+  margin-top:30px;
+  color:rgba(255,255,255,.8);
+  font-size:13px;
+}
 
 /* ================= QUIZ PAGE ================= */
-#quiz-page{display:none; min-height:100vh; padding:70px 0 80px; background:linear-gradient(#fdf6ec,#f7efe2);}
+#quiz-page{display:none;min-height:100vh;padding:70px 0 80px;background:linear-gradient(#fdf6ec,#f7efe2)}
+
 .header-fixed{
-  position:fixed; top:0; left:0; right:0;
-  display:flex; justify-content:space-between; align-items:center;
-  background:#fff; padding:10px 15px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.1); z-index:1000;
+  position:fixed;
+  top:0;left:0;right:0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#fff;
+  padding:10px 15px;
+  box-shadow:0 2px 10px rgba(0,0,0,.1);
+  z-index:1000;
 }
+
 .timer,.submit-top{
-  padding:12px 24px; color:#fff; font-weight:bold;
-  font-size:16px; min-width:110px; text-align:center;
+  padding:12px 24px;
+  color:#fff;
+  font-weight:bold;
+  font-size:16px;
+  min-width:110px;
+  text-align:center;
 }
-.timer{background:#4caf50;}
-.submit-top{background:#f44336;}
-.container{max-width:540px; margin:auto; height:calc(100vh - 150px); overflow-y:auto; padding:0 15px;}
-.question-wrapper{display:none; margin-bottom:40px;}
-.question-wrapper.active{display:block;}
-.box-passage audio,.box-passage img{width:100%; margin-top:10px; display:block;}
-.box-question{background:#fff3e0; padding:20px; margin-top:15px;}
-.option-item{display:flex; align-items:center; margin:18px 0; font-size:16px;}
-.option-item input{display:none;}
+
+.timer{background:#4caf50}
+.submit-top{background:#f44336;cursor:pointer}
+
+.container{
+  max-width:540px;
+  margin:auto;
+  height:calc(100vh - 150px);
+  overflow-y:auto;
+  padding:0 15px;
+}
+
+.question-wrapper{display:none;margin-bottom:40px}
+.question-wrapper.active{display:block}
+
+.box-passage audio,.box-passage img{
+  width:100%;
+  margin-top:10px;
+  display:block;
+}
+
+.box-question{
+  background:#fff3e0;
+  padding:20px;
+  margin-top:15px;
+}
+
+.option-item{
+  display:flex;
+  align-items:center;
+  margin:18px 0;
+  font-size:16px;
+}
+.option-item input{display:none}
+
 .option-circle{
-  width:32px; height:32px; border:2px solid #333; border-radius:50%;
-  display:flex; align-items:center; justify-content:center;
-  margin-right:12px; font-weight:bold;
+  width:32px;
+  height:32px;
+  border:2px solid #333;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-right:12px;
+  font-weight:bold;
 }
+
 .option-item input:checked + .option-circle{
-  background:#bbdefb; border-color:#2196f3; color:#2196f3;
+  background:#bbdefb;
+  border-color:#2196f3;
+  color:#2196f3;
 }
+
 .nav-bottom{
-  position:fixed; bottom:0; left:0; right:0;
-  display:flex; justify-content:space-between;
-  background:#fff; padding:10px 15px;
-  box-shadow:0 -2px 10px rgba(0,0,0,0.1);
+  position:fixed;
+  bottom:0;left:0;right:0;
+  display:flex;
+  justify-content:space-between;
+  background:#fff;
+  padding:10px 15px;
+  box-shadow:0 -2px 10px rgba(0,0,0,.1);
 }
+
 .nav-bottom button{
-  padding:12px 24px; color:#fff; border:none;
-  font-weight:bold; font-size:16px;
+  padding:12px 24px;
+  color:#fff;
+  border:none;
+  font-weight:bold;
+  font-size:16px;
 }
-#prev{background:#2196f3;}
-#next{background:#ff9800;}
+
+#prev{background:#2196f3}
+#next{background:#ff9800}
 </style>
 </head>
 
@@ -126,19 +224,13 @@ button{
 
 <!-- SPLASH -->
 <div id="splash">
-  <h1>
-    tetap semangat belajar,<br>
-    semoga kalian semua lulus ujian<br>
-    <b>EPS TOPIK</b> aamiin 🤲
-  </h1>
-  <div id="splash-names">
-    <span>Uus</span><span>Hanarizka</span><span>Windi</span><span>Rismayayanti</span>
-    <span>Sita</span><span>Mila</span><span>Aini</span><span>Feinie</span>
-    <span>Hamdan</span><span>Heri</span><span>Fikrisurya</span><span>Mutiara</span>
-    <span>Wantika</span><span>Dini</span><span>Kaniarostayuni</span>
-    <span>Dikisetiawan</span><span>Aisyah</span><span>Rizka</span>
-    <span>Dinda</span><span>Zhafif</span><span>Siwon</span>
-    <span>Azizah</span><span>Yppsdi</span><span>Satria</span><span>Sultan</span>
+  <div class="splash-box">
+    <h1>LATIHAN BAHASA KOREA<br>EPS · TOPIK · CBT</h1>
+    <div id="splash-names">
+      <span>Uus</span><span>Hanarizka</span><span>Windi</span><span>Rismayayanti</span>
+      <span>Sita</span><span>Mila</span><span>Aini</span><span>Feinie</span>
+      <span>Hamdan</span><span>Heri</span><span>Fikrisurya</span><span>Mutiara</span>
+    </div>
   </div>
 </div>
 
@@ -167,9 +259,14 @@ button{
 </div>
 
 <script>
-const SPREADSHEET_URL = "https://script.google.com/macros/s/AKfycbzxyVIlsyLswlfnQG618eeUZgN83dd2jfCjU0r7LsNHM3A6NNiibuCIb5e3CNs9J1vVhQ/exec";
+window.addEventListener("load",()=>{
+  setTimeout(()=>{
+    splash.style.display="none";
+    login-page.style.display="flex";
+  },7000);
+});
 
-const userIdToName = {
+const userIdToName={
   "2026010001":"Uus","2026010002":"Hanarizka","2026010003":"Windi",
   "2026010004":"Rismayayanti","2026010005":"Sita","2026010006":"Mila",
   "2026010007":"Aini","2026010008":"Feinie","2026010009":"Hamdan",
@@ -181,17 +278,18 @@ const userIdToName = {
   "2026010025":"Sultan"
 };
 
-const kodeMapping = {
+const kodeMapping={
   "b12345":"soal1.json","a09008":"soal2.json","sarewae":"test.json",
   "w11765":"soal3.json","urinara":"soal5.json","cincay":"soal_urinara.json"
 };
 
-const BASE = "https://raw.githubusercontent.com/airnetcso/latbakor/main/soal/";
+const BASE="https://raw.githubusercontent.com/airnetcso/latbakor/main/soal/";
 
 let questions=[],answers=[],current=0,time=3000,interval;
+let warn5=false,warnLast=false;
 let currentUser="",currentKode="";
 
-document.getElementById("btnLogin").onclick=()=>{
+btnLogin.onclick=()=>{
   const uid=userId.value.trim();
   const kd=kode.value.trim().toLowerCase();
   if(!userIdToName[uid]) return alert("User ID tidak terdaftar");
@@ -250,7 +348,6 @@ submitTop.onclick=()=>{
     show(i);
     return;
   }
-  if(!confirm("Semua soal sudah dijawab.\nSubmit sekarang?")) return;
   clearInterval(interval);
   alert("SUBMIT BERHASIL");
 };
@@ -263,15 +360,6 @@ function startTimer(){
     if(--time<0) submitTop.onclick();
   },1000);
 }
-
-/* SPLASH AUTO HIDE - 8 DETIK */
-window.addEventListener("load",()=>{
-  setTimeout(()=>{
-    const s=document.getElementById("splash");
-    if(s) s.style.display="none";
-  },8000);
-});
 </script>
-
 </body>
 </html>
