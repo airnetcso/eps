@@ -8,7 +8,6 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
-      /* Background mulus tanpa jeda putih */
       background: url('https://raw.githubusercontent.com/airnetcso/eps/main/image/bg1.jpg') no-repeat center center fixed;
       background-size: cover;
       position: relative;
@@ -66,29 +65,26 @@
     }
 
     #splash-names {
-      font-size: 10.5px;
-      line-height: 1.65;
-      opacity: 0.95;
+      font-size: 11px;
+      line-height: 1.7;
+      opacity: 0.92;
       text-align: center;
       text-shadow: 0 1px 3px rgba(0,0,0,0.7);
-      white-space: nowrap; /* biar satu baris panjang */
-      overflow: hidden;
-      text-overflow: ellipsis; /* kalau terlalu panjang, tambah ... */
       max-width: 90%;
       margin: 0 auto;
     }
 
     #splash-names span {
-      display: inline;
-      margin: 0 4px;
+      white-space: normal;
     }
 
     #splash-names span::after {
-      content: " • "; /* pemisah titik-titik biar rapi */
+      content: ". ";
+      opacity: 0.7;
     }
 
     #splash-names span:last-child::after {
-      content: " 🔥"; /* emoji di akhir */
+      content: " 🔥";
     }
 
     @media (max-width: 480px) {
@@ -276,7 +272,7 @@
       Lulus <b>EPS-TOPIK</b> bareng yuk, aamiin ya Allah 🤲🇰🇷✨
     </h1>
     <div id="splash-names">
-      <span>Uus</span><span>Hanarizka</span><span>Windi</span><span>Rismayayanti</span><span>Sita</span><span>Mila</span><span>Aini</span><span>Feinie</span><span>Hamdan</span><span>Heri</span><span>Fikrisurya</span><span>Mutiara</span><span>Wantika</span><span>Dini</span><span>Kaniarostayuni</span><span>Dikisetiawan</span><span>Aisyah</span><span>Rizka</span><span>Dinda</span><span>Zhafif</span><span>Siwon</span><span>Azizah</span><span>Yppsdi</span><span>Satria</span><span>Sultan</span><span>Aditya</span><span>Bima</span><span>Citra</span><span>Dewi</span><span>Eka</span><span>Fadli</span><span>Gita</span><span>Hafiz</span><span>Indah</span><span>Jihan</span><span>Kim Jihoon</span><span>Laras</span><span>Minji</span><span>Naufal</span><span>Putri</span><span>Qori</span><span>Raka</span><span>Sari</span><span>Taufik</span><span>Umair</span><span>Vina</span><span>Wahyu</span><span>Xena</span><span>Yanti</span><span>Zara</span><span>Arif</span><span>Bunga</span><span>Chandra</span><span>Dhani</span><span>Elina</span><span>Fajar</span><span>Galang</span><span>Hadi</span><span>Indra</span><span>Joko</span><span>Kurnia</span><span>Lukman</span><span>Maulana</span><span>Nanda</span>
+      Uus. Hanarizka. Windi. Rismayayanti. Sita. Mila. Aini. Feinie. Hamdan. Heri. Fikrisurya. Mutiara. Wantika. Dini. Kaniarostayuni. Dikisetiawan. Aisyah. Rizka. Dinda. Zhafif. Siwon. Azizah. Yppsdi. Satria. Sultan. Aditya. Bima. Citra. Dewi. Eka. Fadli. Gita. Hafiz. Indah. Jihan. Kim Jihoon. Laras. Minji. Naufal. Putri. Qori. Raka. Sari. Taufik. Umair. Vina. Wahyu. Xena. Yanti. Zara. Arif. Bunga. Chandra. Dhani. Elina. Fajar. Galang. Hadi. Indra. Joko. Kurnia. Lukman. Maulana. Nanda 🔥
     </div>
   </div>
 </div>
@@ -313,6 +309,7 @@
 </div>
 
 <script>
+// Script tetap sama seperti sebelumnya (tidak diubah)
 const SPREADSHEET_URL = "https://script.google.com/macros/s/AKfycbzxyVIlsyLswlfnQG618eeUZgN83dd2jfCjU0r7LsNHM3A6NNiibuCIb5e3CNs9J1vVhQ/exec";
 
 const userIdToName = {
@@ -352,7 +349,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const timerEl = document.getElementById("timer");
   const resultBox = document.getElementById("resultBox");
 
-  // Splash 6 detik → fade out mulus tanpa jeda putih
+  // Splash 6 detik → fade out mulus
   setTimeout(() => {
     splash.style.opacity = "0";
     setTimeout(() => {
