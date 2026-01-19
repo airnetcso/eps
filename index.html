@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
-      /* Diubah biar mulus tanpa jeda putih: background gambar + overlay gelap langsung */
+      /* Background mulus tanpa jeda putih */
       background: url('https://raw.githubusercontent.com/airnetcso/eps/main/image/bg1.jpg') no-repeat center center fixed;
       background-size: cover;
       position: relative;
@@ -18,7 +18,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.6); /* overlay gelap, bisa disesuaikan opacity */
+      background: rgba(0,0,0,0.6);
       z-index: 0;
     }
 
@@ -69,17 +69,26 @@
       font-size: 10.5px;
       line-height: 1.65;
       opacity: 0.95;
-      text-align: left;
-      column-count: 4;
-      column-gap: 24px;
-      max-height: 280px;
-      overflow: hidden;
+      text-align: center;
       text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+      white-space: nowrap; /* biar satu baris panjang */
+      overflow: hidden;
+      text-overflow: ellipsis; /* kalau terlalu panjang, tambah ... */
+      max-width: 90%;
+      margin: 0 auto;
     }
 
     #splash-names span {
-      display: block;
-      margin-bottom: 4px;
+      display: inline;
+      margin: 0 4px;
+    }
+
+    #splash-names span::after {
+      content: " • "; /* pemisah titik-titik biar rapi */
+    }
+
+    #splash-names span:last-child::after {
+      content: " 🔥"; /* emoji di akhir */
     }
 
     @media (max-width: 480px) {
@@ -87,13 +96,11 @@
         padding: 40px 30px;
       }
       #splash-names {
-        column-count: 3;
-        column-gap: 18px;
         font-size: 10px;
       }
     }
 
-    /* LOGIN PAGE (sama ramping, tapi sekarang tanpa jeda putih) */
+    /* LOGIN PAGE */
     #login-page {
       min-height: 100vh;
       display: none;
@@ -182,7 +189,7 @@
       z-index: 3;
     }
 
-    /* QUIZ PAGE (background quiz tetap seperti asli) */
+    /* QUIZ PAGE */
     #quiz-page { 
       display: none; 
       min-height: 100vh; 
@@ -269,22 +276,7 @@
       Lulus <b>EPS-TOPIK</b> bareng yuk, aamiin ya Allah 🤲🇰🇷✨
     </h1>
     <div id="splash-names">
-      <span>Uus</span><span>Hanarizka</span><span>Windi</span><span>Rismayayanti</span>
-      <span>Sita</span><span>Mila</span><span>Aini</span><span>Feinie</span>
-      <span>Hamdan</span><span>Heri</span><span>Fikrisurya</span><span>Mutiara</span>
-      <span>Wantika</span><span>Dini</span><span>Kaniarostayuni</span><span>Dikisetiawan</span>
-      <span>Aisyah</span><span>Rizka</span><span>Dinda</span><span>Zhafif</span>
-      <span>Siwon</span><span>Azizah</span><span>Yppsdi</span><span>Satria</span>
-      <span>Sultan</span><span>Aditya</span><span>Bima</span><span>Citra</span>
-      <span>Dewi</span><span>Eka</span><span>Fadli</span><span>Gita</span>
-      <span>Hafiz</span><span>Indah</span><span>Jihan</span><span>Kim Jihoon</span>
-      <span>Laras</span><span>Minji</span><span>Naufal</span><span>Putri</span>
-      <span>Qori</span><span>Raka</span><span>Sari</span><span>Taufik</span>
-      <span>Umair</span><span>Vina</span><span>Wahyu</span><span>Xena</span>
-      <span>Yanti</span><span>Zara</span><span>Arif</span><span>Bunga</span>
-      <span>Chandra</span><span>Dhani</span><span>Elina</span><span>Fajar</span>
-      <span>Galang</span><span>Hadi</span><span>Indra</span><span>Joko</span>
-      <span>Kurnia</span><span>Lukman</span><span>Maulana</span><span>Nanda</span>
+      <span>Uus</span><span>Hanarizka</span><span>Windi</span><span>Rismayayanti</span><span>Sita</span><span>Mila</span><span>Aini</span><span>Feinie</span><span>Hamdan</span><span>Heri</span><span>Fikrisurya</span><span>Mutiara</span><span>Wantika</span><span>Dini</span><span>Kaniarostayuni</span><span>Dikisetiawan</span><span>Aisyah</span><span>Rizka</span><span>Dinda</span><span>Zhafif</span><span>Siwon</span><span>Azizah</span><span>Yppsdi</span><span>Satria</span><span>Sultan</span><span>Aditya</span><span>Bima</span><span>Citra</span><span>Dewi</span><span>Eka</span><span>Fadli</span><span>Gita</span><span>Hafiz</span><span>Indah</span><span>Jihan</span><span>Kim Jihoon</span><span>Laras</span><span>Minji</span><span>Naufal</span><span>Putri</span><span>Qori</span><span>Raka</span><span>Sari</span><span>Taufik</span><span>Umair</span><span>Vina</span><span>Wahyu</span><span>Xena</span><span>Yanti</span><span>Zara</span><span>Arif</span><span>Bunga</span><span>Chandra</span><span>Dhani</span><span>Elina</span><span>Fajar</span><span>Galang</span><span>Hadi</span><span>Indra</span><span>Joko</span><span>Kurnia</span><span>Lukman</span><span>Maulana</span><span>Nanda</span>
     </div>
   </div>
 </div>
