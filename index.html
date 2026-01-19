@@ -11,7 +11,7 @@
       background: #f5f5f5;
     }
 
-    /* ================= SPLASH PREMIUM ================= */
+    /* ================= SPLASH PREMIUM (dengan margin lebih lega) ================= */
     #splash {
       position: fixed;
       inset: 0;
@@ -23,7 +23,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 30px 20px;
+      padding: 40px 40px;           /* lebih lega di kiri-kanan */
       z-index: 9999;
       text-align: center;
       transition: opacity 1.3s ease;
@@ -36,7 +36,8 @@
     }
 
     .splash-box {
-      max-width: 520px;
+      max-width: 560px;              /* lebih lebar supaya tidak mepet */
+      width: 100%;
       transform: translateY(10px);
     }
 
@@ -68,6 +69,18 @@
     #splash-names span {
       display: block;
       margin-bottom: 4px;
+    }
+
+    /* Responsif: di layar kecil pakai 3 kolom agar tidak terlalu sempit */
+    @media (max-width: 480px) {
+      #splash {
+        padding: 40px 30px;
+      }
+      #splash-names {
+        column-count: 3;
+        column-gap: 18px;
+        font-size: 10px;
+      }
     }
 
     /* LOGIN PAGE */
