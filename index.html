@@ -175,7 +175,7 @@
       background: linear-gradient(#fdf6ec,#f7efe2);
       position: relative;
       z-index: 2;
-      color: #333; /* teks hitam pekat biar kontras */
+      color: #333;
     }
     .header-fixed {
       position: fixed;
@@ -327,8 +327,8 @@ const BASE = "https://raw.githubusercontent.com/airnetcso/latbakor/main/soal/";
 
 let questions = [], answers = [], current = 0, time = 3000, interval;
 let currentUser = "", currentKode = "";
-let warned5min = false; // flag untuk notif 5 menit sekali saja
-let warnedLast3 = false; // flag untuk notif 3 soal terakhir sekali saja
+let warned5min = false;
+let warnedLast = false; // flag untuk notif soal terakhir
 
 document.addEventListener("DOMContentLoaded", () => {
   const splash = document.getElementById("splash");
@@ -341,7 +341,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const timerEl = document.getElementById("timer");
   const resultBox = document.getElementById("resultBox");
 
-  // Splash 6 detik → fade out mulus
   setTimeout(() => {
     splash.style.opacity = "0";
     setTimeout(() => {
@@ -402,10 +401,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".question-wrapper").forEach((q, i) => q.classList.toggle("active", i === n));
     current = n;
 
-    // Notif 3 soal terakhir (sekali saja)
-    if (questions.length - current <= 3 && !warnedLast3) {
-      alert("Ini 3 soal terakhir! Pastikan semua jawaban sudah benar sebelum submit ya!");
-      warnedLast3 = true;
+    // Notif hanya di soal terakhir (sekali saja)
+    if (current === questions.length - 1 && !warnedLast) {
+      alert("Ini soal terakhir! Pastikan jawaban sudah benar ya!");
+      warnedLast = true;
     }
   }
 
@@ -420,9 +419,8 @@ document.addEventListener("DOMContentLoaded", () => {
       return; 
     }
 
-    // Notif konfirmasi kalau semua sudah dijawab
+    // Konfirmasi submit kalau semua sudah dijawab
     if (confirm("Semua soal sudah dijawab. Mau cek lagi atau langsung SUBMIT?")) {
-      // Jika "OK" → langsung submit
       clearInterval(interval);
       quizPage.style.display = "none";
       resultPage.style.display = "block";
@@ -447,7 +445,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ${html || "<p class='correct'>Semua jawaban benar 🎉</p>"}
         <div class="back-btn" onclick="location.reload()">KEMBALI</div>`;
     }
-    // Jika "Cancel" → tidak submit, user bisa cek lagi
   };
 
   function startTimer() {
@@ -457,7 +454,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Notif waktu tinggal 5 menit (sekali saja)
       if (time <= 300 && !warned5min) {
         alert("Waktu tinggal 5 menit! Segera selesaikan soal yang belum dijawab!");
-        timerEl.style.background = "#f44336"; // ubah warna timer jadi merah
+        timerEl.style.background = "#f44336"; // merah
         warned5min = true;
       }
 
