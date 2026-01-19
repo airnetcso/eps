@@ -1,0 +1,302 @@
+[
+  {
+    "question": "빈칸에 알맞은 것을 고르세요. \"저는 매일 아침 7시에 ______.\"",
+    "options": {
+      "A": "일어나요",
+      "B": "일어났어요",
+      "C": "일어나고 있어요",
+      "D": "일어나고 싶어요"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "\"책상에 책이 ______.\" (kopula yang benar)",
+    "options": {
+      "A": "있어요",
+      "B": "이다",
+      "C": "예요",
+      "D": "아닙니다"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "\"저는 친구 ______ 선물을 줬어요.\" (preposisi yang tepat)",
+    "options": {
+      "A": "에게",
+      "B": "에서",
+      "C": "하고",
+      "D": "부터"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "Bilangan Sino-Korea untuk \"38\" adalah?",
+    "options": {
+      "A": "서른여덟",
+      "B": "삼십팔",
+      "C": "삼십여덟",
+      "D": "서른팔"
+    },
+    "correct": "B",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "\"오늘은 정말 ______.\" (kata sifat untuk \"panas\")",
+    "options": {
+      "A": "춥다",
+      "B": "덥다",
+      "C": "시원하다",
+      "D": "따뜻하다"
+    },
+    "correct": "B",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "Lawan kata dari \"크다\" adalah?",
+    "options": {
+      "A": "작다",
+      "B": "길다",
+      "C": "짧다",
+      "D": "높다"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "\"지금 무엇을 ______?\" (sedang melakukan sesuatu)",
+    "options": {
+      "A": "하고 있어요",
+      "B": "할 거예요",
+      "C": "하고 싶어요",
+      "D": "했어요"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "\"내일 친구를 ______ 갈 거예요.\"",
+    "options": {
+      "A": "만나고",
+      "B": "만나",
+      "C": "만날",
+      "D": "만났"
+    },
+    "correct": "C",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "\"저는 한국어를 ______.\" (ingin belajar)",
+    "options": {
+      "A": "공부하고 있어요",
+      "B": "공부할 거예요",
+      "C": "공부하고 싶어요",
+      "D": "공부했어요"
+    },
+    "correct": "C",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "\"어제 저는 영화를 ______.\"",
+    "options": {
+      "A": "봤어요",
+      "B": "볼 거예요",
+      "C": "보고 있어요",
+      "D": "보고 싶어요"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "Preposisi yang benar untuk \"dari rumah ke sekolah\" adalah?",
+    "options": {
+      "A": "집에서 학교까지",
+      "B": "집에 학교로",
+      "C": "집에게 학교에서",
+      "D": "집하고 학교까지"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "Bilangan asli Korea untuk \"11 orang\" adalah?",
+    "options": {
+      "A": "열한 명",
+      "B": "십일 명",
+      "C": "열한 사람",
+      "D": "열한 개"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "\"이 가방은 ______ 예쁘다.\" (sangat)",
+    "options": {
+      "A": "아주",
+      "B": "정말",
+      "C": "너무",
+      "D": "Semua benar"
+    },
+    "correct": "D",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "Lawan kata dari \"비싸다\" adalah?",
+    "options": {
+      "A": "싸다",
+      "B": "맛있다",
+      "C": "재미있다",
+      "D": "어렵다"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "\"저는 지금 한국 드라마를 ______.\" (sedang menonton)",
+    "options": {
+      "A": "보고 있어요",
+      "B": "볼 거예요",
+      "C": "보고 싶어요",
+      "D": "봤어요"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "\"주말에 산에 ______.\" (akan pergi)",
+    "options": {
+      "A": "갈 거예요",
+      "B": "가고 있어요",
+      "C": "가고 싶어요",
+      "D": "갔어요"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "\"저는 피자를 ______.\" (ingin makan)",
+    "options": {
+      "A": "먹고 있어요",
+      "B": "먹을 거예요",
+      "C": "먹고 싶어요",
+      "D": "먹었어요"
+    },
+    "correct": "C",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "Preposisi yang tepat: \"친구 ______ 전화했어요.\"",
+    "options": {
+      "A": "에게",
+      "B": "에서",
+      "C": "한테",
+      "D": "A dan C benar"
+    },
+    "correct": "D",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "Bilangan Sino untuk \"tahun 2025\" adalah?",
+    "options": {
+      "A": "이천이십오년",
+      "B": "이천이십오 년",
+      "C": "이천이십오",
+      "D": "둘천이십오년"
+    },
+    "correct": "B",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "\"그 사람은 키가 ______.\" (sangat tinggi)",
+    "options": {
+      "A": "아주 크다",
+      "B": "아주 길다",
+      "C": "아주 높다",
+      "D": "아주 크다 (키가 크다 lebih umum)"
+    },
+    "correct": "D",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "\"어제 밤에 비가 ______.\"",
+    "options": {
+      "A": "왔어요",
+      "B": "올 거예요",
+      "C": "오고 있어요",
+      "D": "오고 싶어요"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "Lawan kata dari \"맛있다\" adalah?",
+    "options": {
+      "A": "맛없다",
+      "B": "달다",
+      "C": "짜다",
+      "D": "시다"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "\"저는 한국에 ______ 살아요.\" (sudah lama)",
+    "options": {
+      "A": "오래",
+      "B": "아주",
+      "C": "정말",
+      "D": "너무"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "\"내일 아침 일찍 ______.\" (akan bangun)",
+    "options": {
+      "A": "일어날 거예요",
+      "B": "일어나고 있어요",
+      "C": "일어나고 싶어요",
+      "D": "일어났어요"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": null
+  },
+  {
+    "question": "\"저는 지금 책을 ______.\" (sedang membaca)",
+    "options": {
+      "A": "읽고 있어요",
+      "B": "읽을 거예요",
+      "C": "읽고 싶어요",
+      "D": "읽었어요"
+    },
+    "correct": "A",
+    "audio": null,
+    "image": null
+  }
+]
