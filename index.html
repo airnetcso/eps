@@ -2,16 +2,25 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>LATIHAN BAHASA KOREA</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    body {
       font-family: 'Segoe UI', Arial, sans-serif;
       background: url('https://raw.githubusercontent.com/airnetcso/eps/main/image/bg1.jpg') no-repeat center center fixed;
       background-size: cover;
       position: relative;
       color: #e0e0e0;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     body::before {
       content: '';
@@ -21,52 +30,68 @@
       z-index: 0;
     }
 
-    /* ================= SPLASH PREMIUM ================= */
+    /* ================= SPLASH PREMIUM (dari file perfect: full page, no side padding) ================= */
     #splash {
       position: fixed;
-      inset: 0;
-      background:
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100dvh;
+      background: 
         linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.82)),
-        url("https://raw.githubusercontent.com/airnetcso/eps/main/image/bg1.jpg")
-        center/cover no-repeat;
+        url("https://raw.githubusercontent.com/airnetcso/eps/main/image/bg1.jpg") center/cover no-repeat;
+      background-attachment: fixed;
       color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 40px 40px;
       z-index: 9999;
       text-align: center;
       transition: opacity 1.3s ease;
       animation: fadeIn 1.2s ease-out;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+
+    @supports not (height: 100dvh) {
+      #splash { height: 100vh; }
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     .splash-box {
       max-width: 560px;
       width: 100%;
-      transform: translateY(10px);
+      padding: 20px;
+      box-sizing: border-box;
     }
+
     #splash h1 {
       font-size: 22px;
       font-weight: 800;
       line-height: 1.4;
-      margin-bottom: 20px;
+      margin: 0 0 20px;
       text-shadow: 0 4px 12px rgba(0,0,0,0.9), 0 0 20px rgba(255, 107, 157, 0.4);
       letter-spacing: 0.5px;
     }
     #splash h1 b {
       color: #ff6b9d;
     }
+
+    /* NAMA-NAMA DI SPLASH: RATA KIRI-KANAN (JUSTIFY) */
     #splash-names {
       font-size: 11px;
       line-height: 1.7;
       opacity: 0.92;
-      text-align: center;
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+      word-break: break-word;
       text-shadow: 0 1px 3px rgba(0,0,0,0.7);
       max-width: 90%;
       margin: 0 auto;
+      padding: 0 10px;
     }
     #splash-names span {
       white-space: normal;
@@ -78,16 +103,17 @@
     #splash-names span:last-child::after {
       content: " 🔥";
     }
+
     @media (max-width: 480px) {
-      #splash {
-        padding: 40px 30px;
-      }
-      #splash-names {
-        font-size: 10px;
+      .splash-box { padding: 15px 20px; }
+      #splash h1 { font-size: 20px; }
+      #splash-names { 
+        font-size: 12px; 
+        padding: 0 8px; 
       }
     }
 
-    /* LOGIN PAGE */
+    /* ================= LOGIN PAGE (ukuran & jenis tampilan dari file perfect) ================= */
     #login-page {
       min-height: 100vh;
       display: none;
@@ -99,58 +125,62 @@
       transition: opacity 0.8s ease;
       opacity: 0;
     }
+
+    .login-container {
+      width: 95%;
+      max-width: 300px;
+      padding: 35px 25px;
+      text-align: center;
+      background: rgba(40,40,40,0.92);
+      border: 1px solid #666;
+      border-radius: 8px;
+      box-shadow: 0 14px 32px rgba(0,0,0,0.7);
+      animation: fadeSlideUp 0.9s ease-out forwards;
+      position: relative;
+      z-index: 3;
+      box-sizing: border-box;
+    }
+
     @keyframes fadeSlideUp {
       from { opacity:0; transform:translateY(40px);}
       to { opacity:1; transform:translateY(0);}
     }
-    .login-container {
-      width: 90%;
-      max-width: 260px;
-      padding: 30px 20px;
-      text-align: center;
-      background: rgba(255,255,255,.12);
-      backdrop-filter: blur(14px);
-      border-radius: 8px;
-      box-shadow: 0 12px 40px rgba(0,0,0,.5);
-      animation: fadeSlideUp 0.9s ease-out forwards;
-      position: relative;
-      z-index: 3;
-    }
+
     .login-container h1 {
       color: #fff;
-      font-size: 26px;
-      margin: 0 0 18px;
+      font-size: 28px;
+      margin: 0 0 24px;
       text-shadow: 0 2px 6px rgba(0,0,0,.7);
     }
+
     input {
       width: 100%;
-      padding: 14px;
-      margin: 10px 0;
-      border: none;
+      padding: 16px;
+      margin: 12px 0;
+      border: 1px solid #666;
       border-radius: 6px;
-      background: rgba(255,255,255,.18);
-      color: #fff;
-      font-size: 15px;
-      backdrop-filter: blur(4px);
+      background: #1e1e1e;
+      color: #e0e0e0;
+      font-size: 16px;
       box-sizing: border-box;
-      transition: all 0.3s;
+      transition: border-color 0.3s ease;
     }
-    input::placeholder { color: rgba(255,255,255,.65); font-size: 15px; }
+    input::placeholder { color: #888; opacity:1; }
     input:focus {
       outline: none;
-      background: rgba(255,255,255,.35);
-      transform: scale(1.02);
+      border-color: #818cf8;
     }
+
     button {
       width: 100%;
-      padding: 14px;
-      margin: 14px 0 8px;
+      padding: 16px;
+      margin: 16px 0 10px;
       border: none;
       border-radius: 6px;
       background: #ff6b9d;
       color: #fff;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 17px;
       cursor: pointer;
       box-shadow: 0 6px 20px rgba(255,107,157,.5);
       transition: all 0.4s;
@@ -159,15 +189,16 @@
       background: #ff8ac1;
       transform: translateY(-5px) scale(1.05);
     }
+
     .copyright {
-      margin-top: 30px;
+      margin-top: 24px;
       color: rgba(255,255,255,.8);
       font-size: 13px;
       position: relative;
       z-index: 3;
     }
 
-    /* QUIZ PAGE */
+    /* QUIZ PAGE (tetap sama persis) */
     #quiz-page {
       display: none;
       min-height: 100vh;
@@ -236,7 +267,7 @@
     #prev { background: #2196f3; }
     #next { background: #ff9800; }
 
-    /* RESULT PAGE */
+    /* RESULT PAGE (tetap sama) */
     #result-page {
       display: none;
       max-width: 600px; margin: auto; padding: 20px 15px;
@@ -259,7 +290,7 @@
 <div id="splash">
   <div class="splash-box">
     <h1>
-      <b>여러분,</b> tetap semangat!<br>
+      <b>여러분,</b> tetap semangat!<br><br>
       Kalian semua pasti lulus EPS TOPIK, Aamiin ...
     </h1>
     <div id="splash-names">
@@ -300,6 +331,7 @@
 </div>
 
 <script>
+// Script tetap sama persis seperti yang kamu berikan
 const SPREADSHEET_URL = "https://script.google.com/macros/s/AKfycbzxyVIlsyLswlfnQG618eeUZgN83dd2jfCjU0r7LsNHM3A6NNiibuCIb5e3CNs9J1vVhQ/exec";
 
 const userIdToName = {
@@ -328,7 +360,7 @@ const BASE = "https://raw.githubusercontent.com/airnetcso/latbakor/main/soal/";
 let questions = [], answers = [], current = 0, time = 3000, interval;
 let currentUser = "", currentKode = "";
 let warned5min = false;
-let warnedLast = false; // flag untuk notif soal terakhir
+let warnedLast = false;
 
 document.addEventListener("DOMContentLoaded", () => {
   const splash = document.getElementById("splash");
@@ -401,7 +433,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".question-wrapper").forEach((q, i) => q.classList.toggle("active", i === n));
     current = n;
 
-    // Notif hanya di soal terakhir (sekali saja)
     if (current === questions.length - 1 && !warnedLast) {
       alert("Ini soal terakhir! Pastikan jawaban sudah benar ya!");
       warnedLast = true;
@@ -419,7 +450,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return; 
     }
 
-    // Konfirmasi submit kalau semua sudah dijawab
     if (confirm("Semua soal sudah dijawab. Mau cek lagi atau langsung SUBMIT?")) {
       clearInterval(interval);
       quizPage.style.display = "none";
@@ -451,10 +481,9 @@ document.addEventListener("DOMContentLoaded", () => {
     interval = setInterval(() => {
       timerEl.textContent = String(Math.floor(time / 60)).padStart(2, "0") + ":" + String(time % 60).padStart(2, "0");
 
-      // Notif waktu tinggal 5 menit (sekali saja)
       if (time <= 300 && !warned5min) {
         alert("Waktu tinggal 5 menit! Segera selesaikan soal yang belum dijawab!");
-        timerEl.style.background = "#f44336"; // merah
+        timerEl.style.background = "#f44336";
         warned5min = true;
       }
 
@@ -465,4 +494,3 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
-
