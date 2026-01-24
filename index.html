@@ -21,7 +21,7 @@
       z-index: 0;
     }
 
-    /* ================= SPLASH PREMIUM (perfect EPS: full page, no side padding) ================= */
+    /* SPLASH PREMIUM (EPS perfect) */
     #splash {
       position: fixed;
       top: 0;
@@ -100,7 +100,7 @@
       #splash-names { font-size: 12px; padding: 0 8px; }
     }
 
-    /* ================= LOGIN PAGE (EPS style: hanya User ID + Kode Soal) ================= */
+    /* LOGIN PAGE (EPS style: hanya User ID + Kode Soal) */
     #login-page {
       min-height: 100vh;
       display: none;
@@ -181,7 +181,7 @@
       text-shadow: 0 1px 4px rgba(0,0,0,.8);
     }
 
-    /* ================= QUIZ PAGE & RESULT (tetap 100% style lama /latbakor) ================= */
+    /* QUIZ PAGE & RESULT (tetap style lama /latbakor) */
     #quiz-page {
       display: none;
       min-height: 100vh;
@@ -268,7 +268,7 @@
 </head>
 <body>
 
-<!-- SPLASH PREMIUM (EPS perfect) -->
+<!-- SPLASH PREMIUM -->
 <div id="splash">
   <div class="splash-box">
     <h1>
@@ -292,7 +292,7 @@
   <div class="copyright">© 2026 Denzuka - Kim Jongun. All Rights Reserved.</div>
 </div>
 
-<!-- QUIZ PAGE (tetap style lama /latbakor) -->
+<!-- QUIZ PAGE (style lama /latbakor) -->
 <div id="quiz-page">
   <div class="header-fixed">
     <div class="submit-top" id="submitTop">SUBMIT</div>
@@ -313,7 +313,7 @@
 </div>
 
 <script>
-// Script disesuaikan untuk login User ID + Kode Soal saja
+// Script dengan random soal + login EPS style
 const SPREADSHEET_URL = "https://script.google.com/macros/s/AKfycbzxyVIlsyLswlfnQG618eeUZgN83dd2jfCjU0r7LsNHM3A6NNiibuCIb5e3CNs9J1vVhQ/exec";
 
 const userIdToName = {
@@ -377,6 +377,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function loadSoal(file) {
     let loaded = await (await fetch(BASE + file)).json();
+
+    // RANDOM SHUFFLE SOAL (Fisher-Yates shuffle)
+    for (let i = loaded.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [loaded[i], loaded[j]] = [loaded[j], loaded[i]];
+    }
+
     questions = loaded;
     answers = Array(questions.length).fill(null);
     quizForm.innerHTML = "";
