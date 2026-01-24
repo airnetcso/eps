@@ -30,7 +30,7 @@
       z-index: 0;
     }
 
-    /* ================= SPLASH PREMIUM (dari file perfect: full page, no side padding) ================= */
+    /* ================= SPLASH PREMIUM (versi perfect EPS) ================= */
     #splash {
       position: fixed;
       top: 0;
@@ -79,7 +79,6 @@
       color: #ff6b9d;
     }
 
-    /* NAMA-NAMA DI SPLASH: RATA KIRI-KANAN (JUSTIFY) */
     #splash-names {
       font-size: 11px;
       line-height: 1.7;
@@ -107,13 +106,10 @@
     @media (max-width: 480px) {
       .splash-box { padding: 15px 20px; }
       #splash h1 { font-size: 20px; }
-      #splash-names { 
-        font-size: 12px; 
-        padding: 0 8px; 
-      }
+      #splash-names { font-size: 12px; padding: 0 8px; }
     }
 
-    /* ================= LOGIN PAGE (ukuran & jenis tampilan dari file perfect) ================= */
+    /* ================= LOGIN PAGE (versi perfect EPS) ================= */
     #login-page {
       min-height: 100vh;
       display: none;
@@ -127,7 +123,7 @@
     }
 
     .login-container {
-      width: 100%;
+      width: 95%;
       max-width: 300px;
       padding: 35px 25px;
       text-align: center;
@@ -166,10 +162,7 @@
       transition: border-color 0.3s ease;
     }
     input::placeholder { color: #888; opacity:1; }
-    input:focus {
-      outline: none;
-      border-color: #818cf8;
-    }
+    input:focus { outline: none; border-color: #818cf8; }
 
     button {
       width: 100%;
@@ -198,7 +191,7 @@
       z-index: 3;
     }
 
-    /* QUIZ PAGE (tetap sama persis) */
+    /* ================= QUIZ PAGE (kembali ke style lama /latbakor) ================= */
     #quiz-page {
       display: none;
       min-height: 100vh;
@@ -267,7 +260,7 @@
     #prev { background: #2196f3; }
     #next { background: #ff9800; }
 
-    /* RESULT PAGE (tetap sama) */
+    /* RESULT PAGE (kembali ke style lama) */
     #result-page {
       display: none;
       max-width: 600px; margin: auto; padding: 20px 15px;
@@ -286,11 +279,11 @@
 </head>
 <body>
 
-<!-- SPLASH PREMIUM -->
+<!-- SPLASH PREMIUM (EPS perfect) -->
 <div id="splash">
   <div class="splash-box">
     <h1>
-      <b>여러분,</b> tetap semangat!<br>
+      <b>여러분,</b> tetap semangat!<br><br>
       Kalian semua pasti lulus ujian EPS TOPIK, Aamiin ...
     </h1>
     <div id="splash-names">
@@ -299,7 +292,7 @@
   </div>
 </div>
 
-<!-- LOGIN PAGE -->
+<!-- LOGIN PAGE (EPS perfect) -->
 <div id="login-page">
   <div class="login-container">
     <h1>LATIHAN SOAL</h1>
@@ -310,7 +303,7 @@
   <div class="copyright">© 2026 Denzuka - Kim Jongun. All Rights Reserved.</div>
 </div>
 
-<!-- QUIZ PAGE -->
+<!-- QUIZ PAGE (style lama /latbakor) -->
 <div id="quiz-page">
   <div class="header-fixed">
     <div class="submit-top" id="submitTop">SUBMIT</div>
@@ -325,50 +318,28 @@
   </div>
 </div>
 
-<!-- RESULT PAGE -->
+<!-- RESULT PAGE (style lama) -->
 <div id="result-page">
   <div class="result-box" id="resultBox"></div>
 </div>
 
 <script>
-// Script tetap sama persis seperti yang kamu berikan
+// Script tetap sama persis
 const SPREADSHEET_URL = "https://script.google.com/macros/s/AKfycbzxyVIlsyLswlfnQG618eeUZgN83dd2jfCjU0r7LsNHM3A6NNiibuCIb5e3CNs9J1vVhQ/exec";
 
 const userIdToName = {
-  "2026010001":"Uus",
-  "2026010072":"Hanarizka",
-  "2026010011":"Windi",
-  "2026010017":"Rismayayanti",
-  "2026010015":"Sita",
-  "2026010036":"Mila",
-  "2026010023":"Aini",
-  "2026010048":"Feinie",
-  "2026010009":"Hamdan",
-  "2026010010":"Heri",
-  "2026010031":"Fikrisurya",
-  "2026010062":"Mutiara",
-  "2026010043":"Wantika",
-  "2026010014":"Dini",
-  "2026010015":"Kaniarostayuni",
-  "2026010016":"Dikisetiawan",
-  "2026010064":"Aisyah",
-  "2026010018":"Rizka",
-  "2026010019":"Dinda",
-  "2026010020":"Zhafif",
-  "2026010021":"Siwon",
-  "2026010022":"Azizah",
-  "2026010069":"Yppsdi",
-  "2026010024":"Satria",
+  "2026010001":"Uus","2026010072":"Hanarizka","2026010011":"Windi","2026010017":"Rismayayanti",
+  "2026010015":"Sita","2026010036":"Mila","2026010023":"Aini","2026010048":"Feinie",
+  "2026010009":"Hamdan","2026010010":"Heri","2026010031":"Fikrisurya","2026010062":"Mutiara",
+  "2026010043":"Wantika","2026010014":"Dini","2026010015":"Kaniarostayuni","2026010016":"Dikisetiawan",
+  "2026010064":"Aisyah","2026010018":"Rizka","2026010019":"Dinda","2026010020":"Zhafif",
+  "2026010021":"Siwon","2026010022":"Azizah","2026010069":"Yppsdi","2026010024":"Satria",
   "2026010075":"Sultan"
 };
 
 const kodeMapping = {
-  "b12345":"soal1.json",
-  "a09008":"soal2.json",
-  "sarewae":"test.json",
-  "maukimbap":"soal6.json",
-  "urinara":"soal5.json",
-  "cincay":"soal_urinara.json"
+  "b12345":"soal1.json","a09008":"soal2.json","sarewae":"test.json","maukimbap":"soal6.json",
+  "urinara":"soal5.json","cincay":"soal_urinara.json"
 };
 
 const BASE = "https://raw.githubusercontent.com/airnetcso/latbakor/main/soal/";
@@ -480,8 +451,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const percent = Math.round((score / (totalQuestions * 4)) * 100);
       const formData = new URLSearchParams({
         waktu: new Date().toLocaleString('id-ID', { timeZone: 'Asia/Jakarta' }),
-        namaSiswa: currentUser,
-        code: currentKode,
+        namaSiswa: currentUser || "Anonymous",
+        code: currentKode || "Unknown",
         latihanSoal: `${score}/${totalQuestions * 4} (${percent}%)`,
         keterangan: html ? "Ada jawaban salah" : "Semua benar"
       });
@@ -510,6 +481,3 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
-
-
-
