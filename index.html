@@ -231,7 +231,19 @@
     .question-wrapper.active { display: block; }
     .box-passage { padding: 0; margin-bottom: 20px; }
     .box-passage audio, .box-passage img { width: 100%; margin-top: 10px; display: block; }
-    .box-passage audio { background: #e8d5b8; height: 48px; border-radius: 0 !important; }
+
+    /* AUDIO PLAYER DIBUAT POLOS, TANPA BORDER RADIUS, WARNA KREM */
+    .box-passage audio {
+      background: #f5e8d3;          /* krem hangat sesuai tema quiz */
+      height: 48px;
+      border: 1px solid #d0b48a;    /* border tipis supaya kelihatan */
+      border-radius: 0 !important;  /* hapus border radius → polos */
+      outline: none;
+    }
+    .box-passage audio::-webkit-media-controls-panel {
+      background: #f5e8d3 !important;
+      border-radius: 0 !important;
+    }
 
     .option-item { display: flex; align-items: center; margin: 18px 0; font-size: 16px; }
     .option-item input { display: none; }
@@ -264,7 +276,7 @@
       background: #3f51b5; color: #fff; text-align: center; font-weight: bold; font-size: 17px;
       border-radius: 12px; cursor: pointer;
     }
-        /* TULISAN KECIL INFO SOAL & WAKTU DI LOGIN PAGE */
+    /* TULISAN KECIL INFO SOAL & WAKTU DI LOGIN PAGE */
     .info-kecil {
       font-size: 14px;
       color: rgba(255,255,255,0.5);
@@ -280,7 +292,7 @@
 <div id="splash">
   <div class="splash-box">
     <h1>
-      <b>여러분,</b> harus tetap semangat !<br>
+      <b>여러분,</b> harus tetap semangat !<br><br>
       Kalian semua pasti lulus ujian EPS TOPIK, Aamiin ...
     </h1>
     <div id="splash-names">
@@ -328,35 +340,35 @@
 const SPREADSHEET_URL = "https://script.google.com/macros/s/AKfycbzxyVIlsyLswlfnQG618eeUZgN83dd2jfCjU0r7LsNHM3A6NNiibuCIb5e3CNs9J1vVhQ/exec";
 
 const userIdToName = {
- "2026010001":"Uus",
- "2026010009":"Hamdan",
- "2026010010":"Heri",
- "2026010011":"Windi",
- "2026010014":"Dini",
- "2026010015":"Sita",
- "2026010017":"Rismayanti",
- "2026010018":"Rizka",
- "2026010019":"Dinda",
- "2026010020":"Zhafif",
- "2026010021":"Siwon",
- "2026010022":"Azizah",
- "2026010023":"Aini",
- "2026010024":"Satria",
- "2026010025":"Jahro",
- "2026010031":"Fikri Surya",
- "2026010036":"Mila",
- "2026010037":"Kania Rostayuni",
- "2026010038":"Diki Setiawan",
- "2026010043":"Wantika",
- "2026010048":"Feinie",
- "2026010062":"Mutiara",
- "2026010064":"Aisyah",
- "2026010069":"Yppsdi",
- "2026010070":"Dhinda",
- "2026010071":"Janu",
- "2026010076":"Chrisna",
- "2026010072":"Hanarizka",
- "2026010075":"Sultan",
+  "2026010001":"Uus",
+  "2026010009":"Hamdan",
+  "2026010010":"Heri",
+  "2026010011":"Windi",
+  "2026010014":"Dini",
+  "2026010015":"Sita",
+  "2026010017":"Rismayanti",
+  "2026010018":"Rizka",
+  "2026010019":"Dinda",
+  "2026010020":"Zhafif",
+  "2026010021":"Siwon",
+  "2026010022":"Azizah",
+  "2026010023":"Aini",
+  "2026010024":"Satria",
+  "2026010025":"Jahro",
+  "2026010031":"Fikri Surya",
+  "2026010036":"Mila",
+  "2026010037":"Kania Rostayuni",
+  "2026010038":"Diki Setiawan",
+  "2026010043":"Wantika",
+  "2026010048":"Feinie",
+  "2026010062":"Mutiara",
+  "2026010064":"Aisyah",
+  "2026010069":"Yppsdi",
+  "2026010070":"Dhinda",
+  "2026010071":"Janu",
+  "2026010076":"Chrisna",
+  "2026010072":"Hanarizka",
+  "2026010075":"Sultan",
 };
 
 const kodeMapping = {
@@ -514,15 +526,3 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
